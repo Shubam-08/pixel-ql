@@ -1,9 +1,10 @@
-import { HeroLamp } from "@/components/HeroLamp";
+// layout.tsx
 import "./globals.css";
 import { CustomNavbar } from "@/components/CustomNavbar";
+import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Qlite Website",
+  title: "QR pixel Website",
   description: "Official company website",
 };
 
@@ -13,12 +14,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
-        <CustomNavbar />
-        <HeroLamp />
-        <main className="pt-20 px-4">{children}</main> {/* Add padding to avoid overlap */}
-      </body>
+    <html lang="en" className="dark">
+      <body className="bg-gradient-to-b from-[#0f0f0f] to-[#1a1a1a] text-white min-h-screen flex flex-col">
+  <CustomNavbar />
+  
+  {/* Main content grows to fill available space */}
+  <main className="flex-grow  ">
+    {children}
+  </main>
+
+  {/* Footer stays at bottom */}
+  <Footer />
+</body>
     </html>
   );
 }
