@@ -1,11 +1,24 @@
 export default function AboutPage() {
+  // Helper to get initials safely
+  const getInitials = (fullName: string) => {
+    const parts = fullName.trim().split(" ");
+    if (parts.length === 1) return parts[0][0]; // Only one name
+    return parts[0][0] + parts[1][0]; // First + Last initials
+  };
+
+  const team = [
+    { name: "Revant Sharma", role: "Founder & CEO" },
+    { name: "Jnanasagar", role: "Design Head" },
+    { name: "Illayaraja VP", role: "RnD Expert" },
+  ];
+
   return (
     <main className="min-h-screen bg-gray-900 text-white pt-24 md:pt-32">
       <div className="p-8">
         {/* About Section */}
         <section className="w-full px-4 sm:px-6 lg:px-12 py-10">
           <h1 className="text-4xl font-bold">About Us</h1>
-          <p className="mt-4 text-green-600 underline">
+          <p className="mt-4 text-blue-500 ">
             Welcome to Qlite. We specialize in smart lighting and automation solutions that blend innovation, design, and energy efficiency.
           </p>
         </section>
@@ -17,20 +30,13 @@ export default function AboutPage() {
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-7xl mx-auto">
-            {[
-              { name: "Aarav Mehta", role: "Founder & CEO" },
-              { name: "Simran Kaur", role: "Design Head" },
-              { name: "Kabir Shah", role: "Automation Expert" },
-              { name: "Riya Singh", role: "Project Manager" },
-              { name: "Neel Joshi", role: "Tech Lead" },
-            ].map((member, idx) => (
+            {team.map((member, idx) => (
               <div
                 key={idx}
                 className="bg-gradient-to-br from-[#1e1e1e] to-[#2d2d2d] rounded-lg p-6 text-center shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
               >
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-600 text-white flex items-center justify-center text-xl font-bold">
-                  {member.name.split(" ")[0][0]}
-                  {member.name.split(" ")[1][0]}
+                  {getInitials(member.name)}
                 </div>
                 <h3 className="text-lg font-semibold">{member.name}</h3>
                 <p className="text-sm text-gray-400">{member.role}</p>
