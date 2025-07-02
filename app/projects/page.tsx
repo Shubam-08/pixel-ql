@@ -1,30 +1,42 @@
 import Link from "next/link";
+import Image from "next/image";
+import { ScrollButton } from "@/components/ui/scroll-button";
 
 export default function ProjectsPage() {
   const projects = [
     {
+      id: 1,
       title: "29k Hotel, Pune",
-      description: "Integrated GRMS, mood lighting, and energy automation solutions",
       image: "/second.jpg",
-      link: "/projects/29k-hotel"
+      description: "Advanced lighting control and automation system implemented in a luxury hotel setting",
+      link: "/projects/hotel"
     },
     {
-      title: "Corporate Office Building",
-      description: "Complete building automation and energy management system",
-      image: "/office.jpg",
+      id: 2,
+      title: "Corporate Office, Mumbai",
+      image: "/third.jpg",
+      description: "Intelligent energy management system with smart lighting and HVAC controls",
       link: "/projects/office"
     },
     {
-      title: "Luxury Retail Mall",
-      description: "Smart lighting and energy optimization solutions",
-      image: "/mall.jpg",
-      link: "/projects/mall"
+      id: 3,
+      title: "Residential Complex, Bangalore",
+      image: "/fourth.jpg",
+      description: "Smart home automation with integrated lighting and security systems",
+      link: "/projects/residential"
+    },
+    {
+      id: 4,
+      title: "Retail Mall, Chennai",
+      image: "/fifth.jpg",
+      description: "Energy-efficient lighting and automation solutions for large retail spaces",
+      link: "/projects/retail"
     }
   ];
 
   return (
-    <main className="min-h-screen bg-white">
-      <section className="py-20">
+    <main className="min-h-screen bg-black text-white">
+      <section id="projects" className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800">
@@ -36,35 +48,22 @@ export default function ProjectsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <div 
-                key={index}
-                className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow"
-              >
-                <div className="relative h-64 md:h-80">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover transform group-hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6 bg-white">
-                  <h2 className="text-2xl font-bold mb-3">{project.title}</h2>
-                  <p className="text-gray-600 mb-6">{project.description}</p>
-                  <Link
-                    href={project.link}
-                    className="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors"
-                  >
-                    View Project
-                    <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
+            {projects.map((project) => (
+              <div key={project.id} className="group bg-black/50 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-300">
+                <Image src={project.image} alt={project.title} width={800} height={500} className="w-full h-64 object-cover" />
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
+                  <p className="text-gray-400 mb-4">{project.description}</p>
+                  <Link href={project.link} className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors">
+                    Learn More →
                   </Link>
                 </div>
               </div>
             ))}
           </div>
+        </div>
+        <div className="text-center mt-16">
+          <ScrollButton />
         </div>
       </section>
     </main>
