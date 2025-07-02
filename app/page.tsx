@@ -21,7 +21,7 @@ export default function Home() {
 
 
 <Image
-  src="/Nikhil Gowda Facade revised.jpg"
+  src="/second.jpg"
   alt="29k Hotel Project"
   width={800}  // ✅ Add width
   height={500} // ✅ Add height

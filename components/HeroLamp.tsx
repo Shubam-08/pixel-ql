@@ -7,7 +7,7 @@ export function HeroLamp() {
   return (
     <section
       className="relative flex min-h-screen items-center justify-center bg-cover bg-center pb-0"
-      style={{ backgroundImage: "url('/Family Living-All ON.jpg')" }}
+      style={{ backgroundImage: "url('/first.jpg')" }}
     >
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-black/60 z-10"></div>
