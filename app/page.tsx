@@ -18,11 +18,16 @@ export default function Home() {
         >
           <div className="w-full flex flex-col items-center justify-center py-12 px-4 md:px-6">
             <div className="w-full">
-            <Image
-                src="/Nikhil Gowda Facade revised.jpg"
-                alt="29k Hotel Project"
-                className="rounded-lg object-cover shadow-lg w-full max-w-4xl"
-              />
+
+
+<Image
+  src="/Nikhil Gowda Facade revised.jpg"
+  alt="29k Hotel Project"
+  width={800}  // ✅ Add width
+  height={500} // ✅ Add height
+  className="rounded-lg object-cover shadow-lg w-full max-w-4xl"
+/>
+
               <div className="text-center mt-8">
                 <h3 className="text-2xl font-bold mb-2">29k Hotel, Pune</h3>
                 <p className="text-yellow-900 font-semibold">
