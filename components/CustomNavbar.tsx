@@ -1,7 +1,7 @@
-// components/CustomNavbar.tsx
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 
@@ -9,93 +9,87 @@ export function CustomNavbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
+  const links = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Projects", href: "/projects" },
+    { name: "Contact", href: "/contact" },
+  ];
+
   return (
-    <nav className="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-lg">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-blue-600">Qlite</Link>
-          </div>
-          <div className="hidden md:flex space-x-8">
-            <Link 
-              href="/" 
-              className={`text-gray-600 hover:text-blue-600 transition-colors ${pathname === '/' ? 'font-semibold' : ''}`}
-            >
-              Home
-            </Link>
-            <Link 
-              href="/about" 
-              className={`text-gray-600 hover:text-blue-600 transition-colors ${pathname === '/about' ? 'font-semibold' : ''}`}
-            >
-              About
-            </Link>
-            <Link 
-              href="/services" 
-              className={`text-gray-600 hover:text-blue-600 transition-colors ${pathname === '/services' ? 'font-semibold' : ''}`}
-            >
-              Services
-            </Link>
-            <Link 
-              href="/projects" 
-              className={`text-gray-600 hover:text-blue-600 transition-colors ${pathname === '/projects' ? 'font-semibold' : ''}`}
-            >
-              Projects
-            </Link>
-            <Link 
-              href="/contact" 
-              className={`text-gray-600 hover:text-blue-600 transition-colors ${pathname === '/contact' ? 'font-semibold' : ''}`}
-            >
-              Contact
-            </Link>
-          </div>
-          <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="p-2">
-              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                {isOpen ? (
-                  <path d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
-            </button>
-          </div>
+    <nav className="w-full bg-black shadow-md sticky top-0 z-50">
+      <div className="max-w-[1600px] mx-auto px-0 md:px-0 flex justify-between items-center min-h-[120px] py-0">
+        {/* Logo */}
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/qrpixel_logo1.jpg"
+            alt="QRPixels Logo"
+            width={160}
+            height={80}
+            className="h-[70px] w-auto object-contain"
+            priority
+          />
+        </Link>
+
+        {/* Nav Links (same as your original) */}
+        <div className="hidden md:flex flex-1 justify-center items-end space-x-10 pb-0 pt-4">
+          {links.map(({ name, href }) => {
+            const isActive = pathname === href;
+            return (
+              <Link
+                key={name}
+                href={href}
+                className={`relative text-xs uppercase tracking-wider pt-15 transition-all
+                  ${isActive ? "text-blue-400" : "text-gray-300 hover:text-blue-400"}
+                `}
+              >
+                {name}
+                <span
+                  className={`block h-[2px] bg-blue-400 mx-auto mt-1 transition-all duration-300
+                    ${isActive ? "w-full" : "w-0 group-hover:w-full"}`}
+                />
+              </Link>
+            );
+          })}
+        </div>
+
+        {/* Glowing Call-to-Action Text on the Right */}
+        <div className="hidden md:block ml-4 text-shadow-md font-semibold text-blue-400 animate-pulse tracking-wide bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          Get a Free Design Consultation
+        </div>
+
+        {/* Mobile Toggle */}
+        <div className="md:hidden">
+          <button onClick={() => setIsOpen(!isOpen)} className="text-white">
+            <svg className="h-6 w-6" fill="none" stroke="currentColor">
+              {isOpen ? (
+                <path strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
         </div>
       </div>
 
+      {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-sm p-4">
-          <div className="space-y-4">
-            <Link 
-              href="/" 
-              className={`block text-gray-600 hover:text-blue-600 transition-colors ${pathname === '/' ? 'font-semibold' : ''}`}
-            >
-              Home
-            </Link>
-            <Link 
-              href="/about" 
-              className={`block text-gray-600 hover:text-blue-600 transition-colors ${pathname === '/about' ? 'font-semibold' : ''}`}
-            >
-              About
-            </Link>
-            <Link 
-              href="/services" 
-              className={`block text-gray-600 hover:text-blue-600 transition-colors ${pathname === '/services' ? 'font-semibold' : ''}`}
-            >
-              Services
-            </Link>
-            <Link 
-              href="/projects" 
-              className={`block text-gray-600 hover:text-blue-600 transition-colors ${pathname === '/projects' ? 'font-semibold' : ''}`}
-            >
-              Projects
-            </Link>
-            <Link 
-              href="/contact" 
-              className={`block text-gray-600 hover:text-blue-600 transition-colors ${pathname === '/contact' ? 'font-semibold' : ''}`}
-            >
-              Contact
-            </Link>
-          </div>
+        <div className="md:hidden bg-black px-6 pb-6">
+          {links.map(({ name, href }) => {
+            const isActive = pathname === href;
+            return (
+              <Link
+                key={name}
+                href={href}
+                className={`block text-sm text-white py-2 hover:text-blue-400 transition-colors ${
+                  isActive ? "text-blue-400" : ""
+                }`}
+              >
+                {name}
+              </Link>
+            );
+          })}
         </div>
       )}
     </nav>

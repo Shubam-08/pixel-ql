@@ -21,7 +21,10 @@ export function HeroLamp() {
           transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
           className="text-white text-4xl md:text-6xl font-bold"
         >
-          Empowering Your Vision with Qlite Architect
+            Empowering Your Vision with{" "}
+          <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-pulse">
+            QR PIXEL
+          </span>
         </motion.h1>
 
         <motion.p
