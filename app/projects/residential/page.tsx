@@ -11,14 +11,17 @@ export default function ResidentialProjectPage() {
           <div className="max-w-6xl mx-auto">
             <h1 className="text-5xl font-bold mb-12 text-center">Residential Complex, Bangalore</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-              <div className="aspect-[4/3] relative">
-                <Image 
-                  src="/fourth.jpg" 
-                  alt="Residential Complex Project" 
-                  fill 
-                  className="object-cover rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300" 
-                />
-              </div>
+
+              
+            <div className="w-full h-[500px] relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
+  <Image
+    src="/fourth.jpg"
+    alt="Residential Complex Project"
+    fill
+    className="object-cover"
+  />
+</div>
+
               <div className="space-y-8">
                 <div>
                   <h2 className="text-3xl font-semibold mb-4">Project Overview</h2>

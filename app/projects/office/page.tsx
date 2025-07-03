@@ -9,12 +9,12 @@ export default function OfficeProjectPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h1 className="text-5xl font-bold mb-12 text-center">Corporate Office, Mumbai</h1>
+            <h1 className="text-5xl font-bold mb-12 text-center">Tower from street</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
               <div className="aspect-[4/3] relative">
                 <Image 
-                  src="/third.jpg" 
-                  alt="Corporate Office Project" 
+                  src="/Tower from street.jpg" 
+                  alt="Tower from street" 
                   fill 
                   className="object-cover rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300" 
                 />

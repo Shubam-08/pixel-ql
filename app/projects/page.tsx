@@ -13,8 +13,8 @@ export default function ProjectsPage() {
     },
     {
       id: 2,
-      title: "Corporate Office, Mumbai",
-      image: "/third.jpg",
+      title: "Tower from street",
+      image: "/tower from street.jpg",
       description: "Intelligent energy management system with smart lighting and HVAC controls",
       link: "/projects/office"
     },
@@ -54,7 +54,7 @@ export default function ProjectsPage() {
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
                   <p className="text-gray-400 mb-4">{project.description}</p>
-                  <Link href={project.link} className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors">
+                  <Link href={project.link}  className="hidden md:block ml-4 text-shadow-md font-semibold text-blue-400 animate-pulse tracking-wide bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                     Learn More →
                   </Link>
                 </div>
