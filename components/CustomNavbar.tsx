@@ -18,18 +18,21 @@ export function CustomNavbar() {
   ];
 
   return (
-    <nav className="w-full bg-black shadow-md sticky top-0 z-50">
+    <nav className="w-full bg-black shadow-md z-50">
       <div className="max-w-[1600px] mx-auto px-0 md:px-0 flex justify-between items-center min-h-[120px] py-0">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <Image
-            src="/qrpixel_logo1.jpg"
-            alt="QRPixels Logo"
-            width={160}
-            height={80}
-            className="h-[70px] w-auto object-contain"
-            priority
-          />
+        <Link href="/" className="flex items-center">
+  <Image
+    src="/final_QR_PIXEL_logo.png"
+    alt="QRPixels Logo"
+    width={240}
+    height={100}
+    className="h-[100px] w-auto object-contain drop-shadow-[0_4px_12px_rgba(0,200,255,0.15)]"
+    priority
+  />
+</Link>
+
         </Link>
 
         {/* Nav Links (same as your original) */}
@@ -56,7 +59,7 @@ export function CustomNavbar() {
 
         {/* Glowing Call-to-Action Text on the Right */}
         <div className="hidden md:block ml-4 text-shadow-md font-semibold text-blue-400 animate-pulse tracking-wide bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-          Get a Free Design Consultation
+        Let’s Design Something Brilliant
         </div>
 
         {/* Mobile Toggle */}
