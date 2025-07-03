@@ -42,7 +42,7 @@ export default function Home() {
             <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-300">
               <div className="relative h-64">
                 <Image
-                  src="/tower from street.jpg"
+                  src="/Sobha Towers.jpg"
                   alt="Corporate Office Project"
                   fill
                   className="object-cover"

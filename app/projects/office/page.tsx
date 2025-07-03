@@ -13,7 +13,7 @@ export default function OfficeProjectPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
               <div className="aspect-[4/3] relative">
                 <Image 
-                  src="/Tower from street.jpg" 
+                  src="/Sobha Towers.jpg" 
                   alt="Tower from street" 
                   fill 
                   className="object-cover rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300" 
