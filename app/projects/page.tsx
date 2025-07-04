@@ -55,7 +55,7 @@ export default function ProjectsPage() {
                   <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
                   <p className="text-gray-400 mb-4">{project.description}</p>
                   <Link href={project.link}  className="hidden md:block ml-4 text-shadow-md font-semibold text-blue-400 animate-pulse tracking-wide bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                    Learn More →
+                    Read More →
                   </Link>
                 </div>
               </div>

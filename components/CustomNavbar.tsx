@@ -11,9 +11,10 @@ export function CustomNavbar() {
 
   const links = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
+    { name: "About US", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Projects", href: "/projects" },
+    { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
   ];
 

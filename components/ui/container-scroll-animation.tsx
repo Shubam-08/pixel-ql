@@ -37,11 +37,11 @@ export const ContainerScroll = ({
 
   return (
     <div
-      className="h-[60rem] md:h-[80rem] flex items-center justify-center relative px-2 md:px-8 pt-20 md:pt-24"
+      className="min-h-[70vh] h-auto md:h-[80rem] flex items-center justify-center relative px-2 sm:px-4 md:px-8 pt-14 sm:pt-16 md:pt-24"
       ref={containerRef}
     >
       <div
-        className="py-10 md:py-32 w-full relative z-10"
+        className="py-6 sm:py-10 md:py-32 w-full relative z-10"
         style={{ perspective: "1000px" }}
       >
         <Header translate={translate} titleComponent={titleComponent} />
@@ -57,7 +57,7 @@ export const Header = ({ translate, titleComponent }: { translate: MotionValue<n
   return (
     <motion.div
       style={{ translateY: translate }}
-      className="max-w-screen-xl mx-auto text-center px-4"
+      className="max-w-full sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-xl mx-auto text-center px-2 sm:px-4"
     >
       {titleComponent}
     </motion.div>
@@ -82,9 +82,9 @@ export const Card = ({
         boxShadow:
           "0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003",
       }}
-      className="w-full max-w-screen-xl -mt-12 mx-auto h-[40rem] md:h-[70rem] border-4 border-[#6C6C6C] p-2 md:p-6 bg-[#222222] rounded-[30px] shadow-2xl"
+      className="w-full max-w-full sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-xl -mt-8 sm:-mt-12 mx-auto min-h-[50vw] h-auto md:h-[70rem] border-2 sm:border-4 border-[#6C6C6C] p-1 sm:p-2 md:p-6 bg-[#222222] rounded-2xl sm:rounded-[30px] shadow-xl sm:shadow-2xl"
     >
-      <div className="h-full w-full overflow-hidden rounded-2xl bg-black dark:bg-zinc-900 md:p-4">
+      <div className="min-h-[40vw] h-full w-full overflow-hidden rounded-xl sm:rounded-2xl bg-black dark:bg-zinc-900 p-2 sm:p-4 max-h-[60vh] overflow-y-auto md:max-h-full md:overflow-y-visible">
         {children}
       </div>
     </motion.div>
