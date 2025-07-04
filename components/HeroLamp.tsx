@@ -2,48 +2,41 @@
 
 import { motion } from "framer-motion";
 import React from "react";
+import { playfair } from "@/app/fonts";
+// path to your font setup
 
 export function HeroLamp() {
   return (
     <section
-      className="relative flex min-h-screen items-center justify-center bg-cover bg-center pb-0"
+      className="relative flex min-h-screen items-center justify-center bg-cover bg-center"
       style={{ backgroundImage: "url('/first.jpg')" }}
     >
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-black/60 z-10"></div>
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/60 z-10" />
 
-      {/* Hero content */}
+      {/* Hero Content */}
       <div className="relative z-20 flex flex-col items-center text-center px-4">
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
-          className="text-white text-4xl md:text-6xl font-bold"
+          className={`text-white text-4xl md:text-6xl font-medium tracking-tight ${playfair.className}`}
         >
-            Empowering Your Vision with{" "}
-          <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-pulse">
+          Empowering Your Vision with{" "}
+          <span className="bg-gradient-to-r from-blue-400 via-yellow-300 to-cyan-400 bg-clip-text text-transparent animate-pulse">
             QR PIXEL
           </span>
         </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 70 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5, duration: 0.8, ease: "easeInOut" }}
-          className="text-white/90 mt-4 max-w-xl p-3.5"
-        >
-          Modernize your space with advanced lighting, sensors, and automation technology — all tailored to your needs.
-        </motion.p>
+       
 
-        {/* 💡 New replacement for button */}
         <motion.p
           initial={{ opacity: 0, y: 90 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.7, duration: 0.8, ease: "easeInOut" }}
-          className="text-base text-gray-300 mt-4"
+          className="text-sm text-gray-300 mt-4"
         >
           Discover intelligent lighting and automation for every space.
         </motion.p>
