@@ -96,7 +96,7 @@ export default function FloatingMenu() {
               animate={{ scale: 1.08, y: 0, opacity: 1 }}
               exit={{ scale: 0.92, y: 60, opacity: 0 }}
               transition={{ type: "spring", stiffness: 220, damping: 22 }}
-              className="flex flex-col gap-8 bg-gradient-to-br from-gray-900/90 to-gray-800/90 rounded-3xl p-8 md:p-16 shadow-2xl border-2 border-blue-400/30 min-w-[320px] md:min-w-[420px] max-w-[96vw]"
+              className="flex flex-col gap-8 bg-gradient-to-br from-[#]/80 via-[#]/70 to-[#]/60 rounded-3xl p-8 md:p-16 shadow-2xl border-2 border-yellow-400/40 backdrop-blur-xl min-w-[320px] md:min-w-[420px] max-w-[96vw]"
             >
               {navLinks.map(({ label, href, icon: Icon }) => (
                 <motion.li
@@ -107,12 +107,12 @@ export default function FloatingMenu() {
                   className="rounded-xl overflow-hidden group"
                 >
                   <Link
-                    href={href}
-                    className="flex items-center gap-4 px-6 py-4 md:py-5 text-2xl md:text-3xl font-bold text-white hover:text-cyan-300 transition-colors bg-gradient-to-r from-blue-900/40 via-gray-900/70 to-pink-900/40 group-hover:bg-gray-800/80 group-hover:shadow-lg neon-border focus:outline-none focus:ring-2 focus:ring-blue-400"
-                    onClick={() => setOpen(false)}
-                  >
-                    <Icon className="w-8 h-8 text-cyan-400 group-hover:text-pink-400 transition-colors drop-shadow-[0_0_8px_#00eaff77]" />
-                    <span className="drop-shadow-[0_2px_8px_#00eaff77]">{label}</span>
+  href={href}
+  className="flex items-center gap-4 px-6 py-4 md:py-5 text-2xl md:text-3xl font-bold text-gray-900 hover:text-yellow-700 transition-colors bg-[#f5e9da]/30 group-hover:bg-[#f5f5dc]/60 group-hover:shadow-yellow-400/40 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+  onClick={() => setOpen(false)}
+>
+                    <Icon className="w-8 h-8 text-yellow-400 group-hover:text-yellow-500 transition-colors drop-shadow-[0_0_8px_#ffe06699]" />
+                    <span>{label}</span>
                   </Link>
                 </motion.li>
               ))}

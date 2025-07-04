@@ -26,101 +26,97 @@ export default function Home() {
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Project 1 */}
-            <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-300">
-              <div className="relative aspect-[16/9] md:aspect-[2/1] w-full h-64 md:h-80 lg:h-96 overflow-hidden">
+             <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-300">
+              <div className="relative aspect-[16/9] md:aspect-[2/1] w-full h-80 md:h-96 overflow-hidden">
                 <Image
                   src="/second.jpg"
                   alt="29k Hotel Project"
                   fill
                   className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105 group-hover:brightness-110"
                 />
-              </div>
-              <div className="relative p-6 flex flex-col justify-end min-h-[80px]">
-                <h3 className="text-2xl font-bold text-blue-300 mb-2 drop-shadow-md">29k Hotel, Pune</h3>
-                {/* View Details button overlay */}
-                <a href="#" className="absolute right-6 bottom-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 bg-gradient-to-r from-blue-400 to-cyan-400 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg focus:outline-none focus:ring-2 focus:ring-cyan-400">View Details</a>
+                <div className="absolute bottom-0 left-0 w-full px-6 py-5 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex items-end justify-between">
+                  <h3 className="text-lg md:text-xl font-semibold text-white/90">29k Hotel, Pune</h3>
+                  
+                </div>
               </div>
             </div>
 
             {/* Project 2 */}
-            <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-300">
-              <div className="relative aspect-[16/9] md:aspect-[2/1] w-full h-64 md:h-80 lg:h-96 overflow-hidden">
+             <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-300">
+              <div className="relative aspect-[16/9] md:aspect-[2/1] w-full h-80 md:h-96 overflow-hidden">
                 <Image
                   src="/Sobha Towers.jpg"
                   alt="Corporate Office Project"
                   fill
                   className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105 group-hover:brightness-110"
                 />
-              </div>
-              <div className="relative p-6 flex flex-col justify-end min-h-[80px]">
-                <h3 className="text-2xl font-bold text-blue-300 mb-2 drop-shadow-md">Tower from street</h3>
-                <a href="#" className="absolute right-6 bottom-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 bg-gradient-to-r from-blue-400 to-cyan-400 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg focus:outline-none focus:ring-2 focus:ring-cyan-400">View Details</a>
+                <div className="absolute bottom-0 left-0 w-full px-6 py-5 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex items-end justify-between">
+                  <h3 className="text-lg md:text-xl font-semibold text-white/90">Tower from street</h3>
+        
+                </div>
               </div>
             </div>
 
             {/* Project 3 */}
-            <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-300">
-              <div className="relative aspect-[16/9] md:aspect-[2/1] w-full h-64 md:h-80 lg:h-96 overflow-hidden">
+             <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-300">
+              <div className="relative aspect-[16/9] md:aspect-[2/1] w-full h-80 md:h-96 overflow-hidden">
                 <Image
                   src="/fourth.jpg"
                   alt="Retail Mall Project"
                   fill
                   className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105 group-hover:brightness-110"
                 />
-              </div>
-              <div className="relative p-6 flex flex-col justify-end min-h-[80px]">
-                <h3 className="text-2xl font-bold text-blue-300 mb-2 drop-shadow-md">Retail Mall</h3>
-                <a href="#" className="absolute right-6 bottom-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 bg-gradient-to-r from-blue-400 to-cyan-400 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg focus:outline-none focus:ring-2 focus:ring-cyan-400">View Details</a>
+                <div className="absolute bottom-0 left-0 w-full px-6 py-5 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex items-end justify-between">
+                  <h3 className="text-lg md:text-xl font-semibold text-white/90">Retail Mall</h3>
+                  
+                </div>
               </div>
             </div>
 
-
-             {/* Project 5 */}
+            {/* Project 5 */}
             <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-300">
-              <div className="relative aspect-[4/3] w-full overflow-hidden">
+              <div className="relative aspect-[16/9] md:aspect-[2/1] w-full h-80 md:h-96 overflow-hidden">
                 <Image
                   src="/project5.png"
-                  alt="Retail Mall Project"
+                  alt="Italian heritage"
                   fill
-                  className="object-cover"
+                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105 group-hover:brightness-110"
                 />
-              </div>
-              <div className="relative p-6 flex flex-col justify-end min-h-[120px]">
-                <h3 className="text-2xl font-bold text-blue-300 mb-2 drop-shadow-md">Italian heritage</h3>
-                <a href="#" className="absolute right-6 bottom-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 bg-gradient-to-r from-blue-400 to-cyan-400 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg focus:outline-none focus:ring-2 focus:ring-cyan-400">View Details</a>
+                <div className="absolute bottom-0 left-0 w-full px-6 py-5 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex items-end justify-between">
+                  <h3 className="text-lg md:text-xl font-semibold text-white/90">Italian heritage</h3>
+                
+                </div>
               </div>
             </div>
 
-             
-             {/* Project 6 */}
+            {/* Project 6 */}
             <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-300">
-              <div className="relative aspect-[4/3] w-full overflow-hidden">
+              <div className="relative aspect-[16/9] md:aspect-[2/1] w-full h-80 md:h-96 overflow-hidden">
                 <Image
                   src="/project6.png"
                   alt="Gujarat’s Architectural Jewels"
                   fill
-                  className="object-cover"
+                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105 group-hover:brightness-110"
                 />
-              </div>
-              <div className="relative p-6 flex flex-col justify-end min-h-[120px]">
-                <h3 className="text-2xl font-bold text-blue-300 mb-2 drop-shadow-md">Gujarat’s Architectural Jewels</h3>
-                <a href="#" className="absolute right-6 bottom-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 bg-gradient-to-r from-blue-400 to-cyan-400 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg focus:outline-none focus:ring-2 focus:ring-cyan-400">View Details</a>
+                <div className="absolute bottom-0 left-0 w-full px-6 py-5 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex items-end justify-between">
+                  <h3 className="text-lg md:text-xl font-semibold text-white/90">Gujarat’s Architectural Jewels</h3>
+        
+                </div>
               </div>
             </div>
 
             {/* Project 4 */}
             <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-300">
-              <div className="relative aspect-[4/3] w-full overflow-hidden">
+              <div className="relative aspect-[16/9] md:aspect-[2/1] w-full h-80 md:h-96 overflow-hidden">
                 <Image
                   src="/oheh.png"
-                  alt="Residential Project"
+                  alt="Oheh Complex"
                   fill
-                  className="object-cover"
+                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105 group-hover:brightness-110"
                 />
-              </div>
-              <div className="relative p-6 flex flex-col justify-end min-h-[120px]">
-                <h3 className="text-2xl font-bold text-blue-300 mb-2 drop-shadow-md">Oheh Complex</h3>
-                <a href="#" className="absolute right-6 bottom-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 bg-gradient-to-r from-blue-400 to-cyan-400 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg focus:outline-none focus:ring-2 focus:ring-cyan-400">View Details</a>
+                <div className="absolute bottom-0 left-0 w-full px-6 py-5 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex items-end justify-between">
+                  <h3 className="text-lg md:text-xl font-semibold text-white/90">Oheh Complex</h3>
+                </div>
               </div>
             </div>
           </div>
