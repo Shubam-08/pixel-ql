@@ -25,21 +25,7 @@ export default function Home() {
           }
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Project 1 */}
-             <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-300">
-              <div className="relative aspect-[16/9] md:aspect-[2/1] w-full h-80 md:h-96 overflow-hidden">
-                <Image
-                  src="/second.jpg"
-                  alt="29k Hotel Project"
-                  fill
-                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105 group-hover:brightness-110"
-                />
-                <div className="absolute bottom-0 left-0 w-full px-6 py-5 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex items-end justify-between">
-                  <h3 className="text-lg md:text-xl font-semibold text-white/90">29k Hotel, Pune</h3>
-                  
-                </div>
-              </div>
-            </div>
+            
 
             {/* Project 2 */}
              <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-300">
@@ -67,7 +53,7 @@ export default function Home() {
                   className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105 group-hover:brightness-110"
                 />
                 <div className="absolute bottom-0 left-0 w-full px-6 py-5 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex items-end justify-between">
-                  <h3 className="text-lg md:text-xl font-semibold text-white/90">Retail Mall</h3>
+                  <h3 className="text-lg md:text-xl font-semibold text-white/90">Residential Area</h3>
                   
                 </div>
               </div>
@@ -104,21 +90,40 @@ export default function Home() {
                 </div>
               </div>
             </div>
+              
 
-            {/* Project 4 */}
-            <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-300">
+   {/* Project 3 */}
+             <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-300">
               <div className="relative aspect-[16/9] md:aspect-[2/1] w-full h-80 md:h-96 overflow-hidden">
                 <Image
-                  src="/oheh.png"
-                  alt="Oheh Complex"
+                  src="/fashionshowroom.png"
+                  alt="Retail Mall Project"
                   fill
                   className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105 group-hover:brightness-110"
                 />
                 <div className="absolute bottom-0 left-0 w-full px-6 py-5 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex items-end justify-between">
-                  <h3 className="text-lg md:text-xl font-semibold text-white/90">Oheh Complex</h3>
+                  <h3 className="text-lg md:text-xl font-semibold text-white/90">Fashion Showroom</h3>
+                  
                 </div>
               </div>
             </div>
+
+                   {/* Project 3 */}
+             <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-300">
+              <div className="relative aspect-[16/9] md:aspect-[2/1] w-full h-80 md:h-96 overflow-hidden">
+                <Image
+                  src="/comercialshowroom.png"
+                  alt="Retail Mall Project"
+                  fill
+                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105 group-hover:brightness-110"
+                />
+                <div className="absolute bottom-0 left-0 w-full px-6 py-5 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex items-end justify-between">
+                  <h3 className="text-lg md:text-xl font-semibold text-white/90">Commercial Showroom</h3>
+                  
+                </div>
+              </div>
+            </div>
+            
           </div>
           <div className="text-center mt-12">
             <ScrollButton />

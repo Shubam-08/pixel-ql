@@ -42,45 +42,51 @@ export default function FloatingMenu() {
         style={{ pointerEvents: 'none' }}
       >
         <Link href="/" className="pointer-events-auto" tabIndex={-1} aria-label="Go to home">
-          <div
-            className="rounded-2xl border-4 border-blue-400/40 bg-white/10 shadow-xl group transition-all hover:shadow-blue-400/50"
-          >
-            <Image
-              src="/final_QR_PIXEL_logo.png"
-              alt="QR Pixel Logo"
-              width={90}
-              height={90}
-              className="w-[60px] md:w-[90px] h-auto select-none group-hover:scale-105 transition-transform"
-              style={{ filter: "drop-shadow(0 0 16px #00eaffbb)" }}
-              priority
-            />
-          </div>
+          <div className="flex items-center justify-center">
+  <span className="absolute w-[68px] md:w-[102px] h-[68px] md:h-[102px] rounded-full bg-white/30 backdrop-blur-sm shadow-lg border-8 border-black" />
+  <Image
+    src="/newlogo1.png"
+    alt="QR Pixel Logo"
+    width={90}
+    height={90}
+    className="relative w-[60px] md:w-[90px] h-[60px] md:h-[90px] rounded-full select-none group-hover:scale-110 transition-transform shadow-md border-8 border-black"
+    priority
+  />
+</div>
         </Link>
       </motion.div>
 
 
       {/* Menu Button */}
-      <button
-        aria-label={open ? "Close menu" : "Open menu"}
-        onClick={() => setOpen((v) => !v)}
-        className="fixed md:top-8 md:right-8 md:left-auto md:translate-x-0 top-24 left-1/2 -translate-x-1/2 z-50 bg-black text-white p-4 rounded-full shadow-lg backdrop-blur-lg hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-400 transition-all"
-        style={{ boxShadow: open ? "0 0 32px #0ff8" : undefined }}
+      <motion.div
+        initial={{ opacity: 1 }}
+        animate={{ opacity: logoVisible ? 1 : 0 }}
+        transition={{ duration: 0.5 }}
+        style={{ pointerEvents: logoVisible ? 'auto' : 'none' }}
+        className="fixed top-4 right-4 md:top-8 md:right-8 z-50"
       >
-        {open ? (
-          // ❌ White Cross Icon
-          <div className="w-6 h-6 relative">
-            <span className="absolute top-1/2 left-0 w-full h-1 bg-white transform rotate-45"></span>
-            <span className="absolute top-1/2 left-0 w-full h-1 bg-white transform -rotate-45"></span>
-          </div>
-        ) : (
-          // 🍔 Hamburger Icon
-          <div className="flex flex-col justify-between w-6 h-5">
-            <span className="w-full h-[2px] bg-white rounded" />
-            <span className="w-full h-[2px] bg-white rounded" />
-            <span className="w-full h-[2px] bg-white rounded" />
-          </div>
-        )}
-      </button>
+        <button
+          aria-label={open ? "Close menu" : "Open menu"}
+          onClick={() => setOpen((v) => !v)}
+          className="bg-black text-white p-4 rounded-full shadow-lg backdrop-blur-lg hover:scale-110 focus:outline-none focus:ring-4 focus:ring-yellow-400 transition-all"
+          style={{ boxShadow: open ? "0 0 32px #0ff8" : undefined }}
+        >
+          {open ? (
+            // ❌ White Cross Icon
+            <div className="w-6 h-6 relative">
+              <span className="absolute top-1/2 left-0 w-full h-1 bg-white transform rotate-45"></span>
+              <span className="absolute top-1/2 left-0 w-full h-1 bg-white transform -rotate-45"></span>
+            </div>
+          ) : (
+            // 🍔 Hamburger Icon
+            <div className="flex flex-col justify-between w-6 h-5">
+              <span className="w-full h-[2px] bg-white rounded" />
+              <span className="w-full h-[2px] bg-white rounded" />
+              <span className="w-full h-[2px] bg-white rounded" />
+            </div>
+          )}
+        </button>
+      </motion.div>
 
       {/* Animated Menu Overlay */}
       <AnimatePresence>
