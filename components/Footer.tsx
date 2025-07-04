@@ -36,7 +36,7 @@ export default function Footer() {
 
           {/* YouTube */}
           <a
-            href="https://www.youtube.com/@yourchannel"
+            href="https://youtube.com/@qr-pixel8275?si=tul4YLOhjjzczHG6"
             target="_blank"
             rel="noopener noreferrer"
             className="text-red-500 hover:text-red-400 transition"
@@ -46,7 +46,7 @@ export default function Footer() {
 
           {/* Facebook */}
           <a
-            href="https://www.facebook.com/yourpage"
+            href="https://www.facebook.com/share/1AdHt798nj/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:text-blue-500 transition"
@@ -56,7 +56,7 @@ export default function Footer() {
 
           {/* Twitter */}
           <a
-            href="https://twitter.com/yourprofile"
+            href="https://x.com/QR_Pixel_LED?t=DtcSiKFmON90lp0T0_dXYw&s=09"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sky-400 hover:text-sky-300 transition"
