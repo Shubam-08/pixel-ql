@@ -3,27 +3,30 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function RetailProjectPage() {
+export default function ResidentialProjectPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-black to-gray-900 text-white">
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h1 className="text-5xl font-bold mb-12 text-center">Retail Mall, Chennai</h1>
+            <h1 className="text-5xl font-bold mb-12 text-center">Residential Building, Bangalore</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-              <div className="aspect-[4/3] relative">
-                <Image 
-                  src="/fifth.jpg" 
-                  alt="Retail Mall Project" 
-                  fill 
-                  className="object-cover rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300" 
-                />
-              </div>
+
+              
+            <div className="w-full h-[500px] relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
+  <Image
+    src="/building.jpg"
+    alt="Residential Complex Project"
+    fill
+    className="object-cover"
+  />
+</div>
+
               <div className="space-y-8">
                 <div>
                   <h2 className="text-3xl font-semibold mb-4">Project Overview</h2>
                   <p className="text-gray-400 leading-relaxed">
-                    Our comprehensive lighting automation solution for a major retail mall in Chennai. This project showcases our ability to create dynamic and energy-efficient lighting environments that enhance customer experience and operational efficiency.
+                    Our smart home automation solution implemented in a modern residential complex in Bangalore. This project showcases how we bring convenience and energy efficiency to everyday living spaces.
                   </p>
                 </div>
                 <div>
@@ -33,31 +36,31 @@ export default function RetailProjectPage() {
                       <svg className="w-6 h-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
-                      <span>Dynamic lighting zones for different store areas</span>
+                      <span>Smart lighting control for individual apartments</span>
                     </li>
                     <li className="flex items-start">
                       <svg className="w-6 h-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
-                      <span>Time-based lighting schedules</span>
+                      <span>Energy-efficient lighting for common areas</span>
                     </li>
                     <li className="flex items-start">
                       <svg className="w-6 h-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
-                      <span>Energy-efficient LED lighting</span>
+                      <span>Security system integration</span>
                     </li>
                     <li className="flex items-start">
                       <svg className="w-6 h-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
-                      <span>Centralized control system</span>
+                      <span>Centralized maintenance monitoring</span>
                     </li>
                     <li className="flex items-start">
                       <svg className="w-6 h-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
-                      <span>Real-time energy monitoring</span>
+                      <span>Mobile app control for residents</span>
                     </li>
                   </ul>
                 </div>
@@ -71,21 +74,21 @@ export default function RetailProjectPage() {
                   <div className="space-y-4">
                     <div className="flex items-start">
                       <span className="font-semibold">Project Duration:</span>
-                      <span className="ml-4">5 months</span>
+                      <span className="ml-4">3 months</span>
                     </div>
                     <div className="flex items-start">
                       <span className="font-semibold">Location:</span>
-                      <span className="ml-4">Chennai, India</span>
+                      <span className="ml-4">Bangalore, India</span>
                     </div>
                   </div>
                   <div className="space-y-4">
                     <div className="flex items-start">
                       <span className="font-semibold">Lighting Points:</span>
-                      <span className="ml-4">1,500+</span>
+                      <span className="ml-4">500+</span>
                     </div>
                     <div className="flex items-start">
                       <span className="font-semibold">Energy Savings:</span>
-                      <span className="ml-4">45% reduction</span>
+                      <span className="ml-4">30% reduction</span>
                     </div>
                   </div>
                 </div>
@@ -97,31 +100,31 @@ export default function RetailProjectPage() {
                     <svg className="w-6 h-6 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Enhanced customer experience through dynamic lighting</span>
+                    <span>Enhanced resident convenience</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-6 h-6 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Significant energy cost reduction</span>
+                    <span>Reduced electricity bills</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-6 h-6 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Improved store visibility and ambiance</span>
+                    <span>Improved security</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-6 h-6 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Easy maintenance and monitoring</span>
+                    <span>Modern living experience</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-6 h-6 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Modern retail environment</span>
+                    <span>Easy maintenance</span>
                   </li>
                 </ul>
               </div>

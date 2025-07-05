@@ -73,14 +73,14 @@ export default function AboutPage() {
           />
           <h2 className="text-2xl font-semibold mb-6 relative z-10 bg-gradient-to-r from-blue-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_2px_16px_#00eaff44]">Our Journey</h2>
           <ul className="text-gray-400 space-y-4 relative z-10">
-            <motion.li initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.1, duration: 0.5 }} viewport={{ once: true }}><span className="text-blue-400 font-bold">2018</span> — Qlite was founded with a passion for design and lighting.</motion.li>
+            <motion.li initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.1, duration: 0.5 }} viewport={{ once: true }}><span className="text-blue-400 font-bold">2018</span> — QR Pixel was founded with a passion for design and lighting.</motion.li>
             <motion.li initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.2, duration: 0.5 }} viewport={{ once: true }}><span className="text-blue-400 font-bold">2020</span> — Expanded to commercial and hospitality design across India.</motion.li>
             <motion.li initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.5 }} viewport={{ once: true }}><span className="text-blue-400 font-bold">2022</span> — Entered the Middle East market and launched LED integration solutions.</motion.li>
             <motion.li initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.4, duration: 0.5 }} viewport={{ once: true }}><span className="text-blue-400 font-bold">2024</span> — Recognized as a leader in GRMS & façade design innovation.</motion.li>
           </ul>
         </motion.div>
 
-
+           
         
           {/* Stats */}
           <motion.div

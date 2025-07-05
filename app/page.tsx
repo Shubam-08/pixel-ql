@@ -37,7 +37,7 @@ export default function Home() {
                   className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105 group-hover:brightness-110"
                 />
                 <div className="absolute bottom-0 left-0 w-full px-6 py-5 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex items-end justify-between">
-                  <h3 className="text-lg md:text-xl font-semibold text-white/90">Tower from street</h3>
+                  <h3 className="text-lg md:text-xl font-semibold text-white/90">Sobha Towers</h3>
         
                 </div>
               </div>

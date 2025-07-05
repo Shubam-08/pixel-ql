@@ -6,31 +6,53 @@ export default function ProjectsPage() {
   const projects = [
     {
       id: 1,
-      title: "29k Hotel, Pune",
-      image: "/second.jpg",
-      description: "Advanced lighting control and automation system implemented in a luxury hotel setting",
-      link: "/projects/hotel"
-    },
-    {
-      id: 2,
-      title: "Tower from street",
+      title: "Sobha Towers",
       image: "/Sobha Towers.jpg",
       description: "Intelligent energy management system with smart lighting and HVAC controls",
-      link: "/projects/office"
+      link: "/projects/sobhatowers"
     },
-    {
-      id: 3,
+ {
+      id: 2,
       title: "Residential Complex, Bangalore",
       image: "/fourth.jpg",
       description: "Smart home automation with integrated lighting and security systems",
-      link: "/projects/residential"
+      link: "/projects/residentialcomplex"
+    },
+     {
+      id: 3,
+      title: "Italian Heritage",
+      image: "/project5.png",
+      description: "Smart home automation with integrated lighting and security systems",
+      link: "/projects/italianheritage"
     },
     {
+      id: 3,
+      title: "Gijrat Architectural Jewels",
+      image: "/project6.png",
+      description: "Advanced lighting control and automation system implemented in a luxury hotel setting",
+      link: "/projects/gujratjewels"
+    },
+    
+    {
       id: 4,
-      title: "Retail Mall, Chennai",
-      image: "/fifth.jpg",
+      title: "Fashion Showroom, Bangalore",
+      image: "/fashionshowroom.png",
+      description: "Intelligent energy management system with smart lighting and HVAC controls",
+      link: "/projects/fashionshowroom"
+    },
+    {
+      id: 5,
+      title: "Commercial Showroom, Bangalore",
+      image: "/comercialshowroom.png",
+      description: "Smart home automation with integrated lighting and security systems",
+      link: "/projects/comercialshowroom"
+    },
+    {
+      id: 6,
+      title: "Residential Building, Chennai",
+      image: "/building.jpg",
       description: "Energy-efficient lighting and automation solutions for large retail spaces",
-      link: "/projects/retail"
+      link: "/projects/residentialbuilding"
     }
   ];
 

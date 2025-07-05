@@ -3,18 +3,18 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function OfficeProjectPage() {
+export default function HotelProjectPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-black to-gray-900 text-white">
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h1 className="text-5xl font-bold mb-12 text-center">Tower from street</h1>
+            <h1 className="text-5xl font-bold mb-12 text-center">Sobha Towers</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
               <div className="aspect-[4/3] relative">
                 <Image 
                   src="/Sobha Towers.jpg" 
-                  alt="Tower from street" 
+                  alt="29k Hotel Project" 
                   fill 
                   className="object-cover rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300" 
                 />
@@ -23,7 +23,7 @@ export default function OfficeProjectPage() {
                 <div>
                   <h2 className="text-3xl font-semibold mb-4">Project Overview</h2>
                   <p className="text-gray-400 leading-relaxed">
-                    Our comprehensive automation solution for a leading corporate office in Mumbai. This project demonstrates our ability to integrate multiple building systems into a unified, energy-efficient solution that enhances workplace productivity and comfort.
+                    The 29k Hotel project represents a comprehensive implementation of our smart lighting and automation solutions in a luxury hotel environment. The project showcases our ability to integrate advanced lighting control systems with energy management and guest experience enhancement features.
                   </p>
                 </div>
                 <div>
@@ -33,31 +33,31 @@ export default function OfficeProjectPage() {
                       <svg className="w-6 h-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
-                      <span>Smart lighting zones for different work areas</span>
+                      <span>Room-specific lighting scenes for different times of day</span>
                     </li>
                     <li className="flex items-start">
                       <svg className="w-6 h-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
-                      <span>Occupancy-based energy optimization</span>
+                      <span>Automated energy optimization based on occupancy</span>
                     </li>
                     <li className="flex items-start">
                       <svg className="w-6 h-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
-                      <span>Integrated HVAC control system</span>
+                      <span>Guest-friendly lighting controls via mobile app</span>
                     </li>
                     <li className="flex items-start">
                       <svg className="w-6 h-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
-                      <span>Conference room automation</span>
+                      <span>Mood lighting for various hotel areas</span>
                     </li>
                     <li className="flex items-start">
                       <svg className="w-6 h-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
-                      <span>Centralized building management system</span>
+                      <span>Integration with HVAC systems for energy savings</span>
                     </li>
                   </ul>
                 </div>
@@ -71,21 +71,21 @@ export default function OfficeProjectPage() {
                   <div className="space-y-4">
                     <div className="flex items-start">
                       <span className="font-semibold">Project Duration:</span>
-                      <span className="ml-4">4 months</span>
+                      <span className="ml-4">6 months</span>
                     </div>
                     <div className="flex items-start">
                       <span className="font-semibold">Location:</span>
-                      <span className="ml-4">Mumbai, India</span>
+                      <span className="ml-4">Pune, India</span>
                     </div>
                   </div>
                   <div className="space-y-4">
                     <div className="flex items-start">
                       <span className="font-semibold">Lighting Points:</span>
-                      <span className="ml-4">800+</span>
+                      <span className="ml-4">1,200+</span>
                     </div>
                     <div className="flex items-start">
                       <span className="font-semibold">Energy Savings:</span>
-                      <span className="ml-4">40% reduction</span>
+                      <span className="ml-4">35% reduction</span>
                     </div>
                   </div>
                 </div>
@@ -97,31 +97,31 @@ export default function OfficeProjectPage() {
                     <svg className="w-6 h-6 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Improved employee productivity through better lighting</span>
+                    <span>Enhanced guest experience through intuitive lighting controls</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-6 h-6 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Reduced operational costs</span>
+                    <span>Significant energy cost reduction</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-6 h-6 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Enhanced workplace comfort</span>
+                    <span>Improved maintenance efficiency</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-6 h-6 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Modern, professional office environment</span>
+                    <span>Increased property value through modern amenities</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-6 h-6 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Easy maintenance and monitoring</span>
+                    <span>Compliance with energy efficiency standards</span>
                   </li>
                 </ul>
               </div>
