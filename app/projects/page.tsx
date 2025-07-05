@@ -27,7 +27,7 @@ export default function ProjectsPage() {
     },
     {
       id: 4,
-      title: "Gijrat Architectural Jewels",
+      title: "Gujrat Architectural Jewels",
       image: "/project6.png",
       description: "Advanced lighting control and automation system implemented in a luxury hotel setting",
       link: "/projects/gujratjewels"
