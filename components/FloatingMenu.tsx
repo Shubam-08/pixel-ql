@@ -95,14 +95,14 @@ export default function FloatingMenu() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 flex items-center justify-center bg-black/70 backdrop-blur-lg"
+            className="fixed inset-0 z-40 flex items-center justify-center bg-black/80 backdrop-blur-lg w-screen h-screen"
           >
             <motion.ul
               initial={{ scale: 0.92, y: 60, opacity: 0 }}
               animate={{ scale: 1.08, y: 0, opacity: 1 }}
               exit={{ scale: 0.92, y: 60, opacity: 0 }}
               transition={{ type: "spring", stiffness: 220, damping: 22 }}
-              className="flex flex-col gap-8 bg-gradient-to-br from-[#]/80 via-[#]/70 to-[#]/60 rounded-3xl p-8 md:p-16 shadow-2xl border-2 border-yellow-400/40 backdrop-blur-xl min-w-[320px] md:min-w-[420px] max-w-[96vw]"
+              className="flex flex-col gap-8 bg-gradient-to-br from-[#]/80 via-[#]/70 to-[#]/60 rounded-3xl p-4 sm:p-8 md:p-16 shadow-2xl border-2 border-yellow-400/40 backdrop-blur-xl w-full max-w-xs sm:max-w-md md:max-w-lg"
             >
               {navLinks.map(({ label, href, icon: Icon }) => (
                 <motion.li
