@@ -1,136 +1,148 @@
 "use client";
 
-import Image from "next/image";
+import ImageCarousel from "@/components/ImageCarousel";
 import Link from "next/link";
 
-export default function RetailProjectPage() {
+export default function ItalianHeritageProjectPage() {
   return (
     <main className="bg-black text-white">
       {/* Responsive Gallery Grid for Project Images */}
-      <div className="w-full pt-24 md:pt-32 px-2 md:px-0">
+      <div className="w-full pt-4 md:pt-12 px-2 md:px-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl group">
-            <Image
-              src="/project5.png"
-              alt="Retail Mall Project 1"
-              fill
-              className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
-              priority
+          {/* Left: Image Carousel */}
+          <div className="flex flex-col justify-center items-center">
+            <ImageCarousel
+              images={[
+                { src: "/project5.png", alt: "Italian Heritage Project 1" },
+                { src: "/italian1.png", alt: "Italian Heritage Project 2" },
+                { src: "/italian2.png", alt: "Italian Heritage Project 3" },
+              ]}
+              aspect="aspect-[4/3]"
             />
           </div>
-          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl group">
-            <Image
-              src="/italian1.png"
-              alt="Retail Mall Project 2"
-              fill
-              className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
-              priority
-            />
-          </div>
-          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl group md:col-span-2">
-            <Image
-              src="/italian2.png"
-              alt="Retail Mall Project 3"
-              fill
-              className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
-              priority
-            />
+
+          {/* Right: Project Details */}
+          <div className="flex flex-col justify-center space-y-10 px-6 md:px-12">
+            <h1 className="text-5xl font-bold text-center md:text-left">Italian Heritage, Italy</h1>
+
+            {/* Project Overview */}
+            <div>
+              <h2 className="text-3xl font-semibold mb-4">Project Overview</h2>
+              <p className="text-gray-400 leading-relaxed">
+                Our comprehensive lighting automation solution for a historic Italian structure. This project showcases our ability to create dynamic and energy-efficient lighting environments that enhance both aesthetic and functional appeal.
+              </p>
+            </div>
+
+            {/* Key Features */}
+            <div>
+              <h3 className="text-2xl font-semibold mb-4">Key Features</h3>
+              <ul className="list-disc list-inside text-gray-400 space-y-2">
+                {[
+                  "Dynamic lighting zones for architectural highlights",
+                  "Time-based lighting schedules",
+                  "Energy-efficient LED integration",
+                  "Centralized control system",
+                  "Real-time energy monitoring",
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start">
+                    <svg
+                      className="w-6 h-6 text-blue-600 mr-3"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Technical Specs */}
+            <div>
+              <h2 className="text-3xl font-semibold mb-4">Technical Specifications</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-gray-400">
+                <div className="space-y-2">
+                  <p>
+                    <span className="font-semibold">Project Duration:</span> 5 months
+                  </p>
+                  <p>
+                    <span className="font-semibold">Location:</span> Italy
+                  </p>
+                </div>
+                <div className="space-y-2">
+                  <p>
+                    <span className="font-semibold">Lighting Points:</span> 1,500+
+                  </p>
+                  <p>
+                    <span className="font-semibold">Energy Savings:</span> 45% reduction
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Benefits */}
+            <div>
+              <h2 className="text-3xl font-semibold mb-4">Benefits</h2>
+              <ul className="list-disc list-inside text-gray-400 space-y-2">
+                {[
+                  "Enhanced cultural ambiance through smart lighting",
+                  "Significant energy cost reduction",
+                  "Improved heritage visibility",
+                  "Easy maintenance and monitoring",
+                  "Preservation-friendly technology",
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start">
+                    <svg
+                      className="w-6 h-6 text-green-600 mr-3"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Back Button */}
+            <div className="text-center pt-8">
+              <Link
+                href="/projects"
+                className="inline-flex items-center bg-blue-600 text-white px-12 py-4 rounded-full hover:bg-blue-700 transition-colors text-lg font-semibold"
+              >
+                <svg
+                  className="w-6 h-6 mr-3"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                  />
+                </svg>
+                Back to Projects
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Text Section */}
-      <section className="relative py-20 px-6 md:px-12 overflow-hidden">
-  {/* Animated background blobs behind info section */}
-  <div className="absolute inset-0 -z-10">
-    <div className="absolute animate-blob1 left-1/4 top-1/4 w-72 h-72 bg-pink-400 opacity-40 rounded-full filter blur-3xl mix-blend-multiply" />
-    <div className="absolute animate-blob2 right-1/4 top-1/2 w-80 h-80 bg-blue-400 opacity-40 rounded-full filter blur-3xl mix-blend-multiply" />
-    <div className="absolute animate-blob3 left-1/2 bottom-0 w-60 h-60 bg-cyan-400 opacity-40 rounded-full filter blur-3xl mix-blend-multiply" />
-    <div className="absolute inset-0 bg-gradient-to-br from-pink-500 via-blue-500 to-cyan-400 opacity-60" />
-  </div>
-  <div className="relative max-w-5xl mx-auto space-y-16 bg-black/90 rounded-3xl shadow-2xl p-8 md:p-16 backdrop-blur-md">
-        
-          <h1 className="text-5xl font-bold text-center">Italian Heritage, Italy</h1>
-
-          {/* Project Overview */}
-          <div>
-            <h2 className="text-3xl font-semibold mb-4">Project Overview</h2>
-            <p className="text-gray-400 leading-relaxed">
-              Our comprehensive lighting automation solution for a major retail mall in Chennai. This project showcases our ability to create dynamic and energy-efficient lighting environments that enhance customer experience and operational efficiency.
-            </p>
-          </div>
-
-          {/* Key Features */}
-          <div>
-            <h3 className="text-2xl font-semibold mb-4">Key Features</h3>
-            <ul className="list-disc list-inside text-gray-400 space-y-2">
-              {[
-                "Dynamic lighting zones for different store areas",
-                "Time-based lighting schedules",
-                "Energy-efficient LED lighting",
-                "Centralized control system",
-                "Real-time energy monitoring"
-              ].map((item, idx) => (
-                <li key={idx} className="flex items-start">
-                  <svg className="w-6 h-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Technical Specs */}
-          <div>
-            <h2 className="text-3xl font-semibold mb-4">Technical Specifications</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-gray-400">
-              <div className="space-y-2">
-                <p><span className="font-semibold">Project Duration:</span> 5 months</p>
-                <p><span className="font-semibold">Location:</span> Chennai, India</p>
-              </div>
-              <div className="space-y-2">
-                <p><span className="font-semibold">Lighting Points:</span> 1,500+</p>
-                <p><span className="font-semibold">Energy Savings:</span> 45% reduction</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Benefits */}
-          <div>
-            <h2 className="text-3xl font-semibold mb-4">Benefits</h2>
-            <ul className="list-disc list-inside text-gray-400 space-y-2">
-              {[
-                "Enhanced customer experience through dynamic lighting",
-                "Significant energy cost reduction",
-                "Improved store visibility and ambiance",
-                "Easy maintenance and monitoring",
-                "Modern retail environment"
-              ].map((item, idx) => (
-                <li key={idx} className="flex items-start">
-                  <svg className="w-6 h-6 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Back Button */}
-          <div className="text-center pt-8">
-            <Link 
-              href="/projects" 
-              className="inline-flex items-center bg-blue-600 text-white px-12 py-4 rounded-full hover:bg-blue-700 transition-colors text-lg font-semibold"
-            >
-              <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-              </svg>
-              Back to Projects
-            </Link>
-          </div>
-        </div>
-      </section>
     </main>
   );
 }

@@ -43,13 +43,12 @@ export default function FloatingMenu() {
       >
         <Link href="/" className="pointer-events-auto" tabIndex={-1} aria-label="Go to home">
           <div className="flex items-center justify-center">
-  <span className="absolute w-16 h-16 rounded-full bg-white/30 backdrop-blur-sm shadow-md border-4 border-black" />
   <Image
-    src="/newlogo1.png"
+    src="/pixellogoo.png"
     alt="QR Pixel Logo"
     width={64}
     height={64}
-    className="relative w-16 h-16 rounded-full select-none group-hover:scale-110 transition-transform shadow border-4 border-black"
+    className="relative w-16 h-16 rounded-full select-none group-hover:scale-110 transition-transform shadow"
     priority
   />
 </div>

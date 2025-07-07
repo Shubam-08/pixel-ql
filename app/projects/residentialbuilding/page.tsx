@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import ImageCarousel from "@/components/ImageCarousel";
 import Link from "next/link";
 
 export default function ResidentialProjectPage() {
@@ -10,17 +10,22 @@ export default function ResidentialProjectPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h1 className="text-5xl font-bold mb-12 text-center">Residential Building, Bangalore</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Left: Image Carousel */}
+              <div className="flex flex-col justify-center items-center">
+                <ImageCarousel
+                  images={[
+                    { src: "/building.jpg", alt: "Residential Building Project" },
+                    { src: "/residentialb2.jpg", alt: "Residential Building 2" },
+                    { src: "/residentialb3.jpg", alt: "Residential Building 3" }
+                  ]}
+                  aspect="aspect-[4/3]"
+                />
+              </div>
+              {/* Right: Project Details */}
+              <div className="flex flex-col justify-center space-y-10">
               
-            <div className="w-full h-[500px] relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
-  <Image
-    src="/building.jpg"
-    alt="Residential Complex Project"
-    fill
-    className="object-cover"
-  />
-</div>
+            </div>
 
               <div className="space-y-8">
                 <div>
