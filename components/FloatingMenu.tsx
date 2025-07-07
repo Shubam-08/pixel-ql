@@ -38,18 +38,18 @@ export default function FloatingMenu() {
         initial={{ opacity: 1 }}
         animate={{ opacity: logoVisible ? 1 : 0 }}
         transition={{ duration: 0.5 }}
-        className="fixed top-8 left-8 z-50 flex flex-col items-start pointer-events-none"
+        className="fixed top-4 left-4 z-50 flex flex-col items-start pointer-events-none"
         style={{ pointerEvents: 'none' }}
       >
         <Link href="/" className="pointer-events-auto" tabIndex={-1} aria-label="Go to home">
           <div className="flex items-center justify-center">
-  <span className="absolute w-[68px] md:w-[102px] h-[68px] md:h-[102px] rounded-full bg-white/30 backdrop-blur-sm shadow-lg border-8 border-black" />
+  <span className="absolute w-16 h-16 rounded-full bg-white/30 backdrop-blur-sm shadow-md border-4 border-black" />
   <Image
     src="/newlogo1.png"
     alt="QR Pixel Logo"
-    width={90}
-    height={90}
-    className="relative w-[60px] md:w-[90px] h-[60px] md:h-[90px] rounded-full select-none group-hover:scale-110 transition-transform shadow-md border-8 border-black"
+    width={64}
+    height={64}
+    className="relative w-16 h-16 rounded-full select-none group-hover:scale-110 transition-transform shadow border-4 border-black"
     priority
   />
 </div>
