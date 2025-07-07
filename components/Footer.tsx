@@ -4,7 +4,7 @@ import { Instagram } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="bg-[hsl(221,39%,11%)] text-white py-10 px-4">
-      <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-6">
         <div className="text-center md:text-left">
           <h2 className="text-2xl font-bold text-white">QR PIXEL</h2>
           <p className="text-sm text-gray-400 mt-1">
@@ -13,13 +13,14 @@ export default function Footer() {
         </div>
 
         {/* Social Media Icons */}
-        <div className="flex space-x-6 text-xl">
+        <div className="flex flex-row justify-end w-full space-x-3 sm:space-x-4">
           {/* WhatsApp */}
           <a
             href="https://wa.me/916005749782"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-green-500 hover0:text-green-400 transition"
+            className="group rounded-full bg-white/10 p-2 sm:p-3 text-xl sm:text-2xl text-green-500 shadow-md ring-2 ring-green-200 hover:bg-white hover:text-green-600 hover:scale-110 hover:ring-green-400 transition-all duration-200 flex items-center justify-center"
+            aria-label="WhatsApp"
           >
             <FaWhatsapp />
           </a>
@@ -29,7 +30,8 @@ export default function Footer() {
             href="https://www.instagram.com/qr_pixel?igsh=MW1oY3hkMTRmZXZjcA=="
             target="_blank"
             rel="noopener noreferrer"
-            className="text-pink-500 hover:text-pink-400 transition"
+            className="group rounded-full bg-white/10 p-2 sm:p-3 text-xl sm:text-2xl text-pink-500 shadow-md ring-2 ring-pink-200 hover:bg-white hover:text-pink-600 hover:scale-110 hover:ring-pink-400 transition-all duration-200 flex items-center justify-center"
+            aria-label="Instagram"
           >
             <Instagram size={20} />
           </a>
@@ -39,7 +41,8 @@ export default function Footer() {
             href="https://youtube.com/@qr-pixel8275?si=tul4YLOhjjzczHG6"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-red-500 hover:text-red-400 transition"
+            className="group rounded-full bg-white/10 p-2 sm:p-3 text-xl sm:text-2xl text-red-500 shadow-md ring-2 ring-red-200 hover:bg-white hover:text-red-600 hover:scale-110 hover:ring-red-400 transition-all duration-200 flex items-center justify-center"
+            aria-label="YouTube"
           >
             <FaYoutube />
           </a>
@@ -49,7 +52,8 @@ export default function Footer() {
             href="https://www.facebook.com/share/1AdHt798nj/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-500 transition"
+            className="group rounded-full bg-white/10 p-2 sm:p-3 text-xl sm:text-2xl text-blue-600 shadow-md ring-2 ring-blue-200 hover:bg-white hover:text-blue-700 hover:scale-110 hover:ring-blue-400 transition-all duration-200 flex items-center justify-center"
+            aria-label="Facebook"
           >
             <FaFacebook />
           </a>
@@ -59,7 +63,8 @@ export default function Footer() {
             href="https://x.com/QR_Pixel_LED?t=DtcSiKFmON90lp0T0_dXYw&s=09"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sky-400 hover:text-sky-300 transition"
+            className="group rounded-full bg-white/10 p-2 sm:p-3 text-xl sm:text-2xl text-sky-400 shadow-md ring-2 ring-sky-200 hover:bg-white hover:text-sky-600 hover:scale-110 hover:ring-sky-400 transition-all duration-200 flex items-center justify-center"
+            aria-label="Twitter"
           >
             <FaTwitter />
           </a>

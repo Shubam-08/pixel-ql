@@ -170,14 +170,14 @@ export default function Home() {
               { icon: '🏠', title: 'Personalized & Affordable Lighting', desc: 'We deliver lighting plans tailored to your budget and preferences—because good lighting should be accessible to everyone.', image: '/personalized.png', },
               { icon: '🌱', title: 'Energy Efficiency', desc: 'Lighting systems and technologies that significantly reduce energy consumption without compromising brightness or performance.', image: '/efficiency.png', },
             ].map((service, index) => (
-              <div
-                key={index}
-                className="relative min-w-[300px] max-w-[90vw] md:min-w-0 md:max-w-none snap-center rounded-3xl overflow-hidden shadow-2xl group backdrop-blur-lg bg-white/10 border border-white/20 hover:border-cyan-400/60 hover:shadow-cyan-400/30 hover:scale-105 hover:brightness-110 transition-all duration-500 flex flex-col justify-end"
-                style={{ backgroundImage: `url('${service.image}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-              >
-                <div className="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition duration-300" />
-                <div className="relative p-8 min-h-[260px] flex flex-col justify-end items-center">
-                  <span className="text-4xl mb-3 drop-shadow-lg">{service.icon}</span>
+               <div
+                 key={index}
+                 className="relative min-w-[300px] max-w-[90vw] md:min-w-0 md:max-w-none snap-center rounded-3xl overflow-hidden shadow-2xl group backdrop-blur-lg bg-white/10 border border-white/20 hover:border-cyan-400/60 hover:shadow-cyan-400/30 hover:scale-105 hover:brightness-110 transition-all duration-500 flex flex-col justify-end"
+                 style={{ backgroundImage: `url('${service.image}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+               >
+                 <div className="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition duration-300" />
+                 <div className="relative p-8 min-h-[340px] h-[340px] flex flex-col justify-end items-center aspect-[4/3] md:aspect-square">
+                   <span className="text-4xl mb-3 drop-shadow-lg">{service.icon}</span>
                   <h3 className="text-xl font-bold text-white mb-2 text-center drop-shadow-md">{service.title}</h3>
                   <p className="text-gray-200 text-sm leading-relaxed text-center drop-shadow-sm">{service.desc}</p>
                 </div>
