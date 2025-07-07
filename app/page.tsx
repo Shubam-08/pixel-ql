@@ -8,7 +8,7 @@ import { ScrollButton } from "@/components/ui/scroll-button";
 
 export default function Home() {
   return (
-    <>
+    <main className="overflow-x-hidden">
       <FloatingMenu />
       <HeroLamp />
       
@@ -209,6 +209,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }

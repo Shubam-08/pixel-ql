@@ -63,12 +63,12 @@ export default function FloatingMenu() {
         animate={{ opacity: logoVisible ? 1 : 0 }}
         transition={{ duration: 0.5 }}
         style={{ pointerEvents: logoVisible ? 'auto' : 'none' }}
-        className="fixed top-2 right-2 sm:top-4 sm:right-4 md:top-8 md:right-8 z-50"
+        className="fixed top-0 right-0 sm:top-2 sm:right-2 md:top-8 md:right-8 z-50"
       >
         <button
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((v) => !v)}
-          className="bg-black text-white p-3 sm:p-4 rounded-full shadow-lg backdrop-blur-lg hover:scale-110 focus:outline-none focus:ring-4 focus:ring-yellow-400 transition-all"
+          className="bg-black text-white p-3 sm:p-4 m-2 md:m-0 rounded-full shadow-lg backdrop-blur-lg hover:scale-110 focus:outline-none focus:ring-4 focus:ring-yellow-400 transition-all"
           style={{ boxShadow: open ? "0 0 32px #0ff8" : undefined }}
         >
           {open ? (
