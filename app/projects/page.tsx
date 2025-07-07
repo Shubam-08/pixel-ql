@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { ScrollButton } from "@/components/ui/scroll-button";
 
+import AnimatedBackground from "@/components/AnimatedBackground";
+
 export default function ProjectsPage() {
   const projects = [
     {
@@ -59,17 +61,11 @@ export default function ProjectsPage() {
 
   return (
     <main className="min-h-screen bg-black text-white">
-      <section id="projects" className="py-20 bg-neutral-950">
+      <section id="projects" className="py-10 bg-neutral-950 relative overflow-hidden">
+        {/* Animated glowing background */}
+        <AnimatedBackground />
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-cyan-400 to-pink-500 animate-gradient-shimmer">
-              Our Projects
-            </h1>
-            <div className="mx-auto h-1 w-40 rounded-full bg-gradient-to-r from-blue-400 via-cyan-400 to-pink-400 animate-gradient-shimmer mb-8" />
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Real-world implementations of our innovative solutions
-            </p>
-          </div>
+          
 
           <div className="columns-1 md:columns-2 gap-6">
             {projects.map((project) => (
@@ -88,14 +84,14 @@ export default function ProjectsPage() {
                     quality={90}
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
-                  {/* Overlay: Project title on top of image, fades out on hover */}
-                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-500 group-hover:opacity-0">
+                  {/* Overlay: Project title at the bottom of image, fades out on hover */}
+                  <div className="absolute bottom-0 left-0 w-full px-6 py-5 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex items-end pointer-events-none transition-opacity duration-500 group-hover:opacity-0">
                     <h3
-                      className="text-white text-2xl font-extrabold text-center select-none"
+                      className="text-white text-2xl font-extrabold select-none text-left"
                       style={{
-                        textShadow: '0 2px 12px rgba(0,0,0,0.85), 0 0px 1px #fff',
-                        letterSpacing: '0.03em',
-                        WebkitTextStroke: '0.5px #222',
+                        textShadow: "0 2px 12px rgba(0,0,0,0.85), 0 0px 1px #fff",
+                        letterSpacing: "0.03em",
+                        WebkitTextStroke: "0.5px #222",
                       }}
                     >
                       {project.title}

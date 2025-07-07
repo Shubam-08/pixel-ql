@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import React from "react";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 
 const team = [
@@ -22,17 +23,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-black text-white pt-20 relative overflow-x-hidden">
       {/* Animated Gradient Background Blobs */}
-      <motion.div
-        aria-hidden
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.2 }}
-        className="pointer-events-none fixed inset-0 z-0"
-      >
-        <div className="absolute -top-40 left-1/2 w-[120vw] h-[80vw] -translate-x-1/2 bg-gradient-to-tr from-blue-700/20 via-pink-500/10 to-cyan-400/20 blur-3xl animate-pulse rounded-full" />
-        <div className="absolute top-1/3 right-0 w-96 h-96 bg-gradient-to-br from-cyan-400/20 to-blue-700/10 blur-2xl rounded-full animate-[spin_30s_linear_infinite]" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-pink-500/20 to-blue-700/10 blur-2xl rounded-full animate-[spin_50s_linear_infinite]" />
-      </motion.div>
+      <AnimatedBackground />
 
       <section className="relative z-10 px-6 md:px-12 lg:px-24 py-20 max-w-7xl mx-auto">
         {/* Description Section */}

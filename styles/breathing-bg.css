@@ -1,0 +1,26 @@
+.breathing-blob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 80vw;
+  max-width: 1200px;
+  max-height: 70vh;
+  background: radial-gradient(circle at 60% 40%, #60a5fa80 0%, #a21caf80 40%, #f472b680 100%);
+  opacity: 0.50;
+  filter: blur(80px);
+  z-index: 0;
+  animation: breathing-bg 5.5s ease-in-out infinite;
+}
+
+@keyframes breathing-bg {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.50;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.12);
+    opacity: 0.70;
+  }
+}

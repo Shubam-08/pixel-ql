@@ -28,21 +28,24 @@ const blogPosts = [
   },
 ];
 
+import AnimatedBackground from "@/components/AnimatedBackground";
+
 export default function BlogPage() {
   return (
-    <section className="min-h-screen py-20 bg-gradient-to-b from-gray-950 to-black">
-      <div className="max-w-6xl mx-auto px-4">
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-white mb-12">
+    <section className="min-h-screen py-20 bg-gradient-to-b from-gray-950 to-black relative overflow-hidden">
+      <AnimatedBackground />
+      <div className="max-w-6xl mx-auto px-2 sm:px-4">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-center text-white mb-8 sm:mb-12">
           Our Blog
         </h1>
         {/* One blog per line */}
-        <div className="grid grid-cols-1 gap-10">
+        <div className="grid grid-cols-1 gap-6 sm:gap-10">
           {blogPosts.map((post, idx) => (
             <article
               key={idx}
               className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group"
             >
-              <div className="relative h-56 w-full overflow-hidden">
+              <div className="relative h-40 sm:h-56 w-full overflow-hidden">
                 <Image
                   src={post.image}
                   alt={post.title}

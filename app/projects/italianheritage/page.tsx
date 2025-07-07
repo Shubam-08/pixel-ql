@@ -40,8 +40,16 @@ export default function RetailProjectPage() {
       </div>
 
       {/* Text Section */}
-      <section className="bg-gradient-to-b from-black to-gray-900 py-20 px-6 md:px-12">
-        <div className="max-w-5xl mx-auto space-y-16">
+      <section className="relative py-20 px-6 md:px-12 overflow-hidden">
+  {/* Animated background blobs behind info section */}
+  <div className="absolute inset-0 -z-10">
+    <div className="absolute animate-blob1 left-1/4 top-1/4 w-72 h-72 bg-pink-400 opacity-40 rounded-full filter blur-3xl mix-blend-multiply" />
+    <div className="absolute animate-blob2 right-1/4 top-1/2 w-80 h-80 bg-blue-400 opacity-40 rounded-full filter blur-3xl mix-blend-multiply" />
+    <div className="absolute animate-blob3 left-1/2 bottom-0 w-60 h-60 bg-cyan-400 opacity-40 rounded-full filter blur-3xl mix-blend-multiply" />
+    <div className="absolute inset-0 bg-gradient-to-br from-pink-500 via-blue-500 to-cyan-400 opacity-60" />
+  </div>
+  <div className="relative max-w-5xl mx-auto space-y-16 bg-black/90 rounded-3xl shadow-2xl p-8 md:p-16 backdrop-blur-md">
+        
           <h1 className="text-5xl font-bold text-center">Italian Heritage, Italy</h1>
 
           {/* Project Overview */}

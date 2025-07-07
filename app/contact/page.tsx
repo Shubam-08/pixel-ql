@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 
+import AnimatedBackground from "@/components/AnimatedBackground";
+
 export default function ContactPage() {
   const [form, setForm] = useState({
     name: '',
@@ -45,17 +47,18 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white pt-24">
-      <section className="max-w-screen-xl mx-auto py-20 px-4 md:px-8">
+    <main className="min-h-screen bg-black text-white pt-20 relative overflow-hidden">
+      <AnimatedBackground />
+      <section className="max-w-screen-xl mx-auto py-10 px-2 md:px-8">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-6xl font-bold mb-16 text-center">Get in Touch</h1>
-          <p className="text-xl text-gray-400 text-center mb-16">
+          <h1 className="text-3xl sm:text-6xl font-bold mb-8 sm:mb-16 text-center">Get in Touch</h1>
+          <p className="text-lg sm:text-xl text-gray-400 text-center mb-8 sm:mb-16">
             We&apos;re here to help! Send us a message and we&apos;ll get back to you as soon as possible.
           </p>
 
-          <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 md:p-16 shadow-xl border border-gray-700">
+          <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-4 md:p-16 shadow-xl border border-gray-700">
             <form className="space-y-8" onSubmit={handleSubmit}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2 text-gray-300">Full Name</label>
                   <input
