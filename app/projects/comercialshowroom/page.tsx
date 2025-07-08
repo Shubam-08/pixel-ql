@@ -26,10 +26,10 @@ export default function RetailProjectPage() {
 
           {/* ====== RIGHT: Text Section (Independent) ====== */}
           <div className="w-full flex flex-col justify-start space-y-10  px-6 py-8 md:px-12">
-            <h3 className="text-5xl font-bold text-center md:text-left">Commercial Showroom</h3>
+            <h3 className="text-3xl font-bold text-center md:text-left">Commercial Showroom</h3>
 
             <div>
-              <h2 className="text-3xl font-semibold mb-4">Project Overview</h2>
+              <h2 className="text-2xl font-semibold mb-4">Project Overview</h2>
               <p className="text-gray-400 leading-relaxed">
                 Our comprehensive lighting automation solution for a major retail mall in Chennai. This project showcases our ability to create dynamic and energy-efficient lighting environments that enhance customer experience and operational efficiency.
               </p>
@@ -56,7 +56,7 @@ export default function RetailProjectPage() {
             </div>
 
             <div>
-              <h2 className="text-3xl font-semibold mb-4">Technical Specifications</h2>
+              <h2 className="text-2xl font-semibold mb-4">Technical Specifications</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-gray-400">
                 <div className="space-y-2">
                   <p><span className="font-semibold">Project Duration:</span> 5 months</p>
@@ -70,7 +70,7 @@ export default function RetailProjectPage() {
             </div>
 
             <div>
-              <h2 className="text-3xl font-semibold mb-4">Benefits</h2>
+              <h2 className="text-2xl font-semibold mb-4">Benefits</h2>
               <ul className="list-disc list-inside text-gray-400 space-y-2">
                 {[
                   "Enhanced customer experience through dynamic lighting",

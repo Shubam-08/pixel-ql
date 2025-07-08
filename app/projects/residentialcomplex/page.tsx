@@ -20,13 +20,13 @@ export default function ResidentialProjectPage() {
 
           {/* Right: Project Details */}
           <div className="flex flex-col justify-center space-y-10 px-6 md:px-12">
-            <h1 className="text-5xl font-bold text-center md:text-left">
+            <h1 className="text-3xl font-bold text-center md:text-left">
               Residential Complex, Bangalore
             </h1>
 
             {/* Overview */}
             <div>
-              <h2 className="text-3xl font-semibold mb-4">Project Overview</h2>
+              <h2 className="text-2xl font-semibold mb-4">Project Overview</h2>
               <p className="text-gray-400 leading-relaxed">
                 Our smart home automation solution implemented in a modern residential complex in Bangalore. This project showcases how we bring convenience and energy efficiency to everyday living spaces.
               </p>
@@ -55,7 +55,7 @@ export default function ResidentialProjectPage() {
 
             {/* Technical Specifications */}
             <div>
-              <h2 className="text-3xl font-semibold mb-4">Technical Specifications</h2>
+              <h2 className="text-2xl font-semibold mb-4">Technical Specifications</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-gray-400">
                 <div className="space-y-2">
                   <p><span className="font-semibold">Project Duration:</span> 3 months</p>
@@ -70,7 +70,7 @@ export default function ResidentialProjectPage() {
 
             {/* Benefits */}
             <div>
-              <h2 className="text-3xl font-semibold mb-4">Benefits</h2>
+              <h2 className="text-2xl font-semibold mb-4">Benefits</h2>
               <ul className="list-disc list-inside text-gray-400 space-y-2">
                 {[
                   "Enhanced resident convenience",
