@@ -101,7 +101,7 @@ export default function FloatingMenu() {
               animate={{ scale: 1.08, y: 0, opacity: 1 }}
               exit={{ scale: 0.92, y: 60, opacity: 0 }}
               transition={{ type: "spring", stiffness: 220, damping: 22 }}
-              className="flex flex-col gap-8 bg-gradient-to-br from-[#]/80 via-[#]/70 to-[#]/60 rounded-3xl p-4 sm:p-8 md:p-16 shadow-2xl border-2 border-yellow-400/40 backdrop-blur-xl w-full max-w-xs sm:max-w-md md:max-w-lg"
+              className="flex flex-col gap-2.5 bg-black/40 rounded-xl p-3 sm:p-4 shadow-xl border border-yellow-400/20 backdrop-blur-md w-full max-w-[240px] sm:max-w-[300px] text-base font-semibold"
             >
               {navLinks.map(({ label, href, icon: Icon }) => (
                 <motion.li

@@ -11,7 +11,7 @@ export default function ProjectsPage() {
     {
       id: 1,
       title: "Sobha Towers",
-      image: "/Sobha Towers.jpg",
+      image: "/SobhaTowers.jpg",
       description: "Intelligent energy management system with smart lighting and HVAC controls",
       link: "/projects/sobhatowers"
     },
