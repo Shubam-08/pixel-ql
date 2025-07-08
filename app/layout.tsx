@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className="bg-gradient-to-b from-[#0f0f0f] to-[#1a1a1a] text-white min-h-screen flex flex-col">
+      <body className="bg-gradient-to-b from-[#0f0f0f] to-[#1a1a1a] text-white min-h-screen flex flex-col w-screen overflow-x-hidden">
   {/* FloatingMenu (menu icon and logo) shown on all pages */}
   <FloatingMenu />
 

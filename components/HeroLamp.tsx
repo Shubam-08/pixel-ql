@@ -7,7 +7,7 @@ import { playfair } from "@/app/fonts"; // Adjust if your fonts file path is dif
 export function HeroLamp() {
   return (
     <section
-      className="relative flex min-h-screen items-center justify-center bg-cover bg-center"
+      className="relative flex min-h-screen items-center justify-center bg-cover bg-center w-screen overflow-x-hidden"
       style={{ backgroundImage: "url('/homeimage.jpg')", backgroundPosition: 'center', backgroundSize: 'cover' }}
     >
       {/* Brighter image overlay */}
