@@ -6,11 +6,12 @@ import Link from "next/link";
 export default function RetailProjectPage() {
   return (
     <main className="bg-black text-white">
-      {/* Responsive Gallery Grid for Project Images */}
       <div className="w-full pt-4 md:pt-8 px-2 md:px-0">
+        {/* Grid Layout: Side by Side on Desktop */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Left: Image Carousel */}
-          <div className="flex flex-col justify-center items-center">
+          
+          {/* ====== LEFT: Image Section (Independent) ====== */}
+          <div className="w-full flex justify-center items-start py-22 md:px-8">
             <ImageCarousel
               images={[
                 { src: "/comercialshowroom.png", alt: "Retail Mall Project 1" },
@@ -23,11 +24,10 @@ export default function RetailProjectPage() {
             />
           </div>
 
-          {/* Right: Project Details */}
-          <div className="flex flex-col justify-center space-y-10 px-6 md:px-12">
-            <h1 className="text-5xl font-bold text-center md:text-left">Commercial Showroom</h1>
+          {/* ====== RIGHT: Text Section (Independent) ====== */}
+          <div className="w-full flex flex-col justify-start space-y-10  px-6 py-8 md:px-12">
+            <h3 className="text-5xl font-bold text-center md:text-left">Commercial Showroom</h3>
 
-            {/* Project Overview */}
             <div>
               <h2 className="text-3xl font-semibold mb-4">Project Overview</h2>
               <p className="text-gray-400 leading-relaxed">
@@ -35,7 +35,6 @@ export default function RetailProjectPage() {
               </p>
             </div>
 
-            {/* Key Features */}
             <div>
               <h3 className="text-2xl font-semibold mb-4">Key Features</h3>
               <ul className="list-disc list-inside text-gray-400 space-y-2">
@@ -56,7 +55,6 @@ export default function RetailProjectPage() {
               </ul>
             </div>
 
-            {/* Technical Specs */}
             <div>
               <h2 className="text-3xl font-semibold mb-4">Technical Specifications</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-gray-400">
@@ -71,7 +69,6 @@ export default function RetailProjectPage() {
               </div>
             </div>
 
-            {/* Benefits */}
             <div>
               <h2 className="text-3xl font-semibold mb-4">Benefits</h2>
               <ul className="list-disc list-inside text-gray-400 space-y-2">
@@ -92,7 +89,6 @@ export default function RetailProjectPage() {
               </ul>
             </div>
 
-            {/* Back Button */}
             <div className="text-center pt-8">
               <Link 
                 href="/projects" 

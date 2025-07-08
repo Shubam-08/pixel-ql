@@ -3,76 +3,42 @@ import { Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[hsl(221,39%,11%)] text-white py-10">
-      <div className="max-w-screen-xl mx-auto px-0 md:px-0 flex flex-col md:flex-row justify-between items-start md:items-start gap-6">
-        <div className="flex flex-col items-start">
-          <h2 className="text-2xl font-bold text-white">QR PIXEL</h2>
-          <p className="text-sm text-gray-400 mt-1">
-            Lighting |  Designing | Smart Solutions
-          </p>
+    <footer className="!bg-[#0a0a0f] !bg-opacity-100 text-white py-6 relative z-10">
+      <div className="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        {/* Left: Logo & Tagline */}
+        <div className="flex flex-col">
+          <h2 className="text-lg font-semibold text-white">QR PIXEL</h2>
+          <p className="text-xs text-gray-400">Lighting | Designing | Smart Solutions</p>
         </div>
 
-        {/* Social Media Icons */}
-        <div className="flex flex-row justify-end w-full space-x-3 sm:space-x-4">
-          {/* WhatsApp */}
-          <a
-            href="https://wa.me/916005749782"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group rounded-full bg-white/10 p-2 sm:p-3 text-xl sm:text-2xl text-green-500 shadow-md ring-2 ring-green-200 hover:bg-white hover:text-green-600 hover:scale-110 hover:ring-green-400 transition-all duration-200 flex items-center justify-center"
-            aria-label="WhatsApp"
-          >
-            <FaWhatsapp />
+        {/* Right: Social Media Icons */}
+        <div className="flex justify-end gap-2 md:gap-3">
+          <a href="https://wa.me/916005749782" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
+            className="bg-white/10 p-1.5 text-green-500 rounded-full hover:bg-white hover:text-green-600 hover:ring-2 ring-green-400 transition-all">
+            <FaWhatsapp size={16} />
           </a>
-
-          {/* Instagram */}
-          <a
-            href="https://www.instagram.com/qr_pixel?igsh=MW1oY3hkMTRmZXZjcA=="
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group rounded-full bg-white/10 p-2 sm:p-3 text-xl sm:text-2xl text-pink-500 shadow-md ring-2 ring-pink-200 hover:bg-white hover:text-pink-600 hover:scale-110 hover:ring-pink-400 transition-all duration-200 flex items-center justify-center"
-            aria-label="Instagram"
-          >
-            <Instagram size={20} />
+          <a href="https://www.instagram.com/qr_pixel?igsh=MW1oY3hkMTRmZXZjcA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+            className="bg-white/10 p-1.5 text-pink-500 rounded-full hover:bg-white hover:text-pink-600 hover:ring-2 ring-pink-400 transition-all">
+            <Instagram size={16} />
           </a>
-
-          {/* YouTube */}
-          <a
-            href="https://youtube.com/@qr-pixel8275?si=tul4YLOhjjzczHG6"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group rounded-full bg-white/10 p-2 sm:p-3 text-xl sm:text-2xl text-red-500 shadow-md ring-2 ring-red-200 hover:bg-white hover:text-red-600 hover:scale-110 hover:ring-red-400 transition-all duration-200 flex items-center justify-center"
-            aria-label="YouTube"
-          >
-            <FaYoutube />
+          <a href="https://youtube.com/@qr-pixel8275?si=tul4YLOhjjzczHG6" target="_blank" rel="noopener noreferrer" aria-label="YouTube"
+            className="bg-white/10 p-1.5 text-red-500 rounded-full hover:bg-white hover:text-red-600 hover:ring-2 ring-red-400 transition-all">
+            <FaYoutube size={16} />
           </a>
-
-          {/* Facebook */}
-          <a
-            href="https://www.facebook.com/share/1AdHt798nj/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group rounded-full bg-white/10 p-2 sm:p-3 text-xl sm:text-2xl text-blue-600 shadow-md ring-2 ring-blue-200 hover:bg-white hover:text-blue-700 hover:scale-110 hover:ring-blue-400 transition-all duration-200 flex items-center justify-center"
-            aria-label="Facebook"
-          >
-            <FaFacebook />
+          <a href="https://www.facebook.com/share/1AdHt798nj/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+            className="bg-white/10 p-1.5 text-blue-500 rounded-full hover:bg-white hover:text-blue-600 hover:ring-2 ring-blue-400 transition-all">
+            <FaFacebook size={16} />
           </a>
-
-          {/* Twitter */}
-          <a
-            href="https://x.com/QR_Pixel_LED?t=DtcSiKFmON90lp0T0_dXYw&s=09"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group rounded-full bg-white/10 p-2 sm:p-3 text-xl sm:text-2xl text-sky-400 shadow-md ring-2 ring-sky-200 hover:bg-white hover:text-sky-600 hover:scale-110 hover:ring-sky-400 transition-all duration-200 flex items-center justify-center"
-            aria-label="Twitter"
-          >
-            <FaTwitter />
+          <a href="https://x.com/QR_Pixel_LED?t=DtcSiKFmON90lp0T0_dXYw&s=09" target="_blank" rel="noopener noreferrer" aria-label="Twitter"
+            className="bg-white/10 p-1.5 text-sky-400 rounded-full hover:bg-white hover:text-sky-500 hover:ring-2 ring-sky-400 transition-all">
+            <FaTwitter size={16} />
           </a>
         </div>
       </div>
 
-      <div className="mt-8 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} Qlite Architect. All rights reserved.
+      {/* Bottom Text */}
+      <div className="mt-4 text-center text-xs text-gray-500">
+        © {new Date().getFullYear()} QR Pixel. All rights reserved.
       </div>
     </footer>
   );

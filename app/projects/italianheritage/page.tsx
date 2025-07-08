@@ -6,11 +6,11 @@ import Link from "next/link";
 export default function ItalianHeritageProjectPage() {
   return (
     <main className="bg-black text-white">
-      {/* Responsive Gallery Grid for Project Images */}
-      <div className="w-full pt-4 md:pt-12 px-2 md:px-0">
+      <div className="w-full pt-6 md:pt-8 px-2 md:px-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Left: Image Carousel */}
-          <div className="flex flex-col justify-center items-center">
+          
+          {/* ===== LEFT: Image Carousel ===== */}
+          <div className="w-full flex justify-center items-start py-24 md:px-8">
             <ImageCarousel
               images={[
                 { src: "/project5.png", alt: "Italian Heritage Project 1" },
@@ -21,11 +21,10 @@ export default function ItalianHeritageProjectPage() {
             />
           </div>
 
-          {/* Right: Project Details */}
-          <div className="flex flex-col justify-center space-y-10 px-6 md:px-12">
+          {/* ===== RIGHT: Text Section ===== */}
+          <div className="w-full flex flex-col justify-start space-y-10 px-6 py-18 md:px-12">
             <h1 className="text-5xl font-bold text-center md:text-left">Italian Heritage, Italy</h1>
 
-            {/* Project Overview */}
             <div>
               <h2 className="text-3xl font-semibold mb-4">Project Overview</h2>
               <p className="text-gray-400 leading-relaxed">
@@ -33,7 +32,6 @@ export default function ItalianHeritageProjectPage() {
               </p>
             </div>
 
-            {/* Key Features */}
             <div>
               <h3 className="text-2xl font-semibold mb-4">Key Features</h3>
               <ul className="list-disc list-inside text-gray-400 space-y-2">
@@ -64,39 +62,30 @@ export default function ItalianHeritageProjectPage() {
               </ul>
             </div>
 
-            {/* Technical Specs */}
             <div>
               <h2 className="text-3xl font-semibold mb-4">Technical Specifications</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-gray-400">
                 <div className="space-y-2">
-                  <p>
-                    <span className="font-semibold">Project Duration:</span> 5 months
-                  </p>
-                  <p>
-                    <span className="font-semibold">Location:</span> Italy
-                  </p>
+                  <p><span className="font-semibold">Project Duration:</span> 5 months</p>
+                  <p><span className="font-semibold">Location:</span> Italy</p>
                 </div>
                 <div className="space-y-2">
-                  <p>
-                    <span className="font-semibold">Lighting Points:</span> 1,500+
-                  </p>
-                  <p>
-                    <span className="font-semibold">Energy Savings:</span> 45% reduction
-                  </p>
+                  <p><span className="font-semibold">Lighting Points:</span> 1,500+</p>
+                  <p><span className="font-semibold">Energy Savings:</span> 45% reduction</p>
                 </div>
               </div>
             </div>
 
-            {/* Benefits */}
+            {/* ===== Added Benefits Section ===== */}
             <div>
               <h2 className="text-3xl font-semibold mb-4">Benefits</h2>
               <ul className="list-disc list-inside text-gray-400 space-y-2">
                 {[
-                  "Enhanced cultural ambiance through smart lighting",
-                  "Significant energy cost reduction",
-                  "Improved heritage visibility",
-                  "Easy maintenance and monitoring",
-                  "Preservation-friendly technology",
+                  "Elevated visual appeal of historical architecture",
+                  "Significant reduction in energy consumption",
+                  "Improved night-time ambiance for visitors",
+                  "Centralized and easy lighting control",
+                  "Preservation of heritage aesthetics with modern tech",
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start">
                     <svg
@@ -118,7 +107,6 @@ export default function ItalianHeritageProjectPage() {
               </ul>
             </div>
 
-            {/* Back Button */}
             <div className="text-center pt-8">
               <Link
                 href="/projects"

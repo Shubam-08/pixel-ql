@@ -5,140 +5,95 @@ import Link from "next/link";
 
 export default function ResidentialProjectPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-black to-gray-900 text-white">
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h1 className="text-5xl font-bold mb-12 text-center">Residential Building, Bangalore</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Left: Image Carousel */}
-              <div className="flex flex-col justify-center items-center">
-                <ImageCarousel
-                  images={[
-                    { src: "/building.jpg", alt: "Residential Building Project" },
-                    { src: "/residentialb2.jpg", alt: "Residential Building 2" },
-                    { src: "/residentialb3.jpg", alt: "Residential Building 3" }
-                  ]}
-                  aspect="aspect-[4/3]"
-                />
-              </div>
-              {/* Right: Project Details */}
-              <div className="flex flex-col justify-center space-y-10">
-              
+    <main className="bg-black text-white">
+      <div className="w-full pt-6 md:pt-20 px-2 md:px-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          {/* ===== LEFT: Image Carousel ===== */}
+          <div className="w-full flex justify-center items-start py-24 md:px-8">
+            <ImageCarousel
+              images={[
+                { src: "/building.jpg", alt: "Residential Building Project" },
+
+              ]}
+              aspect="aspect-[4/3]"
+            />
+          </div>
+
+          {/* ===== RIGHT: Project Details ===== */}
+          <div className="w-full flex flex-col justify-start space-y-10 px-6 py-8 md:px-12">
+            <h1 className="text-5xl font-bold text-center md:text-left">Residential Building, Bangalore</h1>
+
+            {/* Project Overview */}
+            <div>
+              <h2 className="text-3xl font-semibold mb-4">Project Overview</h2>
+              <p className="text-gray-400 leading-relaxed">
+                Our smart home automation solution implemented in a modern residential complex in Bangalore. This project showcases how we bring convenience and energy efficiency to everyday living spaces.
+              </p>
             </div>
 
-              <div className="space-y-8">
-                <div>
-                  <h2 className="text-3xl font-semibold mb-4">Project Overview</h2>
-                  <p className="text-gray-400 leading-relaxed">
-                    Our smart home automation solution implemented in a modern residential complex in Bangalore. This project showcases how we bring convenience and energy efficiency to everyday living spaces.
-                  </p>
+            {/* Key Features */}
+            <div>
+              <h3 className="text-2xl font-semibold mb-4">Key Features</h3>
+              <ul className="list-disc list-inside text-gray-400 space-y-2">
+                {[
+                  "Smart lighting control for individual apartments",
+                  "Energy-efficient lighting for common areas",
+                  "Security system integration",
+                  "Centralized maintenance monitoring",
+                  "Mobile app control for residents",
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start">
+                    <svg className="w-6 h-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Technical Specifications */}
+            <div>
+              <h2 className="text-3xl font-semibold mb-4">Technical Specifications</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-gray-400">
+                <div className="space-y-2">
+                  <p><span className="font-semibold">Project Duration:</span> 3 months</p>
+                  <p><span className="font-semibold">Location:</span> Bangalore, India</p>
                 </div>
-                <div>
-                  <h3 className="text-2xl font-semibold mb-4">Key Features</h3>
-                  <ul className="list-disc list-inside text-gray-400 space-y-4">
-                    <li className="flex items-start">
-                      <svg className="w-6 h-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span>Smart lighting control for individual apartments</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-6 h-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span>Energy-efficient lighting for common areas</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-6 h-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span>Security system integration</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-6 h-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span>Centralized maintenance monitoring</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-6 h-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span>Mobile app control for residents</span>
-                    </li>
-                  </ul>
+                <div className="space-y-2">
+                  <p><span className="font-semibold">Lighting Points:</span> 500+</p>
+                  <p><span className="font-semibold">Energy Savings:</span> 30% reduction</p>
                 </div>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-              <div className="space-y-8">
-                <h2 className="text-3xl font-semibold mb-4">Technical Specifications</h2>
-                <div className="grid grid-cols-2 gap-8 text-gray-400">
-                  <div className="space-y-4">
-                    <div className="flex items-start">
-                      <span className="font-semibold">Project Duration:</span>
-                      <span className="ml-4">3 months</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="font-semibold">Location:</span>
-                      <span className="ml-4">Bangalore, India</span>
-                    </div>
-                  </div>
-                  <div className="space-y-4">
-                    <div className="flex items-start">
-                      <span className="font-semibold">Lighting Points:</span>
-                      <span className="ml-4">500+</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="font-semibold">Energy Savings:</span>
-                      <span className="ml-4">30% reduction</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="space-y-8">
-                <h2 className="text-3xl font-semibold mb-4">Benefits</h2>
-                <ul className="list-disc list-inside text-gray-400 space-y-4">
-                  <li className="flex items-start">
+            {/* Benefits */}
+            <div>
+              <h2 className="text-3xl font-semibold mb-4">Benefits</h2>
+              <ul className="list-disc list-inside text-gray-400 space-y-2">
+                {[
+                  "Enhanced resident convenience",
+                  "Reduced electricity bills",
+                  "Improved security",
+                  "Modern living experience",
+                  "Easy maintenance",
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start">
                     <svg className="w-6 h-6 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Enhanced resident convenience</span>
+                    <span>{item}</span>
                   </li>
-                  <li className="flex items-start">
-                    <svg className="w-6 h-6 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span>Reduced electricity bills</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-6 h-6 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span>Improved security</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-6 h-6 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span>Modern living experience</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-6 h-6 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span>Easy maintenance</span>
-                  </li>
-                </ul>
-              </div>
+                ))}
+              </ul>
             </div>
 
-            <div className="text-center">
-              <Link 
-                href="/projects" 
-                className="inline-flex items-center bg-blue-600 text-white px-12 py-5 rounded-full hover:bg-blue-700 transition-colors text-xl font-semibold"
+            {/* Back Button */}
+            <div className="text-center pt-8">
+              <Link
+                href="/projects"
+                className="inline-flex items-center bg-blue-600 text-white px-12 py-4 rounded-full hover:bg-blue-700 transition-colors text-lg font-semibold"
               >
                 <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -148,7 +103,7 @@ export default function ResidentialProjectPage() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </main>
   );
 }
