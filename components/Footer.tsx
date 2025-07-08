@@ -4,7 +4,7 @@ import { Instagram } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="!bg-[#0a0a0f] !bg-opacity-100 text-white py-6 relative z-10">
-      <div className="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+      <div className="w-full max-w-full mx-auto px-2 sm:px-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         {/* Left: Logo & Tagline */}
         <div className="flex flex-col">
           <h2 className="text-lg font-semibold text-white">QR PIXEL</h2>

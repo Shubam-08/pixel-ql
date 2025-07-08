@@ -8,25 +8,25 @@ import { ScrollButton } from "@/components/ui/scroll-button";
 
 export default function Home() {
   return (
-    <main className="overflow-x-hidden">
+    <main className="overflow-x-hidden w-full max-w-full">
       <FloatingMenu />
       <HeroLamp />
       
       {/* Featured Projects Section */}
-      <section id="featured-projects" className="py-14 bg-gradient-to-b from-gray-900 to-black px-4 sm:px-6 md:px-12">
+      <section id="featured-projects" className="relative py-14 bg-gradient-to-b from-gray-900 to-black w-full max-w-full px-2 sm:px-4 md:px-8 overflow-x-hidden">
         {/* Divider */}
         <div className="w-full flex justify-center mb-10">
           <div className="h-1 w-40 rounded-full bg-gradient-to-r from-blue-400 via-cyan-400 to-pink-400 animate-pulse" />
         </div>
         {/* Animated background for projects section */}
-        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 w-full max-w-full overflow-x-hidden">
           <div className="absolute -top-24 left-1/4 w-96 h-96 bg-pink-500/30 blur-3xl rounded-full animate-blob1" />
           <div className="absolute top-1/2 right-0 w-80 h-80 bg-blue-500/30 blur-2xl rounded-full animate-blob2" />
           <div className="absolute bottom-0 left-0 w-72 h-72 bg-cyan-400/20 blur-2xl rounded-full animate-blob3" />
           <div className="noise-overlay absolute inset-0" />
         </div>
         <GlowingHeading as="h2" className="text-4xl mb-12 text-center">Our Featured Projects</GlowingHeading>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10 w-full max-w-full">
   {/* Left: Large vertical card */}
   <div className="flex flex-col h-full">
     <Link href="/projects/sobhatowers" className="block flex-1">

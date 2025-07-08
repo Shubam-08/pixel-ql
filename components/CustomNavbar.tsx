@@ -19,8 +19,8 @@ export function CustomNavbar() {
   ];
 
   return (
-    <nav className="w-full bg-black shadow-md z-50">
-      <div className="max-w-[1600px] mx-auto px-0 md:px-0 flex justify-between items-center min-h-[120px] py-0">
+    <nav className="w-full max-w-full bg-black shadow-md z-50 overflow-x-hidden">
+      <div className="w-full max-w-full mx-auto px-2 sm:px-4 flex justify-between items-center min-h-[120px] py-0">
         {/* Logo (single Link only) */}
         <Link href="/" className="flex items-center">
           <Image

@@ -6,7 +6,7 @@ import { playfair } from "@/app/fonts";
 
 export function HeroLamp() {
   return (
-    <section className="relative w-full max-w-full h-screen overflow-hidden">
+    <section className="relative w-full max-w-full h-screen overflow-hidden px-2">
       {/* Video Background */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
@@ -30,7 +30,7 @@ export function HeroLamp() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/40 to-black/80 z-10" />
 
       {/* Hero Content */}
-      <div className="relative z-20 flex flex-col justify-center items-center text-center h-full px-2 sm:px-4 max-w-screen-sm mx-auto">
+      <div className="relative z-20 flex flex-col justify-center items-center text-center h-full px-2 sm:px-4 w-full max-w-full mx-auto">
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
