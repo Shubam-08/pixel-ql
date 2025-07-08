@@ -13,7 +13,7 @@ export default function Home() {
       <HeroLamp />
       
       {/* Featured Projects Section */}
-      <section id="featured-projects" className="py-20 bg-gradient-to-b from-gray-900 to-black px-4 sm:px-6 md:px-12">
+      <section id="featured-projects" className="py-14 bg-gradient-to-b from-gray-900 to-black px-4 sm:px-6 md:px-12">
         {/* Divider */}
         <div className="w-full flex justify-center mb-10">
           <div className="h-1 w-40 rounded-full bg-gradient-to-r from-blue-400 via-cyan-400 to-pink-400 animate-pulse" />
@@ -36,7 +36,7 @@ export default function Home() {
             {/* Project 2 */}
              <Link href="/projects/sobhatowers" className="block">
                <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-300">
-                <div className="relative aspect-[16/9] md:aspect-[2/1] w-full h-80 md:h-96 overflow-hidden">
+                <div className="relative aspect-[16/9] md:aspect-[2/1] w-full h-96 md:h-[28rem] overflow-hidden">
                   <Image
                     src="/Sobha Towers.jpg"
                     alt="Corporate Office Project"
@@ -53,7 +53,7 @@ export default function Home() {
              {/* Project 3 */}
              <Link href="/projects/residentialcomplex" className="block">
                <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-300">
-                <div className="relative aspect-[16/9] md:aspect-[2/1] w-full h-80 md:h-96 overflow-hidden">
+                <div className="relative aspect-[16/9] md:aspect-[2/1] w-full h-96 md:h-[28rem] overflow-hidden">
                   <Image
                     src="/fourth.jpg"
                     alt="Retail Mall Project"
@@ -70,7 +70,7 @@ export default function Home() {
             {/* Project 5 */}
             <Link href="/projects/italianheritage" className="block">
               <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-300">
-                <div className="relative aspect-[16/9] md:aspect-[2/1] w-full h-80 md:h-96 overflow-hidden">
+                <div className="relative aspect-[16/9] md:aspect-[2/1] w-full h-96 md:h-[28rem] overflow-hidden">
                   <Image
                     src="/project5.png"
                     alt="Italian heritage"
@@ -87,7 +87,7 @@ export default function Home() {
             {/* Project 6 */}
             <Link href="/projects/gujratjewels" className="block">
               <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-300">
-                <div className="relative aspect-[16/9] md:aspect-[2/1] w-full h-80 md:h-96 overflow-hidden">
+                <div className="relative aspect-[16/9] md:aspect-[2/1] w-full h-96 md:h-[28rem] overflow-hidden">
                   <Image
                     src="/project6.png"
                     alt="Gujarat’s Architectural Jewels"
@@ -105,7 +105,7 @@ export default function Home() {
    {/* Project 3 */}
              <Link href="/projects/fashionshowroom" className="block">
               <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-300">
-                <div className="relative aspect-[16/9] md:aspect-[2/1] w-full h-80 md:h-96 overflow-hidden">
+                <div className="relative aspect-[16/9] md:aspect-[2/1] w-full h-96 md:h-[28rem] overflow-hidden">
                   <Image
                     src="/fashionshowroom.png"
                     alt="Retail Mall Project"
@@ -122,7 +122,7 @@ export default function Home() {
                    {/* Project 3 */}
             <Link href="/projects/comercialshowroom" className="block">
               <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-300">
-                <div className="relative aspect-[16/9] md:aspect-[2/1] w-full h-80 md:h-96 overflow-hidden">
+                <div className="relative aspect-[16/9] md:aspect-[2/1] w-full h-96 md:h-[28rem] overflow-hidden">
                   <Image
                     src="/comercialshowroom.png"
                     alt="Retail Mall Project"
@@ -137,7 +137,7 @@ export default function Home() {
             </Link>
             
           </div>
-          <div className="text-center mt-12">
+          <div className="text-center mt-6">
             <ScrollButton />
           </div>
         </ContainerScroll>
