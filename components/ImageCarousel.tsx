@@ -20,17 +20,14 @@ export default function ImageCarousel({ images, aspect = "aspect-[4/3]" }: Image
   useEffect(() => {
     if (images.length <= 1) return;
 
-    // Clear previous timeout
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
 
-    // Set new timeout
     timeoutRef.current = setTimeout(() => {
       setCurrent((prev) => (prev + 1) % images.length);
-    }, 2000);
+    }, 4000); // 4 seconds between slides
 
-    // Cleanup on unmount or rerender
     return () => {
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
@@ -52,12 +49,12 @@ export default function ImageCarousel({ images, aspect = "aspect-[4/3]" }: Image
 
   return (
     <div className={`relative w-full ${aspect} rounded-2xl overflow-hidden shadow-2xl bg-black/60`}>
-      {/* Images */}
+      {/* Images with smooth crossfade */}
       {images.map((img, idx) => (
         <div
           key={img.src}
-          className={`absolute inset-0 transition-opacity duration-700 ${
-            idx === current ? "opacity-100 z-10" : "opacity-0 z-0"
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out will-change-opacity ${
+            idx === current ? "opacity-100 z-20" : "opacity-0 z-10"
           }`}
         >
           <Image
@@ -78,7 +75,7 @@ export default function ImageCarousel({ images, aspect = "aspect-[4/3]" }: Image
           <button
             aria-label="Previous Slide"
             onClick={goPrev}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-2 rounded-full z-20 focus:outline-none"
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-2 rounded-full z-30 focus:outline-none"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -89,7 +86,7 @@ export default function ImageCarousel({ images, aspect = "aspect-[4/3]" }: Image
           <button
             aria-label="Next Slide"
             onClick={goNext}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-2 rounded-full z-20 focus:outline-none"
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-2 rounded-full z-30 focus:outline-none"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -97,7 +94,7 @@ export default function ImageCarousel({ images, aspect = "aspect-[4/3]" }: Image
           </button>
 
           {/* Dots */}
-          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-30">
             {images.map((_, idx) => (
               <button
                 key={idx}

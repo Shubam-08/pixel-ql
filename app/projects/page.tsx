@@ -2,11 +2,19 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 import { ScrollButton } from "@/components/ui/scroll-button";
-
 import AnimatedBackground from "@/components/AnimatedBackground";
 
 export default function ProjectsPage() {
+  const yamunaRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (yamunaRef.current) {
+      yamunaRef.current.playbackRate = 2.7;
+    }
+  }, []);
+
   const projects = [
     {
       id: 1,
@@ -56,17 +64,22 @@ export default function ProjectsPage() {
       image: "/building.jpg",
       description: "Energy-efficient lighting and automation solutions for large retail spaces",
       link: "/projects/residentialbuilding"
+    },
+    {
+      id: 8,
+      title: "Yamuna Sky City",
+      video: "/yamunaskycity.mp4",
+      description: "Energy-efficient lighting and automation solutions for large retail spaces",
+      link: "/projects/yamunaskycity"
     }
   ];
 
   return (
     <main className="min-h-screen bg-black text-white">
       <section id="projects" className="py-10 bg-neutral-950 relative overflow-hidden">
-        {/* Animated glowing background */}
         <AnimatedBackground />
-        <div className="container mx-auto px-4">
-          
 
+        <div className="container mx-auto px-4">
           <div className="columns-1 md:columns-2 gap-6">
             {projects.map((project) => (
               <Link
@@ -75,16 +88,29 @@ export default function ProjectsPage() {
                 className="group mb-6 block rounded-xl overflow-hidden relative shadow-xl bg-neutral-900 hover:shadow-2xl transition-shadow duration-300 break-inside-avoid"
               >
                 <div className="w-full overflow-hidden relative flex">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={800}
-                    height={500}
-                    className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105 group-hover:shadow-xl"
-                    quality={90}
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                  {/* Overlay: Project title at the bottom of image, fades out on hover */}
+                  {project.video ? (
+                    <video
+                      ref={project.title === "Yamuna Sky City" ? yamunaRef : null}
+                      src={project.video}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="w-full h-[500px] object-cover transition-transform duration-500 group-hover:scale-105 group-hover:shadow-xl"
+                    />
+                  ) : project.image ? (
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      width={800}
+                      height={500}
+                      className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105 group-hover:shadow-xl"
+                      quality={90}
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  ) : null}
+
+                  {/* Overlay: Project title */}
                   <div className="absolute bottom-0 left-0 w-full px-6 py-5 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex items-end pointer-events-none transition-opacity duration-500 group-hover:opacity-0">
                     <h3
                       className="text-white text-2xl font-extrabold select-none text-left"

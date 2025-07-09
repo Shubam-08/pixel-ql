@@ -13,8 +13,9 @@ export default function ResidentialProjectPage() {
           <div className="w-full flex justify-center items-start py-24 md:px-8">
             <ImageCarousel
               images={[
-                { src: "/building.jpg", alt: "Residential Building Project" },
-
+               
+                  { src: "/building1.png", alt: "Residential Building Project" },
+                   { src: "/building.jpg", alt: "Residential Building Project" },
               ]}
               aspect="aspect-[4/3]"
             />
