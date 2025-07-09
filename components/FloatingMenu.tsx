@@ -41,18 +41,7 @@ export default function FloatingMenu() {
         className="fixed top-4 left-4 z-50 flex flex-col items-start pointer-events-none"
         style={{ pointerEvents: 'none' }}
       >
-        <Link href="/" className="pointer-events-auto" tabIndex={-1} aria-label="Go to home">
-          <div className="flex items-center justify-center">
-  <Image
-    src="/pixellogoo.png"
-    alt="QR Pixel Logo"
-    width={64}
-    height={64}
-    className="relative w-16 h-16 rounded-full select-none group-hover:scale-110 transition-transform shadow"
-    priority
-  />
-</div>
-        </Link>
+        
       </motion.div>
 
 

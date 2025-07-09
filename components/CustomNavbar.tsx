@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 
@@ -22,16 +21,7 @@ export function CustomNavbar() {
     <nav className="w-full max-w-full bg-black shadow-md z-50 overflow-x-hidden">
       <div className="w-full max-w-full mx-auto px-2 sm:px-4 flex justify-between items-center min-h-[120px] py-0">
         {/* Logo (single Link only) */}
-        <Link href="/" className="flex items-center">
-          <Image
-            src="/pixellogoo.png"
-            alt="QRPixels Logo"
-            width={240}
-            height={100}
-            className="h-[100px] w-auto object-contain drop-shadow-[0_4px_12px_rgba(0,200,255,0.15)]"
-            priority
-          />
-        </Link>
+        
         
 
         {/* Nav Links */}

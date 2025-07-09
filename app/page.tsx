@@ -5,10 +5,14 @@ import GlowingHeading from "@/components/GlowingHeading";
 import Image from "next/image";
 import Link from "next/link";
 import { ScrollButton } from "@/components/ui/scroll-button";
+import HeaderLogo from "@/components/HeaderLogo";
+
 
 export default function Home() {
   return (
     <main className="overflow-x-hidden w-full max-w-full">
+      
+       <HeaderLogo />
       <FloatingMenu />
       <HeroLamp />
 
@@ -122,6 +126,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
+        
       </section>
     </main>
   );
