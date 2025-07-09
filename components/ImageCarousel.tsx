@@ -26,7 +26,7 @@ export default function ImageCarousel({ images, aspect = "aspect-[4/3]" }: Image
 
     timeoutRef.current = setTimeout(() => {
       setCurrent((prev) => (prev + 1) % images.length);
-    }, 4000); // 4 seconds between slides
+    }, 5000); // 5 seconds between slides
 
     return () => {
       if (timeoutRef.current) {
@@ -35,25 +35,17 @@ export default function ImageCarousel({ images, aspect = "aspect-[4/3]" }: Image
     };
   }, [current, images.length]);
 
-  const goTo = (idx: number) => {
-    setCurrent(idx);
-  };
-
-  const goPrev = () => {
-    setCurrent((prev) => (prev - 1 + images.length) % images.length);
-  };
-
-  const goNext = () => {
-    setCurrent((prev) => (prev + 1) % images.length);
-  };
+  const goTo = (idx: number) => setCurrent(idx);
+  const goPrev = () => setCurrent((prev) => (prev - 1 + images.length) % images.length);
+  const goNext = () => setCurrent((prev) => (prev + 1) % images.length);
 
   return (
     <div className={`relative w-full ${aspect} rounded-2xl overflow-hidden shadow-2xl bg-black/60`}>
-      {/* Images with smooth crossfade */}
+      {/* Images with smoother fading */}
       {images.map((img, idx) => (
         <div
           key={img.src}
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out will-change-opacity ${
+          className={`absolute inset-0 transition-opacity duration-[2000ms] ease-in-out will-change-opacity ${
             idx === current ? "opacity-100 z-20" : "opacity-0 z-10"
           }`}
         >
@@ -61,17 +53,16 @@ export default function ImageCarousel({ images, aspect = "aspect-[4/3]" }: Image
             src={img.src}
             alt={img.alt}
             fill
-            className="object-cover object-center select-none pointer-events-none"
+            className="object-cover object-center select-none pointer-events-none transition-transform duration-[2000ms]"
             priority={idx === 0}
             draggable={false}
           />
         </div>
       ))}
 
-      {/* Navigation Controls */}
+      {/* Navigation Arrows */}
       {images.length > 1 && (
         <>
-          {/* Left Arrow */}
           <button
             aria-label="Previous Slide"
             onClick={goPrev}
@@ -82,7 +73,6 @@ export default function ImageCarousel({ images, aspect = "aspect-[4/3]" }: Image
             </svg>
           </button>
 
-          {/* Right Arrow */}
           <button
             aria-label="Next Slide"
             onClick={goNext}
@@ -93,7 +83,7 @@ export default function ImageCarousel({ images, aspect = "aspect-[4/3]" }: Image
             </svg>
           </button>
 
-          {/* Dots */}
+          {/* Dot Indicators */}
           <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-30">
             {images.map((_, idx) => (
               <button
