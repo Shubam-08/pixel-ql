@@ -47,7 +47,7 @@ export default function ProjectsPage() {
     {
       id: 5,
       title: "Fashion Showroom, Bangalore",
-      image: "/fashionshowroom.png",
+      image: "/fashion3.png",
       description: "Intelligent energy management system with smart lighting and HVAC controls",
       link: "/projects/fashionshowroom"
     },

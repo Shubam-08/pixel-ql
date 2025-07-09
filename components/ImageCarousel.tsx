@@ -26,7 +26,7 @@ export default function ImageCarousel({ images, aspect = "aspect-[4/3]" }: Image
 
     timeoutRef.current = setTimeout(() => {
       setCurrent((prev) => (prev + 1) % images.length);
-    }, 5000); // 5 seconds between slides
+    }, 2000); // 5 seconds between slides
 
     return () => {
       if (timeoutRef.current) {
