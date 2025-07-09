@@ -7,7 +7,7 @@ export default function HeaderLogo() {
   return (
     <div className="absolute top-2.5 left-4 z-50">
       <Image
-        src="/transparentlogo.png"
+        src="/logonew1.png"
         alt="Company Logo"
         width={85}
         height={40}
