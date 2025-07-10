@@ -49,18 +49,16 @@ export default function BlogPage() {
             >
               {/* IMAGE */}
               <div className="relative aspect-[16/9] w-full overflow-hidden">
-  <Image
-    src={post.image}
-    alt={post.title}
-    fill
-    className="object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
-  />
-</div>
-
-
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                />
+              </div>
 
               {/* TEXT */}
-              <div className="p-6 flex flex-col flex-1 space-y-3">
+              <div className="p-6 flex flex-col flex-1 space-y-3 text-left">
                 <p className="text-sm text-gray-400">
                   {new Date(post.date).toLocaleDateString("en-US", {
                     year: "numeric",
@@ -71,7 +69,7 @@ export default function BlogPage() {
                 <h2 className="text-xl font-semibold text-white group-hover:text-cyan-400 transition">
                   {post.title}
                 </h2>
-                <p className="text-gray-300 text-sm text-justify flex-1">
+                <p className="text-gray-300 text-sm leading-relaxed tracking-normal flex-1">
                   {post.excerpt}
                 </p>
 
