@@ -71,7 +71,14 @@ export default function ProjectsPage() {
       video: "/yamunaskycity.mp4",
       description: "Energy-efficient lighting and automation solutions for large retail spaces",
       link: "/projects/yamunaskycity"
-    }
+    },
+     {
+      id: 9,
+      title: "Private villas",
+      image: "/privatevilla.png",
+      description: "Energy-efficient lighting and automation solutions for large retail spaces",
+      link: "/projects/privatevilla"
+    },
   ];
 
   return (

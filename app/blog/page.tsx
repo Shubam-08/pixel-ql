@@ -1,72 +1,87 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 const blogPosts = [
   {
+    slug: "smartlighting",
     title: "How Smart Lighting Transforms Modern Spaces",
     date: "2025-07-01",
     excerpt:
-      "Discover the latest trends in smart lighting and how it enhances comfort, efficiency, and aesthetics in contemporary environments. Smart lighting is revolutionizing the way we experience modern spaces by blending technology, comfort, and design into one seamless system. Unlike traditional lighting, smart lighting adapts to your lifestyle—automatically adjusting brightness, color temperature, and even scheduling based on your needs or the time of day. It enhances the aesthetics of homes, offices, and commercial spaces while promoting energy efficiency through motion sensors, timers, and daylight harvesting. Integrated with voice assistants or smartphones, it offers effortless control and personalization. In residential settings, it creates cozy, mood-enhancing environments; in workplaces, it boosts productivity by mimicking natural light patterns. Beyond convenience, smart lighting also improves safety and security with motion-activated features and remote access. Whether you're illuminating a cozy living room or designing an energy-efficient office, smart lighting transforms ordinary spaces into responsive, dynamic, and beautifully lit environments. It’s not just about turning lights on and off—it’s about reimagining how lighting can enhance our daily lives.",
+      "Smart lighting blends technology, comfort, and design into one seamless system. It adapts to your lifestyle—automatically adjusting brightness, color temperature, and scheduling. Discover how it transforms homes, offices, and commercial spaces.",
     image: "/smart-lighting.png",
-    link: "#",
   },
   {
+    slug: "grms",
     title: "GRMS: The Future of Hotel Automation",
     date: "2025-06-20",
     excerpt:
-      "Guest Room Management Systems are revolutionizing hospitality. Learn how hotels are boosting guest satisfaction and operational efficiency. GRMS integrates lighting, HVAC, curtains, and access control into one smart interface. Guests enjoy personalized comfort while hotels improve energy savings and service efficiency with real-time data. It's the future of smart, sustainable, and luxurious hospitality.",
+      "Guest Room Management Systems are revolutionizing hospitality. GRMS centralizes lighting, HVAC, curtains, and access control for a luxurious guest experience. Learn how it improves efficiency while enhancing guest satisfaction.",
     image: "/design.png",
-    link: "#",
   },
   {
+    slug: "automation",
     title: "Personalized Automation for Residential Projects",
     date: "2025-06-10",
     excerpt:
-      "Explore how tailored automation solutions are creating smarter, safer, and more convenient homes. Personalized automation adapts to your lifestyle—automating lighting, climate, entertainment, and security based on your habits. These solutions offer remote access, energy savings, and peace of mind, turning any house into a truly smart home.",
+      "Smart homes use tailored automation to simplify daily routines—from lighting and climate to security and entertainment. These systems adapt to your lifestyle for comfort, convenience, and peace of mind.",
     image: "/personalized.png",
-    link: "#",
   },
 ];
-
-import AnimatedBackground from "@/components/AnimatedBackground";
 
 export default function BlogPage() {
   return (
     <section className="min-h-screen py-20 bg-gradient-to-b from-gray-950 to-black relative overflow-hidden">
       <AnimatedBackground />
-      <div className="max-w-6xl mx-auto px-2 sm:px-4">
-        <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-center text-white mb-8 sm:mb-12">
-          Our Blog
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <h1 className="text-4xl md:text-5xl font-bold text-center text-white mb-16">
+          Explore Insights & Ideas
         </h1>
-        {/* One blog per line */}
-        <div className="grid grid-cols-1 gap-6 sm:gap-10">
-          {blogPosts.map((post, idx) => (
+
+        <div className="grid grid-cols-1 gap-12">
+          {blogPosts.map((post) => (
             <article
-              key={idx}
-              className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group"
+              key={post.slug}
+              className="bg-gray-900/80 backdrop-blur-md border border-gray-800 rounded-3xl overflow-hidden shadow-xl transition hover:shadow-2xl group"
             >
-              <div className="relative h-40 sm:h-56 w-full overflow-hidden">
+              {/* IMAGE */}
+              <div className="relative h-52 sm:h-64 w-full overflow-hidden">
                 <Image
                   src={post.image}
                   alt={post.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                 />
               </div>
-              <div className="p-6 flex flex-col h-full">
-                <h2 className="text-2xl font-semibold text-white mb-2">
+
+              {/* TEXT */}
+              <div className="p-6 sm:p-8 flex flex-col space-y-4">
+                <p className="text-sm text-gray-400">
+                  {new Date(post.date).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                  })}
+                </p>
+                <h2 className="text-2xl sm:text-3xl font-semibold text-white group-hover:text-cyan-400 transition">
                   {post.title}
                 </h2>
-                <p className="text-gray-400 text-sm mb-4">{post.date}</p>
-                <p className="text-gray-300 flex-1 text-justify">
+                <p className="text-gray-300 text-justify text-sm sm:text-base">
                   {post.excerpt}
                 </p>
-                <a
-                  href={post.link}
-                  className="mt-6 inline-block text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
-                >
-                  Read More →
-                </a>
+
+                {/* LINK */}
+                <div className="pt-4">
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="inline-block text-yellow-300 hover:text-yellow-400 font-medium text-sm border border-yellow-400 px-4 py-2 rounded-full transition"
+                  >
+                    Read More →
+                  </Link>
+                </div>
               </div>
             </article>
           ))}
