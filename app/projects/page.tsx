@@ -79,6 +79,20 @@ export default function ProjectsPage() {
       description: "Energy-efficient lighting and automation solutions for large retail spaces",
       link: "/projects/privatevilla"
     },
+     {
+      id: 10,
+      title: "Meeting Room",
+      image: "/meetingroom.jpg",
+      description: "Energy-efficient lighting and automation solutions for large retail spaces",
+      link: "/projects/meetingroom"
+    },
+    {
+      id: 11,
+      title: "Aliha University, Campus",
+      image: "/aliha.png",
+      description: "Energy-efficient lighting and automation solutions for large retail spaces",
+      link: "/projects/aliha"
+    },
   ];
 
   return (
