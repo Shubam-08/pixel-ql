@@ -27,7 +27,7 @@ export default function MeetingRoomProjectPage() {
 
           {/* ===== RIGHT: Text Section ===== */}
           <div className="w-full flex flex-col justify-start space-y-10 px-6 py-18 md:px-12">
-            <h1 className="text-3xl font-bold text-center md:text-left">Smart Meeting Room, India</h1>
+            <h1 className="text-3xl font-bold text-center md:text-left">Alian Office, India</h1>
 
             <div>
               <h2 className="text-2xl font-semibold mb-4">Project Overview</h2>

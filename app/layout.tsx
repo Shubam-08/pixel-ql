@@ -5,6 +5,22 @@ import FloatingMenu from "@/components/FloatingMenu";
 export const metadata = {
   title: "QR pixel Website",
   description: "Official company website",
+   icons: {
+    icon: "/logonew1.png", // ✅ this will show your logo in the browser tab
+  },
+   keywords: [
+    "smart lighting",
+    "home automation",
+    "GRMS",
+    "energy-efficient lighting",
+    "architectural lighting",
+    "LED lighting",
+    "automated lighting",
+    "voice-controlled lights",
+    "lighting design",
+    "commercial automation",
+    "residential automation",
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

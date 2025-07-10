@@ -81,7 +81,7 @@ export default function ProjectsPage() {
     },
      {
       id: 10,
-      title: "Meeting Room",
+      title: "Alian Office",
       image: "/meetingroom.jpg",
       description: "Energy-efficient lighting and automation solutions for large retail spaces",
       link: "/projects/meetingroom"
@@ -92,6 +92,13 @@ export default function ProjectsPage() {
       image: "/aliha.png",
       description: "Energy-efficient lighting and automation solutions for large retail spaces",
       link: "/projects/aliha"
+    },
+     {
+      id: 11,
+      title: "Expo City Masjid",
+      image: "/expocity.jpg",
+      description: "Energy-efficient lighting and automation solutions for large retail spaces",
+      link: "/projects/expocitymasjid"
     },
   ];
 
