@@ -12,7 +12,7 @@ const blogPosts = [
     date: "2025-07-01",
     excerpt:
       "Smart lighting blends technology, comfort, and design into one seamless system. It adapts to your lifestyle—automatically adjusting brightness, color temperature, and scheduling. Discover how it transforms homes, offices, and commercial spaces.",
-    image: "/smart-lighting.png",
+    image: "/smart-lighting1.png",
   },
   {
     slug: "grms",
@@ -20,7 +20,7 @@ const blogPosts = [
     date: "2025-06-20",
     excerpt:
       "Guest Room Management Systems are revolutionizing hospitality. GRMS centralizes lighting, HVAC, curtains, and access control for a luxurious guest experience. Learn how it improves efficiency while enhancing guest satisfaction.",
-    image: "/design.png",
+    image: "/grms.png",
   },
   {
     slug: "automation",
@@ -28,7 +28,7 @@ const blogPosts = [
     date: "2025-06-10",
     excerpt:
       "Smart homes use tailored automation to simplify daily routines—from lighting and climate to security and entertainment. These systems adapt to your lifestyle for comfort, convenience, and peace of mind.",
-    image: "/personalized.png",
+    image: "/automation.png",
   },
 ];
 
@@ -41,24 +41,26 @@ export default function BlogPage() {
           Explore Insights & Ideas
         </h1>
 
-        <div className="grid grid-cols-1 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {blogPosts.map((post) => (
             <article
               key={post.slug}
-              className="bg-gray-900/80 backdrop-blur-md border border-gray-800 rounded-3xl overflow-hidden shadow-xl transition hover:shadow-2xl group"
+              className="bg-gray-900/80 backdrop-blur-md border border-gray-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition flex flex-col"
             >
               {/* IMAGE */}
-              <div className="relative h-52 sm:h-64 w-full overflow-hidden">
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
-                />
-              </div>
+              <div className="relative aspect-[16/9] w-full overflow-hidden">
+  <Image
+    src={post.image}
+    alt={post.title}
+    fill
+    className="object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+  />
+</div>
+
+
 
               {/* TEXT */}
-              <div className="p-6 sm:p-8 flex flex-col space-y-4">
+              <div className="p-6 flex flex-col flex-1 space-y-3">
                 <p className="text-sm text-gray-400">
                   {new Date(post.date).toLocaleDateString("en-US", {
                     year: "numeric",
@@ -66,15 +68,15 @@ export default function BlogPage() {
                     day: "numeric",
                   })}
                 </p>
-                <h2 className="text-2xl sm:text-3xl font-semibold text-white group-hover:text-cyan-400 transition">
+                <h2 className="text-xl font-semibold text-white group-hover:text-cyan-400 transition">
                   {post.title}
                 </h2>
-                <p className="text-gray-300 text-justify text-sm sm:text-base">
+                <p className="text-gray-300 text-sm text-justify flex-1">
                   {post.excerpt}
                 </p>
 
                 {/* LINK */}
-                <div className="pt-4">
+                <div className="pt-2">
                   <Link
                     href={`/blog/${post.slug}`}
                     className="inline-block text-yellow-300 hover:text-yellow-400 font-medium text-sm border border-yellow-400 px-4 py-2 rounded-full transition"
