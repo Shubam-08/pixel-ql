@@ -94,7 +94,7 @@ export default function ProjectsPage() {
       link: "/projects/aliha"
     },
      {
-      id: 11,
+      id: 12,
       title: "Expo City Masjid",
       image: "/expocity.jpg",
       description: "Energy-efficient lighting and automation solutions for large retail spaces",
@@ -164,3 +164,4 @@ export default function ProjectsPage() {
     </main>
   );
 }
+

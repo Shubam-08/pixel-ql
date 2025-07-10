@@ -9,12 +9,38 @@ export default function AnimatedBackground() {
       aria-hidden
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1.2 }}
-      className="pointer-events-none fixed inset-0 z-0"
+      transition={{ duration: 0.5 }}
+      className="pointer-events-none fixed inset-0 z-0 overflow-hidden"
     >
-      <div className="absolute -top-40 left-1/2 w-[120vw] h-[80vw] -translate-x-1/2 bg-gradient-to-tr from-blue-400/30 via-yellow-300/30 via-pink-400/30 to-cyan-400/30 blur-[120px] animate-[pulse_8s_ease-in-out_infinite] rounded-full" />
-      <div className="absolute top-1/3 right-0 w-96 h-96 bg-gradient-to-br from-cyan-400/20 via-blue-400/20 to-yellow-300/20 blur-[100px] rounded-full animate-[spin_60s_linear_infinite]" />
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-pink-400/20 via-yellow-300/20 to-blue-400/20 blur-[100px] rounded-full animate-[spin_90s_linear_infinite]" />
+      {/* Fullscreen animated background */}
+      <motion.div
+        className="absolute w-full h-full bg-gradient-to-br from-pink-500 via-blue-500 to-yellow-400 opacity-50 blur-3xl"
+        animate={{
+          scale: [1, 1.2, 1],
+          rotate: [0, 360],
+          opacity: [0.5, 0.8, 0.5],
+        }}
+        transition={{
+          duration: 12,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+
+      {/* Additional color overlay */}
+      <motion.div
+        className="absolute w-full h-full bg-gradient-to-tr from-purple-500 via-cyan-400 to-amber-400 opacity-40 blur-[100px]"
+        animate={{
+          scale: [1.1, 1.3, 1.1],
+          rotate: [360, 0],
+          opacity: [0.4, 0.7, 0.4],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
     </motion.div>
   );
 }
