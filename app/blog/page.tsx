@@ -36,10 +36,10 @@ export default function BlogPage() {
   return (
     <section className="min-h-screen py-20 bg-gradient-to-b from-gray-950 to-black relative overflow-hidden">
       <AnimatedBackground />
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-white mb-16">
-          Explore Insights & Ideas
-        </h1>
+      <div  className="max-w-6xl mx-auto px-4 sm:px-6">
+  <h1 className="text-3xl md:text-4xl font-extrabold text-center mb-16 bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-400 text-transparent bg-clip-text tracking-tight drop-shadow-sm animate-fade-in">
+    Explore Insights & Ideas
+  </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {blogPosts.map((post) => (

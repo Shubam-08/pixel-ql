@@ -2,85 +2,113 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function AutomationPage() {
   return (
-    <main className="bg-black text-white min-h-screen">
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 pt-20 pb-16">
-        {/* Title & Intro */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-14"
-        >
-          <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-4">
-            Complete Home Automation for Effortless Living
-          </h1>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            From lighting to security—explore how full-scale home automation systems make living smarter, safer, and simpler.
-          </p>
-        </motion.div>
+    <div className="bg-neutral-950 text-white font-sans">
+      <main className="w-full min-h-screen overflow-x-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-24 pb-20 sm:pt-28 sm:pb-24">
 
-        {/* Cards */}
-        <div className="grid sm:grid-cols-3 gap-6 mb-20">
-          {[
-            { icon: "🏠", title: "Total Control", value: "All Devices Unified" },
-            { icon: "🔐", title: "Safety & Security", value: "24/7 Monitoring" },
-            { icon: "🧠", title: "Automation Engine", value: "Rule-based Logic" },
-          ].map((item, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.2 }}
-              className="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center shadow hover:shadow-xl transition"
-            >
-              <div className="text-4xl mb-3">{item.icon}</div>
-              <h4 className="text-xl font-bold text-white mb-1">{item.value}</h4>
-              <p className="text-sm text-gray-400">{item.title}</p>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Content */}
-        <div className="space-y-14 text-gray-300 leading-relaxed text-justify">
-          <section>
-            <h2 className="text-2xl font-semibold text-cyan-400 mb-3">Overview</h2>
-            <p>
-              Home automation integrates all aspects of your home—lighting, climate, security, entertainment, and appliances—into a single intuitive system. Using sensors, schedules, and AI-based control, it brings comfort, efficiency, and peace of mind. Whether you&apos;re home or away, automation keeps everything connected and responsive.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold text-cyan-400 mb-3">Key Features</h2>
-            <ul className="list-disc list-inside space-y-2">
-              <li>Voice and app-based control of all devices</li>
-              <li>Smart surveillance with alerts and access logs</li>
-              <li>Energy-efficient climate and lighting control</li>
-              <li>Custom routines and scenes for daily life</li>
-              <li>Remote access from anywhere in the world</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold text-cyan-400 mb-3">Benefits</h2>
-            <p>
-              Home automation simplifies your life by reducing manual tasks, enhancing home security, and optimizing energy usage. It offers convenience, saves time, and gives you full control over your living space—whether you&apos;re at home or on the go.
-            </p>
-          </section>
-        </div>
-
-        {/* Back Button */}
-        <div className="text-center mt-20">
-          <Link
-            href="/blog"
-            className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-yellow-300 border border-yellow-400 rounded-full hover:bg-yellow-400/10 transition"
+          {/* Hero Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="text-center mb-20 px-2"
           >
-            ← Back to Blog
-          </Link>
+              <h3 className="text-3xl sm:text-6xl font-extrabold leading-tight tracking-tight mb-6 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 text-transparent bg-clip-text">
+              Elegant, Intelligent Living
+            </h3>
+            <p className="text-base sm:text-lg text-gray-400 max-w-xl mx-auto px-2">
+              Automation that elevates the experience of space — crafted for comfort, safety, and seamless control.
+            </p>
+          </motion.div>
+
+          {/* Informational Sections */}
+          <div className="space-y-24 text-gray-300 text-base sm:text-lg leading-relaxed px-2 sm:px-0">
+
+            {/* Section 1 */}
+            <section className="flex flex-col md:flex-row gap-10 items-start ">
+              <div className="w-full md:w-1/2">
+                <h2 className="text-2xl sm:text-3xl font-semibold text-cyan-400 mb-4 border-l-4 border-cyan-500 pl-4">
+                  What Makes a Home Smart?
+                </h2>
+                <p className="text-justify">
+                 It’s not just about gadgets — it’s about orchestration. Imagine walking into a space that understands you. As the evening sets in, the lights softly shift to a warm glow, curtains draw themselves closed, and a gentle playlist fills the room — all without lifting a finger. The thermostat adjusts to your preferred comfort level before you even arrive.
+
+True home automation isn’t just about control; it’s about effortless living. It anticipates your needs, adapts to your routine, and creates an environment that flows with your lifestyle. Whether you’re hosting, relaxing, or away from home, every element — lighting, climate, entertainment, and security — works in harmony to make your space more comfortable, intelligent, and beautifully responsive.
+                </p>
+              </div>
+              <div className="w-full md:w-1/2">
+                <Image
+                  src="/automation1.png"
+                  alt="Smart Home Overview"
+                  width={600}
+                  height={400}
+                  className="rounded-xl shadow-lg w-full h-auto"
+                />
+              </div>
+            </section>
+
+            {/* Section 2 */}
+            <section className="flex flex-col-reverse md:flex-row gap-10 items-start">
+              <div className="w-full md:w-1/2">
+                <Image
+                  src="/automation2.png"
+                  alt="Key Features"
+                  width={600}
+                  height={400}
+                  className="rounded-xl shadow-lg w-full h-auto"
+                />
+              </div>
+              <div className="w-full md:w-1/2">
+                <h2 className="text-2xl sm:text-3xl font-semibold text-green-400 mb-4 border-l-4 border-green-500 pl-4">
+                  Signature Features
+                </h2>
+                <ul className="list-disc list-inside space-y-2 text-justify">
+                  <li>Automated scenes for morning, evening, or entertaining</li>
+                  <li>Smart locks, doorbell cams, and security zones</li>
+                  <li>Climate zones with adaptive temperature control</li>
+                  <li>Voice integrations with Alexa, Google, or Siri</li>
+                  <li>Cloud-connected for access anytime, anywhere</li>
+                </ul>
+              </div>
+            </section>
+
+            {/* Section 3 */}
+            <section className="flex flex-col md:flex-row gap-10 items-start">
+              <div className="w-full md:w-1/2">
+                <h2 className="text-2xl sm:text-3xl font-semibold text-purple-400 mb-4 border-l-4 border-purple-500 pl-4">
+                  Why Invest in Automation?
+                </h2>
+                <p className="text-justify">
+                  From energy savings to an enriched lifestyle, smart technology is the new standard in architectural design. It enhances real estate value, reduces energy bills, and gives you control — beautifully, invisibly, and intelligently.
+                </p>
+              </div>
+              <div className="w-full md:w-1/2">
+                <Image
+                  src="/automation.png"
+                  alt="Benefits of Home Automation"
+                  width={600}
+                  height={400}
+                  className="rounded-xl shadow-lg w-full h-auto"
+                />
+              </div>
+            </section>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-28 px-2">
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-3 px-8 py-4 text-base font-medium text-white rounded-full bg-gradient-to-r from-purple-600 to-pink-600 hover:shadow-pink-500/30 shadow-md hover:scale-105 transition-transform"
+            >
+              ← Back to Blog
+            </Link>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </div>
   );
 }

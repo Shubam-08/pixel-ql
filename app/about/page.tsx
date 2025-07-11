@@ -1,15 +1,18 @@
+// app/about/page.tsx
 "use client";
 
 import { motion } from "framer-motion";
 import React from "react";
+import Image from "next/image";
 import AnimatedBackground from "@/components/AnimatedBackground";
+
 const team = [
   { name: "Revant Sharma", role: "Founder & CEO", linkedin: "https://www.linkedin.com/in/revant-sharma-qlite/" },
-  { name: "Philipose P.", role: "Director", linkedin: "https://www.linkedin.com/in/illayaraja-vp/" },
-  { name: "Yash Raj Kaushik", role: "Marketing Head", linkedin: "https://www.linkedin.com/in/illayaraja-vp/" },
+  { name: "Philipose P.", role: "Director", linkedin: "https://www.linkedin.com/in/philipose-p/" },
+  { name: "Yash Raj Kaushik", role: "Marketing Head", linkedin: "https://www.linkedin.com/in/yash-raj-kaushik/" },
   { name: "Jnanasagar", role: "Design Head", linkedin: "https://www.linkedin.com/in/jnanasagar/" },
   { name: "Illayaraja VP", role: "RnD Expert", linkedin: "https://www.linkedin.com/in/illayaraja-vp/" },
-  { name: "Shubam Gupta", role: "Digital Expertise", linkedin: "https://www.linkedin.com/in/illayaraja-vp/" },
+  { name: "Shubam Gupta", role: "Digital Expertise", linkedin: "https://www.linkedin.com/in/shubam-gupta/" },
 ];
 
 const getInitials = (name: string) => {
@@ -24,7 +27,7 @@ export default function AboutPage() {
 
       <section className="relative z-10 px-6 md:px-12 lg:px-24 py-20 max-w-7xl mx-auto space-y-24">
         
-        {/* About + Journey side by side */}
+        {/* About + Journey */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* About Description */}
           <motion.div
@@ -45,7 +48,7 @@ export default function AboutPage() {
             </p>
           </motion.div>
 
-          {/* Our Journey */}
+          {/* Journey */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -71,8 +74,11 @@ export default function AboutPage() {
           </h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
             {team.map((member, idx) => (
-              <div
+              <a
                 key={idx}
+                href={member.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-gray-800 backdrop-blur-md p-6 rounded-2xl text-center border border-white/10 hover:shadow-blue-500/20 transition duration-300"
               >
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-tr from-blue-500 to-cyan-400 flex items-center justify-center text-white text-2xl font-bold">
@@ -80,7 +86,7 @@ export default function AboutPage() {
                 </div>
                 <h3 className="text-white text-lg font-semibold">{member.name}</h3>
                 <p className="text-sm text-gray-300">{member.role}</p>
-              </div>
+              </a>
             ))}
           </div>
         </section>
@@ -92,7 +98,7 @@ export default function AboutPage() {
           transition={{ duration: 1 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center"
         >
-          {[ 
+          {[
             { label: "Years of Innovation", value: "6+" },
             { label: "Smart Projects Delivered", value: "50+" },
             { label: "Countries Served", value: "4+" },
@@ -108,13 +114,13 @@ export default function AboutPage() {
           ))}
         </motion.div>
 
-        {/* Our Services */}
+        {/* Services */}
         <section>
           <h2 className="text-4xl font-extrabold text-center mb-12 bg-gradient-to-r from-pink-400 via-blue-400 to-cyan-400 text-transparent bg-clip-text">
             Our Services
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[ 
+            {[
               { icon: '💡', title: 'Smart Lighting', desc: 'Energy-efficient lighting control systems for ambiance and sustainability.', image: '/smart-lighting.png' },
               { icon: '🤖', title: 'Automation', desc: 'Control lighting, HVAC, and more for comfort and control.', image: '/automation.jpg' },
               { icon: '🎨', title: 'Lighting Design', desc: 'Elegant lighting schemes that blend function and beauty.', image: '/design.png' },
@@ -126,9 +132,11 @@ export default function AboutPage() {
                 key={index}
                 className="relative overflow-hidden rounded-2xl group shadow-xl border border-white/10"
               >
-                <img
+                <Image
                   src={service.image}
                   alt={service.title}
+                  width={500}
+                  height={300}
                   className="w-full h-64 object-cover opacity-80 group-hover:opacity-60 transition duration-300"
                 />
                 <div className="absolute inset-0 bg-black/50 group-hover:bg-black/70 transition duration-300 flex flex-col items-center justify-end p-6">

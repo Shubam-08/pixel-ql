@@ -1,101 +1,113 @@
+// app/blog/smartlighting/page.tsx
 "use client";
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function SmartLightingPage() {
   return (
-    <main className="bg-black text-white min-h-screen">
-   <div className="max-w-6xl mx-auto px-6 sm:px-8 pt-20 pb-16">
+    <div className="bg-neutral-950 text-white font-sans">
+      <main className="w-full min-h-screen overflow-x-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-24 pb-20 sm:pt-28 sm:pb-24">
 
-        {/* Title & Intro */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-14"
-        >
-          <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-4">
-            How Smart Lighting Transforms Modern Spaces
-          </h1>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Discover how intelligent lighting adapts to your lifestyle, saves energy,
-            and enhances every space it illuminates.
-          </p>
-        </motion.div>
-
-        {/* Animated Cards */}
-        <div className="grid sm:grid-cols-3 gap-6 mb-20">
-          {[
-            { icon: "💡", title: "Energy Savings", value: "Up to 60%" },
-            { icon: "📱", title: "Smart Control", value: "App + Voice" },
-            { icon: "🎯", title: "Mood Settings", value: "Custom Scenes" },
-          ].map((item, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.2 }}
-              className="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center shadow hover:shadow-xl transition"
-            >
-              <div className="text-4xl mb-3">{item.icon}</div>
-              <h4 className="text-xl font-bold text-white mb-1">{item.value}</h4>
-              <p className="text-sm text-gray-400">{item.title}</p>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Detailed Content */}
-        <div className="space-y-14 text-gray-300 leading-relaxed text-justify">
-          <section>
-            <h2 className="text-2xl font-semibold text-cyan-400 mb-3">Overview</h2>
-            <p>
-              Smart lighting blends technology, comfort, and design into one seamless system.
-              It automatically adjusts brightness, color temperature, and scheduling
-              to match your daily rhythm. Whether it’s for ambiance, convenience,
-              or efficiency — smart lighting adapts to how you live and work.
-    Smart lighting goes beyond aesthetics and convenience—it’s a foundational element in modern architecture
-    and smart home design. In residential settings, it elevates comfort by automating ambient transitions
-    between morning, afternoon, and night. In commercial environments, it enhances productivity and wellness
-    by dynamically adjusting brightness and color tones to reduce eye strain and fatigue. Hotels, retail stores,
-    and even hospitals are leveraging smart lighting to improve user experience, reduce operational costs, and
-    create adaptive atmospheres. Integration with motion sensors and occupancy data also means lights are only
-    on when needed, significantly reducing wastage. The technology scales effortlessly from a single room to
-    entire buildings, making it both flexible and future-proof.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold text-cyan-400 mb-3">Key Features</h2>
-            <ul className="list-disc list-inside space-y-2">
-              <li>Motion and daylight sensing</li>
-              <li>Remote access via smartphone apps</li>
-              <li>Custom lighting scenes for activities or moods</li>
-              <li>Voice integration with Alexa, Google, Siri</li>
-              <li>Schedules based on time or occupancy</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold text-cyan-400 mb-3">Benefits</h2>
-            <p>
-              Enhance the comfort and security of your home or workspace while reducing energy bills.
-              From cozy reading nooks to vibrant kitchen lights — smart systems put you
-              in control like never before.
-            </p>
-          </section>
-        </div>
-
-        {/* Back Button */}
-        <div className="text-center mt-20">
-          <Link
-            href="/blog"
-            className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-yellow-300 border border-yellow-400 rounded-full hover:bg-yellow-400/10 transition"
+          {/* Hero Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="text-center mb-20 px-2"
           >
-            ← Back to Blog
-          </Link>
+            <h3 className="text-3xl sm:text-6xl font-extrabold leading-tight tracking-tight mb-6 bg-gradient-to-r from-yellow-300 via-orange-400 to-pink-500 text-transparent bg-clip-text">
+              Smart Lighting, Smarter Living
+            </h3>
+            <p className="text-base sm:text-lg text-gray-400 max-w-xl mx-auto px-2">
+              Discover how intelligent lighting transforms the ambiance, energy, and functionality of every space.
+            </p>
+          </motion.div>
+
+          {/* Informational Sections */}
+          <div className="space-y-24 text-gray-300 text-base sm:text-lg leading-relaxed px-2 sm:px-0">
+
+            {/* Section 1 */}
+            <section className="flex flex-col md:flex-row gap-10 items-start">
+              <div className="w-full md:w-1/2">
+                <h2 className="text-2xl sm:text-3xl font-semibold text-yellow-400 mb-4 border-l-4 border-yellow-500 pl-4">
+                  What is Smart Lighting?
+                </h2>
+                <p className="text-justify">
+                  Smart lighting adapts to your rhythm. It automatically adjusts brightness, color temperature, and scenes to match the time of day, your mood, or even your voice command. From homes to commercial buildings, it is a core element of intuitive environments.
+                </p>
+              </div>
+              <div className="w-full md:w-1/2">
+                <Image
+                  src="/smart-lighting3.png"
+                  alt="Smart Lighting Overview"
+                  width={600}
+                  height={400}
+                  className="rounded-xl shadow-lg w-full h-auto"
+                />
+              </div>
+            </section>
+
+            {/* Section 2 */}
+            <section className="flex flex-col-reverse md:flex-row gap-10 items-start">
+              <div className="w-full md:w-1/2">
+                <Image
+                  src="/smart-lighting2.png"
+                  alt="Smart Lighting Features"
+                  width={600}
+                  height={400}
+                  className="rounded-xl shadow-lg w-full h-auto"
+                />
+              </div>
+              <div className="w-full md:w-1/2">
+                <h2 className="text-2xl sm:text-3xl font-semibold text-orange-400 mb-4 border-l-4 border-orange-500 pl-4">
+                  Signature Features
+                </h2>
+                <ul className="list-disc list-inside space-y-2 text-justify">
+                  <li>Dimmable lighting that adapts to time or mood</li>
+                  <li>Scene presets for work, rest, or celebration</li>
+                  <li>Energy-efficient LED and motion sensors</li>
+                  <li>Color-tunable lights for day-to-night transitions</li>
+                  <li>App and voice control from anywhere</li>
+                </ul>
+              </div>
+            </section>
+
+            {/* Section 3 */}
+            <section className="flex flex-col md:flex-row gap-10 items-start">
+              <div className="w-full md:w-1/2">
+                <h2 className="text-2xl sm:text-3xl font-semibold text-pink-400 mb-4 border-l-4 border-pink-500 pl-4">
+                  Why Choose Smart Lighting?
+                </h2>
+                <p className="text-justify">
+                  Beyond convenience, smart lighting promotes well-being. Proper lighting boosts productivity, improves sleep patterns, and lowers energy usage. It’s an essential upgrade for anyone looking to design healthier, more dynamic spaces.
+                </p>
+              </div>
+              <div className="w-full md:w-1/2">
+                <Image
+                  src="/smart-lighting1.png"
+                  alt="Lighting Benefits"
+                  width={600}
+                  height={400}
+                  className="rounded-xl shadow-lg w-full h-auto"
+                />
+              </div>
+            </section>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-28 px-2">
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-3 px-8 py-4 text-base font-medium text-white rounded-full bg-gradient-to-r from-yellow-500 to-pink-500 hover:shadow-yellow-400/30 shadow-md hover:scale-105 transition-transform"
+            >
+              ← Back to Blog
+            </Link>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </div>
   );
 }
