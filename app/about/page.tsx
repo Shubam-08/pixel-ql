@@ -66,7 +66,7 @@ export default function AboutPage() {
 
         {/* Team */}
         <section>
-          <h2 className="text-4xl font-extrabold text-center mb-12 bg-gradient-to-r from-blue-900 via-pink-900 to-cyan-900 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-extrabold text-center mb-12 bg-gradient-to-r from-blue-300 via-pink-300 to-cyan-300 bg-clip-text text-transparent">
             The Minds Behind QR Pixel
           </h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">

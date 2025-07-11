@@ -7,10 +7,12 @@ export function ScrollButton() {
   return (
     <Link
       href="/projects"
-      className="inline-flex items-center border border-neutral-700 bg-transparent text-neutral-200 px-4 py-2 rounded-lg hover:bg-neutral-800 hover:border-neutral-600 transition-colors text-base font-medium shadow-sm group gap-2"
+      className="inline-flex items-center gap-2 px-6 py-3 rounded-xl shadow-md border border-neutral-700 
+                 bg-black/70 backdrop-blur-md text-neutral-200 transition-all duration-300 group 
+                 hover:bg-gradient-to-r hover:from-pink-600/60 hover:to-purple-700/60 hover:border-pink-500"
     >
-      <Sparkles className="w-4 h-4 mr-1 text-pink-400 group-hover:text-white transition-colors" />
-      <span className="text-base font-medium tracking-wide">
+      <Sparkles className="w-5 h-5 text-pink-400 group-hover:text-white transition-colors duration-300" />
+      <span className="text-base font-semibold tracking-wide">
         Explore Our Creations
       </span>
     </Link>

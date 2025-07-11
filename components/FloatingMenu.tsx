@@ -27,23 +27,23 @@ export default function FloatingMenu() {
 
   return (
     <>
-      {/* Logo (optional, left-top disappearing) */}
+      {/* Optional fading logo placeholder (top-left) */}
       <motion.div
         initial={{ opacity: 1 }}
         animate={{ opacity: logoVisible ? 1 : 0 }}
         transition={{ duration: 0.5 }}
-        className="fixed top-4 left-4 z-50 pointer-events-none"
+        className="fixed top-2 sm:top-4 md:top-6 left-4 z-50 pointer-events-none"
       >
-        {/* You can add logo content here if needed */}
+        {/* Optional logo if needed */}
       </motion.div>
 
-      {/* Menu Toggle Button */}
+      {/* Toggle button aligned with logo */}
       <motion.div
         initial={{ opacity: 1 }}
         animate={{ opacity: logoVisible ? 1 : 0 }}
         transition={{ duration: 0.5 }}
         style={{ pointerEvents: logoVisible ? "auto" : "none" }}
-        className="fixed top-4 right-4 sm:top-4 sm:right-4 md:top-6 md:right-6 z-50"
+        className="fixed top-2 sm:top-4 md:top-6 right-4 sm:right-4 md:right-6 z-50"
       >
         <button
           aria-label={open ? "Close menu" : "Open menu"}
@@ -66,7 +66,7 @@ export default function FloatingMenu() {
         </button>
       </motion.div>
 
-      {/* Dropdown Menu (below the icon) */}
+      {/* Dropdown nav menu */}
       <AnimatePresence>
         {open && (
           <motion.nav
