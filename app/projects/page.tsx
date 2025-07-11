@@ -71,20 +71,20 @@ export default function ProjectsPage() {
       description: "Energy-efficient lighting and automation solutions for large retail spaces",
       link: "/projects/residentialbuilding",
     },
-     {
-      id: 8,
-      title: "Yamuna Sky City",
-      video: "/yamunaskycity.mp4",
-      description: "Energy-efficient lighting and automation solutions for large retail spaces",
-      link: "/projects/yamunaskycity",
-    },
-    
+     
     {
-      id: 9,
+      id: 8,
       title: "Private villas",
       image: "/privatevilla.png",
       description: "Energy-efficient lighting and automation solutions for large retail spaces",
       link: "/projects/privatevilla",
+    },
+    {
+      id: 9,
+      title: "Yamuna Sky City",
+      video: "/yamunaskycity.mp4",
+      description: "Energy-efficient lighting and automation solutions for large retail spaces",
+      link: "/projects/yamunaskycity",
     },
     {
       id: 10,
@@ -106,6 +106,27 @@ export default function ProjectsPage() {
       image: "/expocity.jpg",
       description: "Energy-efficient lighting and automation solutions for large retail spaces",
       link: "/projects/expocitymasjid",
+    },
+    {
+      id: 13,
+      title: "Luqta(private place)",
+      image: "/luqta.jpg",
+      description: "Energy-efficient lighting and automation solutions for large retail spaces",
+      link: "/projects/luqta",
+    },
+    {
+      id: 14,
+      title: "Muraqqabat",
+      image: "/muraqqabat.jpg",
+      description: "Energy-efficient lighting and automation solutions for large retail spaces",
+      link: "/projects/muraqqabat",
+    },
+    {
+      id: 15,
+      title: "Training Institute, Dubai",
+      image: "/dubaitrainginstitute.jpg",
+      description: "Energy-efficient lighting and automation solutions for large retail spaces",
+      link: "/projects/dubaitraininginstitute",
     },
   ];
 
