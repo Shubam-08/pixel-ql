@@ -6,11 +6,12 @@ import { useState, useEffect, useRef } from "react";
 interface CarouselImage {
   src: string;
   alt: string;
+  label?: string; // <-- Add optional label
 }
 
 interface ImageCarouselProps {
   images: CarouselImage[];
-  aspect?: string; // e.g. "aspect-[4/3]"
+  aspect?: string;
 }
 
 export default function ImageCarousel({ images, aspect = "aspect-[4/3]" }: ImageCarouselProps) {
@@ -20,18 +21,14 @@ export default function ImageCarousel({ images, aspect = "aspect-[4/3]" }: Image
   useEffect(() => {
     if (images.length <= 1) return;
 
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
 
     timeoutRef.current = setTimeout(() => {
       setCurrent((prev) => (prev + 1) % images.length);
-    }, 3200); // 5 seconds between slides
-
+    }, 3600);
+       
     return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
   }, [current, images.length]);
 
@@ -41,7 +38,6 @@ export default function ImageCarousel({ images, aspect = "aspect-[4/3]" }: Image
 
   return (
     <div className={`relative w-full ${aspect} rounded-2xl overflow-hidden shadow-2xl bg-black/60`}>
-      {/* Images with smoother fading */}
       {images.map((img, idx) => (
         <div
           key={img.src}
@@ -57,16 +53,21 @@ export default function ImageCarousel({ images, aspect = "aspect-[4/3]" }: Image
             priority={idx === 0}
             draggable={false}
           />
+
+          {img.label && (
+            <div className="absolute top-3 left-1 px-3 py-1 rounded text-sm text-white font-semibold shadow-md z-30">
+              {img.label}
+            </div>
+          )}
         </div>
       ))}
 
-      {/* Navigation Arrows */}
       {images.length > 1 && (
         <>
           <button
             aria-label="Previous Slide"
             onClick={goPrev}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-2 rounded-full z-30 focus:outline-none"
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-2 rounded-full z-30"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -76,14 +77,13 @@ export default function ImageCarousel({ images, aspect = "aspect-[4/3]" }: Image
           <button
             aria-label="Next Slide"
             onClick={goNext}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-2 rounded-full z-30 focus:outline-none"
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-2 rounded-full z-30"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
 
-          {/* Dot Indicators */}
           <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-30">
             {images.map((_, idx) => (
               <button

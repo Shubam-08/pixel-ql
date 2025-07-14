@@ -40,29 +40,30 @@ export default function ProjectsPage() {
       description: "Smart home automation with integrated lighting and security systems",
       link: "/projects/italianheritage",
     },
-   
     {
-      id: 4,
+       id: 4,
+      title: "Spatika Hotel, Manipal",
+      image: "/spatikahotel.png",
+      description: "Energy-efficient lighting and automation solutions for large retail spaces",
+      link: "/projects/spatikahotel",
+    },
+    {
+      id: 5,
       title: "Gujrat Architectural Jewels",
       image: "/project6.png",
       description: "Advanced lighting control and automation system implemented in a luxury hotel setting",
       link: "/projects/gujratjewels",
     },
 
+     
      {
-      id: 5,
+      id: 6,
       title: "Sobha Towers",
       image: "/Sobha Towers.jpg",
       description: "Intelligent energy management system with smart lighting and HVAC controls",
       link: "/projects/sobhatowers",
     },
-     {
-      id: 6,
-      title: "Alian Office",
-      image: "/meetingroom.jpg",
-      description: "Energy-efficient lighting and automation solutions for large retail spaces",
-      link: "/projects/meetingroom",
-     },
+  
 
     {
       id: 7,
@@ -74,11 +75,12 @@ export default function ProjectsPage() {
      
     {
       id: 8,
-      title: "Private villas",
-      image: "/privatevilla.png",
+      title: "Alian Office",
+      image: "/meetingroom.jpg",
       description: "Energy-efficient lighting and automation solutions for large retail spaces",
-      link: "/projects/privatevilla",
-    },
+      link: "/projects/meetingroom",
+     },
+    
     {
       id: 9,
       title: "Yamuna Sky City",
@@ -94,14 +96,13 @@ export default function ProjectsPage() {
       description: "Smart home automation with integrated lighting and security systems",
       link: "/projects/comercialshowroom",
     },
-
-    {
+      {
       id: 11,
-      title: "Aliha University, Campus",
-      image: "/aliha.png",
+      title: "Welcare Hospital, Kochi",
+      image: "/welcare.jpg",
       description: "Energy-efficient lighting and automation solutions for large retail spaces",
-      link: "/projects/aliha",
-    },
+      link: "/projects/welcarehospital",
+     },
     {
       id: 12,
       title: "Expo City Masjid",
@@ -131,6 +132,23 @@ export default function ProjectsPage() {
       description: "Energy-efficient lighting and automation solutions for large retail spaces",
       link: "/projects/dubaitraininginstitute",
     },
+   
+      
+    {
+      id: 16,
+      title: "Private villas",
+      image: "/privatevilla.png",
+      description: "Energy-efficient lighting and automation solutions for large retail spaces",
+      link: "/projects/privatevilla",
+    },
+     
+    {
+      id: 17,
+      title: "Aliha University, Campus",
+      image: "/aliha.png",
+      description: "Energy-efficient lighting and automation solutions for large retail spaces",
+      link: "/projects/aliha",
+    },
   ];
 
   return (
@@ -155,7 +173,7 @@ export default function ProjectsPage() {
                       muted
                       loop
                       playsInline
-                      className="w-full h-[400px] sm:h-[500px] md:h-[650px] lg:h-[850px] object-cover transition-transform duration-500"
+                      className="w-full h-[600px] sm:h-[500px] md:h-[650px] lg:h-[1000px] object-cover transition-transform duration-500"
                     />
                   ) : project.image ? (
                     <Image

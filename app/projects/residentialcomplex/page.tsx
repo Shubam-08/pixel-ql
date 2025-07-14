@@ -6,25 +6,27 @@ import Link from "next/link";
 export default function ResidentialProjectPage() {
   return (
     <main className="bg-black text-white">
-      <div className="w-full pt-6 md:pt-20 px-8 md:px-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center min-h-[700px]">
-          {/* Left: Image Carousel */}
-          <div className="flex justify-center items-center -mt-14 md:-mt-28">
+      <div className="w-full pt-6 md:pt-20 px-2 md:px-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          {/* ===== LEFT: Image Carousel ===== */}
+          <div className="w-full flex justify-center items-start py-24 md:px-8">
             <ImageCarousel
               images={[
                 { src: "/fourth.jpg", alt: "Residential Complex Project" },
+                { src: "/fourth1.jpg", alt: "Residential Complex Project" },
               ]}
-              aspect="aspect-[4/3]" // Matches others in height
+              aspect="aspect-[4/3]"
             />
           </div>
 
-          {/* Right: Project Details */}
-          <div className="flex flex-col justify-center space-y-10 px-6 md:px-12">
+          {/* ===== RIGHT: Project Details ===== */}
+          <div className="w-full flex flex-col justify-start space-y-10 px-6 py-8 md:px-12">
             <h1 className="text-3xl font-bold text-center md:text-left">
               Residential Complex, Bangalore
             </h1>
 
-            {/* Overview */}
+            {/* Project Overview */}
             <div>
               <h2 className="text-2xl font-semibold mb-4">Project Overview</h2>
               <p className="text-gray-400 leading-relaxed">

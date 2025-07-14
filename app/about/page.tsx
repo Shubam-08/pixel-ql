@@ -1,4 +1,3 @@
-// app/about/page.tsx
 "use client";
 
 import { motion } from "framer-motion";
@@ -7,12 +6,12 @@ import Image from "next/image";
 import AnimatedBackground from "@/components/AnimatedBackground";
 
 const team = [
-  { name: "Revant Sharma", role: "Founder & CEO", linkedin: "https://www.linkedin.com/in/revant-sharma-qlite/" },
-  { name: "Philipose P.", role: "Director", linkedin: "https://www.linkedin.com/in/philipose-p/" },
-  { name: "Yash Raj Kaushik", role: "Marketing Head", linkedin: "https://www.linkedin.com/in/yash-raj-kaushik/" },
-  { name: "Jnanasagar", role: "Design Head", linkedin: "https://www.linkedin.com/in/jnanasagar/" },
-  { name: "Illayaraja VP", role: "RnD Expert", linkedin: "https://www.linkedin.com/in/illayaraja-vp/" },
-  { name: "Shubam Gupta", role: "Digital Expertise", linkedin: "https://www.linkedin.com/in/shubam-gupta/" },
+  { name: "Revant Sharma", role: "Founder & CEO" },
+  { name: "Philipose P.", role: "Director" },
+  { name: "Yash Raj Kaushik", role: "Marketing Head"},
+  { name: "Jnanasagar", role: "Design Head", },
+  { name: "Illayaraja VP", role: "RnD Expert" },
+  { name: "Shubam Gupta", role: "Digital Expertise"},
 ];
 
 const getInitials = (name: string) => {
@@ -22,11 +21,11 @@ const getInitials = (name: string) => {
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-black text-white pt-20 relative overflow-hidden">
+    <main className="min-h-screen bg-black text-white pt-2 relative overflow-hidden">
       <AnimatedBackground />
 
       <section className="relative z-10 px-6 md:px-12 lg:px-24 py-20 max-w-7xl mx-auto space-y-24">
-        
+
         {/* About + Journey */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* About Description */}
@@ -76,7 +75,6 @@ export default function AboutPage() {
             {team.map((member, idx) => (
               <a
                 key={idx}
-                href={member.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-800 backdrop-blur-md p-6 rounded-2xl text-center border border-white/10 hover:shadow-blue-500/20 transition duration-300"
@@ -148,6 +146,7 @@ export default function AboutPage() {
             ))}
           </div>
         </section>
+
       </section>
     </main>
   );
