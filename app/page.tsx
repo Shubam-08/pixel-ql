@@ -1,37 +1,32 @@
 import { HeroLamp } from "@/components/HeroLamp";
 import FloatingMenu from "@/components/FloatingMenu";
 import GlowingHeading from "@/components/GlowingHeading";
-
-
 import Image from "next/image";
 import Link from "next/link";
 import { ScrollButton } from "@/components/ui/scroll-button";
 import HeaderLogo from "@/components/HeaderLogo";
 
-
 export default function Home() {
   return (
-    <main className="overflow-x-hidden w-full max-w-full">
-      
-       <HeaderLogo />
+    <main className="w-full max-w-full overflow-x-hidden">
+      <HeaderLogo />
       <FloatingMenu />
       <HeroLamp />
 
       {/* Featured Projects Section */}
       <section
         id="featured-projects"
-        className="relative py-14 bg-black/90 backdrop-blur-md w-full max-w-full px-2 sm:px-4 md:px-8 overflow-x-hidden border-y border-white/10"
-
+        className="relative py-14 bg-black/90 backdrop-blur-md w-full max-w-full px-2 sm:px-4 md:px-8 border-y border-white/10 overflow-hidden"
       >
         {/* Divider */}
         <div className="w-full flex justify-center mb-10">
           <div className="h-1 w-40 rounded-full bg-gradient-to-r from-blue-400 via-cyan-400 to-pink-400 animate-pulse" />
         </div>
 
-        {/* Animated Background */}
+        {/* Animated Background Blobs */}
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 -z-10 w-full max-w-full overflow-x-hidden"
+          className="pointer-events-none absolute inset-0 -z-10 w-full h-full overflow-hidden"
         >
           <div className="absolute -top-24 left-1/4 w-96 h-96 bg-pink-500/30 blur-3xl rounded-full animate-blob1" />
           <div className="absolute top-1/2 right-0 w-80 h-80 bg-blue-500/30 blur-2xl rounded-full animate-blob2" />
@@ -78,7 +73,7 @@ export default function Home() {
                   />
                   <div className="absolute bottom-0 left-0 w-full px-6 py-3 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex items-end">
                     <h3 className="text-lg md:text-xl font-semibold text-white/90">
-                     Luqta, Private palace
+                      Luqta, Private Palace
                     </h3>
                   </div>
                 </div>
@@ -90,7 +85,7 @@ export default function Home() {
                 <div className="relative w-full h-full aspect-[16/9]">
                   <Image
                     src="/project5.png"
-                    alt="Italian heritage"
+                    alt="Italian Heritage"
                     fill
                     className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105 group-hover:brightness-110"
                   />
@@ -109,12 +104,6 @@ export default function Home() {
           <ScrollButton />
         </div>
       </section>
-
-     {/* Call to Action */}
-
-
-
-
     </main>
   );
 }
