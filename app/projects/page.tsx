@@ -17,12 +17,12 @@ export default function ProjectsPage() {
 
   const projects = [
    
-    {
+   {
       id: 1,
-      title: "Residential Complex, Bangalore",
-      image: "/fourth.jpg",
-      description: "Smart home automation with integrated lighting and security systems",
-      link: "/projects/residentialcomplex",
+      title: "Luqta(private place)",
+      image: "/luqta2.jpg",
+      description: "Energy-efficient lighting and automation solutions for large retail spaces",
+      link: "/projects/luqta",
     },
 
      {
@@ -48,22 +48,22 @@ export default function ProjectsPage() {
       description: "Advanced lighting control and automation system implemented in a luxury hotel setting",
       link: "/projects/gujratjewels",
     },
-   
-    {
-      id: 5,
-      title: "Commercial Showroom, Bangalore",
-      image: "/comercialshowroom.png",
-      description: "Smart home automation with integrated lighting and security systems",
-      link: "/projects/comercialshowroom",
-    },
+
      {
-      id: 6,
+      id: 5,
       title: "Sobha Towers",
       image: "/Sobha Towers.jpg",
       description: "Intelligent energy management system with smart lighting and HVAC controls",
       link: "/projects/sobhatowers",
     },
-    
+     {
+      id: 6,
+      title: "Alian Office",
+      image: "/meetingroom.jpg",
+      description: "Energy-efficient lighting and automation solutions for large retail spaces",
+      link: "/projects/meetingroom",
+     },
+
     {
       id: 7,
       title: "Residential Building, Chennai",
@@ -86,13 +86,15 @@ export default function ProjectsPage() {
       description: "Energy-efficient lighting and automation solutions for large retail spaces",
       link: "/projects/yamunaskycity",
     },
-    {
+   
+ {
       id: 10,
-      title: "Alian Office",
-      image: "/meetingroom.jpg",
-      description: "Energy-efficient lighting and automation solutions for large retail spaces",
-      link: "/projects/meetingroom",
+      title: "Commercial Showroom, Bangalore",
+      image: "/comercialshowroom.png",
+      description: "Smart home automation with integrated lighting and security systems",
+      link: "/projects/comercialshowroom",
     },
+
     {
       id: 11,
       title: "Aliha University, Campus",
@@ -107,12 +109,13 @@ export default function ProjectsPage() {
       description: "Energy-efficient lighting and automation solutions for large retail spaces",
       link: "/projects/expocitymasjid",
     },
-    {
+
+     {
       id: 13,
-      title: "Luqta(private place)",
-      image: "/luqta.jpg",
-      description: "Energy-efficient lighting and automation solutions for large retail spaces",
-      link: "/projects/luqta",
+      title: "Residential Complex, Bangalore",
+      image: "/fourth.jpg",
+      description: "Smart home automation with integrated lighting and security systems",
+      link: "/projects/residentialcomplex",
     },
     {
       id: 14,
@@ -160,7 +163,7 @@ export default function ProjectsPage() {
                       alt={project.title}
                       width={800}
                       height={500}
-                      className="w-full h-auto object-cover transition-transform duration-500"
+                      className="w-full h-auto object-cover transition-transform duration-500 "
                       quality={90}
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />

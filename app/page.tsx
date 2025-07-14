@@ -67,18 +67,18 @@ export default function Home() {
 
           {/* Right: Two Stacked Cards */}
           <div className="flex flex-col gap-10 justify-center h-auto">
-            <Link href="/projects/residentialcomplex" className="block flex-1">
+            <Link href="/projects/luqta" className="block flex-1">
               <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl border border-transparent hover:shadow-cyan-400/40 hover:border-cyan-400 hover:brightness-110 hover:-translate-y-2 transition-all duration-300 h-[340px] md:h-[420px] flex flex-col">
                 <div className="relative w-full h-full aspect-[16/9]">
                   <Image
-                    src="/fourth.jpg"
-                    alt="Residential Area"
+                    src="/luqta2.jpg"
+                    alt="Luqta, Private palace"
                     fill
                     className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105 group-hover:brightness-110"
                   />
                   <div className="absolute bottom-0 left-0 w-full px-6 py-3 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex items-end">
                     <h3 className="text-lg md:text-xl font-semibold text-white/90">
-                      Residential Area
+                     Luqta, Private palace
                     </h3>
                   </div>
                 </div>
@@ -111,29 +111,7 @@ export default function Home() {
       </section>
 
      {/* Call to Action */}
-<section className="py-10 px-4 sm:px-6 md:px-8 bg-gradient-to-br from-[#0f0f0f] via-[#1a1a1a] to-[#0f0f0f] border-t border-white/10">
-  <div className="max-w-2xl mx-auto text-center backdrop-blur-md bg-black/60 rounded-xl px-4 py-8 shadow-xl border border-white/10">
-    <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-3">
-      Ready to Transform Your Space?
-    </h2>
-    <p className="text-base text-white/80 mb-6">
-      Contact us today to schedule a consultation.
-    </p>
-    <Link
-      href="/contact"
-      className="group relative inline-flex items-center justify-center px-7 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-base transition-all duration-300 hover:from-purple-700 hover:to-pink-600 shadow-[0_4px_20px_rgba(255,255,255,0.05)] overflow-hidden"
-    >
-      {/* Glow Ring */}
-      <span className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 to-pink-500 blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-300" />
-      
-      {/* Ring Border */}
-      <span className="absolute inset-0 rounded-full border border-white/10 group-hover:border-white/20" />
 
-      {/* Text */}
-      <span className="relative z-10">Get Started</span>
-    </Link>
-  </div>
-</section>
 
 
 

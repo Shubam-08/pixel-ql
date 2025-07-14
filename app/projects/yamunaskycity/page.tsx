@@ -18,8 +18,8 @@ export default function YamunaSkyCityPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
           {/* LEFT: Taller Video Block */}
-          <div className="w-full flex justify-center items-start py-20 md:px-8">
-            <div className="w-full max-w-2xl h-[640px] md:h-[720px] rounded-xl overflow-hidden border border-white/10 shadow-lg relative">
+          <div className="w-full flex justify-center items-start py-6 md:px-8">
+            <div className="w-full max-w-2xl h-[890px] md:h-[950px] rounded-xl overflow-hidden border border-white/10 shadow-lg relative">
               <video
                 ref={videoRef}
                 src="/yamunaskycity.mp4"
