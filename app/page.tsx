@@ -1,6 +1,5 @@
 import { HeroLamp } from "@/components/HeroLamp";
 import FloatingMenu from "@/components/FloatingMenu";
-import GlowingHeading from "@/components/GlowingHeading";
 import Image from "next/image";
 import Link from "next/link";
 import { ScrollButton } from "@/components/ui/scroll-button";
@@ -8,7 +7,7 @@ import HeaderLogo from "@/components/HeaderLogo";
 
 export default function Home() {
   return (
-    <main className="w-full max-w-full overflow-x-hidden">
+    <main className="w-full max-w-full overflow-x-hidden bg-[#111111] text-white">
       <HeaderLogo />
       <FloatingMenu />
       <HeroLamp />
@@ -16,27 +15,21 @@ export default function Home() {
       {/* Featured Projects Section */}
       <section
         id="featured-projects"
-        className="relative py-14 bg-black/90 backdrop-blur-md w-full max-w-full px-2 sm:px-4 md:px-8 border-y border-white/10 overflow-hidden"
+        className="relative py-14 bg-[#111111] w-full max-w-full px-2 sm:px-4 md:px-8 border-y border-white/10"
       >
         {/* Divider */}
         <div className="w-full flex justify-center mb-10">
-          <div className="h-1 w-40 rounded-full bg-gradient-to-r from-blue-400 via-cyan-400 to-pink-400 animate-pulse" />
+          <div className="h-1 w-40 rounded-full bg-gradient-to-r from-blue-400 via-cyan-400 to-pink-400" />
         </div>
+<div className="text-center mb-12">
+  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
+    Our <span className="text-primary">Featured</span> Projects
+  </h2>
+  <p className="mt-4 text-sm sm:text-base text-gray-400 max-w-xl mx-auto">
+    A curated selection of architectural and lighting designs that reflect our passion for detail, creativity, and innovation.
+  </p>
+</div>
 
-        {/* Animated Background Blobs */}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 -z-10 w-full h-full overflow-hidden"
-        >
-          <div className="absolute -top-24 left-1/4 w-96 h-96 bg-pink-500/30 blur-3xl rounded-full animate-blob1" />
-          <div className="absolute top-1/2 right-0 w-80 h-80 bg-blue-500/30 blur-2xl rounded-full animate-blob2" />
-          <div className="absolute bottom-0 left-0 w-72 h-72 bg-cyan-400/20 blur-2xl rounded-full animate-blob3" />
-          <div className="noise-overlay absolute inset-0" />
-        </div>
-
-        <GlowingHeading as="h2" className="text-4xl mb-12 text-center">
-          Our Featured Projects
-        </GlowingHeading>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10 w-full max-w-full">
           {/* Left: Large Vertical Card */}

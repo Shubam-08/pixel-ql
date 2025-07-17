@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0a0a0f] bg-opacity-100 text-white py-4 sm:py-6 relative z-10">
+    <footer className="bg-[#0a0a0f] bg-opacity-100 text-white py-0 sm:py-6 relative z-10">
       <div className="w-full px-2 sm:px-4 md:px-8">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-4 md:mb-6 items-start">
@@ -14,18 +14,15 @@ export default function Footer() {
             <h2 className="text-lg sm:text-xl font-bold text-white">QR PIXEL</h2>
             <p className="text-xs sm:text-sm text-gray-400">Lighting | Designing | Smart Solutions</p>
             <div>
-              <h3 className="text-[11px] sm:text-xs font-semibold text-gray-300 uppercase tracking-wide">Bengaluru Office</h3>
-              <address className="text-[11px] sm:text-xs text-gray-400 not-italic leading-tight mt-1">
+              
+              <address className="text-[11px] sm:text-xs text-white not-italic leading-tight mt-1">
                 <a
                   href="https://maps.app.goo.gl/zNuAjEVHyN6tV5pR9"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline hover:text-blue-400 transition-colors"
                 >
-                  First Floor, Block -2<br />
-                  KSSIDC Complex, A-202<br />
-                  Indra Nagar, Electronic City Phase I<br />
-                  Bengaluru, Karnataka 560100
+                 view on map
                 </a>
               </address>
             </div>
