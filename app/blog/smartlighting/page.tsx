@@ -18,7 +18,7 @@ export default function SmartLightingPage() {
             transition={{ duration: 0.7 }}
             className="text-center mb-20 px-2"
           >
-            <h3 className="text-3xl sm:text-6xl font-extrabold leading-tight tracking-tight mb-6 bg-gradient-to-r from-yellow-300 via-orange-400 to-pink-500 text-transparent bg-clip-text">
+            <h3 className="text-3xl sm:text-6xl font-bold leading-tight tracking-tight mb-6 text-white">
               Smart Lighting, Smarter Living
             </h3>
             <p className="text-base sm:text-lg text-gray-400 max-w-xl mx-auto px-2">
@@ -32,7 +32,7 @@ export default function SmartLightingPage() {
             {/* Section 1 */}
             <section className="flex flex-col md:flex-row gap-10 items-start">
               <div className="w-full md:w-1/2">
-                <h2 className="text-2xl sm:text-3xl font-semibold text-yellow-400 mb-4 border-l-4 border-yellow-500 pl-4">
+                <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-4 border-l-4 border-gray-600 pl-4">
                   What is Smart Lighting?
                 </h2>
                 <p className="text-justify">
@@ -62,7 +62,7 @@ export default function SmartLightingPage() {
                 />
               </div>
               <div className="w-full md:w-1/2">
-                <h2 className="text-2xl sm:text-3xl font-semibold text-orange-400 mb-4 border-l-4 border-orange-500 pl-4">
+                <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-4 border-l-4 border-gray-600 pl-4">
                   Signature Features
                 </h2>
                 <ul className="list-disc list-inside space-y-2 text-justify">
@@ -78,7 +78,7 @@ export default function SmartLightingPage() {
             {/* Section 3 */}
             <section className="flex flex-col md:flex-row gap-10 items-start">
               <div className="w-full md:w-1/2">
-                <h2 className="text-2xl sm:text-3xl font-semibold text-pink-400 mb-4 border-l-4 border-pink-500 pl-4">
+                <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-4 border-l-4 border-gray-600 pl-4">
                   Why Choose Smart Lighting?
                 </h2>
                 <p className="text-justify">
@@ -100,8 +100,8 @@ export default function SmartLightingPage() {
           {/* Call to Action */}
           <div className="text-center mt-28 px-2">
             <Link
-              href="/blog"
-              className="inline-flex items-center gap-3 px-8 py-4 text-base font-medium text-white rounded-full bg-gradient-to-r from-yellow-500 to-pink-500 hover:shadow-yellow-400/30 shadow-md hover:scale-105 transition-transform"
+              href="/blog/smartlighting"
+              className="inline-flex items-center gap-3 px-6 py-3 text-base font-medium text-white border border-gray-600 rounded-full hover:bg-gray-800 transition-transform hover:scale-105"
             >
               ← Back to Blog
             </Link>

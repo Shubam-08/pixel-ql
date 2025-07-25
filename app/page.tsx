@@ -18,16 +18,15 @@ export default function Home() {
         className="relative py-14 bg-[#111111] w-full max-w-full px-2 sm:px-4 md:px-8 border-y border-white/10"
       >
         {/* Divider */}
-        <div className="w-full flex justify-center mb-10">
-          <div className="h-1 w-40 rounded-full bg-gradient-to-r from-blue-400 via-cyan-400 to-pink-400" />
-        </div>
+        
+         
 <div className="text-center mb-12">
-  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
-    Our <span className="text-primary">Featured</span> Projects
-  </h2>
-  <p className="mt-4 text-sm sm:text-base text-gray-400 max-w-xl mx-auto">
-    A curated selection of architectural and lighting designs that reflect our passion for detail, creativity, and innovation.
-  </p>
+  <h3 className="text-3xl sm:text-5xl md:text-5xl font-light tracking-tight text-[#fdf6f0]">
+  <span className="text-[#f4e7da]">Featured</span> Projects
+</h3>
+
+
+ 
 </div>
 
 
@@ -44,7 +43,7 @@ export default function Home() {
                     className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105 group-hover:brightness-110"
                   />
                   <div className="absolute bottom-0 left-0 w-full px-6 py-5 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex items-end">
-                    <h3 className="text-xl md:text-2xl font-semibold text-white/90">
+                    <h3 className="text-xl md:text-2xl  text-white/90">
                       Sobha Towers
                     </h3>
                   </div>
@@ -65,7 +64,7 @@ export default function Home() {
                     className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105 group-hover:brightness-110"
                   />
                   <div className="absolute bottom-0 left-0 w-full px-6 py-3 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex items-end">
-                    <h3 className="text-lg md:text-xl font-semibold text-white/90">
+                    <h3 className="text-lg md:text-xl  text-white/90">
                       Luqta, Private Palace
                     </h3>
                   </div>
@@ -83,7 +82,7 @@ export default function Home() {
                     className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105 group-hover:brightness-110"
                   />
                   <div className="absolute bottom-0 left-0 w-full px-6 py-3 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex items-end">
-                    <h3 className="text-lg md:text-xl font-semibold text-white/90">
+                    <h3 className="text-lg md:text-xl text-white/90">
                       Italian Heritage
                     </h3>
                   </div>

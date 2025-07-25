@@ -1,4 +1,4 @@
-import { FaWhatsapp, FaYoutube, FaFacebook, FaTwitter } from "react-icons/fa";
+import { FaWhatsapp, FaYoutube, FaFacebook,  } from "react-icons/fa";
 import { Instagram } from "lucide-react";
 import Link from "next/link";
 
@@ -11,50 +11,46 @@ export default function Footer() {
 
           {/* LEFT: QR PIXEL & Address */}
           <div className="space-y-2 sm:space-y-3 text-left">
-            <h2 className="text-lg sm:text-xl font-bold text-white">QR PIXEL</h2>
-            <p className="text-xs sm:text-sm text-gray-400">Lighting | Designing | Smart Solutions</p>
+            <h2 className="text-lg sm:text-xl font-bold text-white">QR Pixel Design Studio</h2>
+            <p className="text-xs sm:text-sm text-gray-400">
+              Lighting Consultation | Lighting Design /<br />
+              Intelligent Automation | Digital Signage
+            </p>
             <div>
-              
               <address className="text-[11px] sm:text-xs text-white not-italic leading-tight mt-1">
-                <a
-                  href="https://maps.app.goo.gl/zNuAjEVHyN6tV5pR9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline hover:text-blue-400 transition-colors"
-                >
-                 view on map
-                </a>
+                <p>Dubai | Bangalore</p>
               </address>
             </div>
           </div>
 
-          {/* CENTER: CTA */}
-          <div className="text-center px-0 sm:px-2">
-            <h2 className="text-base sm:text-xl md:text-2xl font-serif font-semibold text-white mb-1 sm:mb-2 tracking-wide">
-              Ready to Transform Your Space?
-            </h2>
-            <p className="text-xs sm:text-sm text-gray-300 mb-2 sm:mb-3">
-              Contact us today to schedule a consultation.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-block px-4 sm:px-5 py-1.5 sm:py-2 rounded-full bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white font-medium text-xs sm:text-sm shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105 hover:brightness-110"
-            >
-              Get Started
-            </Link>
-          </div>
+          {/* CENTER: Quick Links */}
+       <div className="flex flex-col items-center text-center">
+ 
+  <ul className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-[11px] sm:text-xs text-white/70">
+    <li><Link href="/" className="hover:text-blue-400">Home</Link></li>
+    <li><Link href="/about" className="hover:text-blue-400">About</Link></li>
+    <li><Link href="/projects"
+     
+    className="hover:text-blue-400">Projects</Link></li>
+     <li><Link href="/blog" className="hover:text-blue-400">Blogs</Link></li>
+    <li><Link href="/contact" 
+    
+    className="hover:text-blue-400">Contact</Link></li>
+  </ul>
+</div>
 
-          {/* RIGHT: Social Icons */}
-          <div className="flex flex-col items-center md:items-end space-y-1 sm:space-y-2">
-            <h3 className="text-[11px] sm:text-xs font-semibold text-gray-300 uppercase tracking-wide text-center md:text-right">
-              Connect With Us
+
+          {/* RIGHT: Social Media Icons */}
+          <div className="flex flex-col items-end sm:items-end text-right">
+            <h3 className="text-[11px] sm:text-xs font-semibold text-gray-300 tracking-wide mb-2  ">
+              Follow and Contact with us
             </h3>
-            <div className="flex gap-1.5 sm:gap-2 flex-wrap justify-center md:justify-end">
-              <SocialIcon href="https://wa.me/916005749782" label="WhatsApp" icon={<FaWhatsapp size={18} />} />
-              <SocialIcon href="https://www.instagram.com/qr_pixel?igsh=MW1oY3hkMTRmZXZjcA==" label="Instagram" icon={<Instagram size={18} />} />
-              <SocialIcon href="https://youtube.com/@qr-pixel8275?si=tul4YLOhjjzczHG6" label="YouTube" icon={<FaYoutube size={18} />} />
-              <SocialIcon href="https://www.facebook.com/share/1AdHt798nj/" label="Facebook" icon={<FaFacebook size={18} />} />
-              <SocialIcon href="https://x.com/QR_Pixel_LED?t=DtcSiKFmON90lp0T0_dXYw&s=09" label="Twitter" icon={<FaTwitter size={18} />} />
+            <div className="flex gap-1.5 sm:gap-2 justify-end">
+              <SocialIcon href="https://wa.me/916005749782" label="WhatsApp" icon={<FaWhatsapp size={22} />} />
+              <SocialIcon href="https://www.instagram.com/qr_pixel?igsh=MW1oY3hkMTRmZXZjcA==" label="Instagram" icon={<Instagram size={22} />} />
+              <SocialIcon href="https://youtube.com/@qr-pixel8275?si=tul4YLOhjjzczHG6" label="YouTube" icon={<FaYoutube size={22} />} />
+              <SocialIcon href="https://www.facebook.com/share/1AdHt798nj/" label="Facebook" icon={<FaFacebook size={22} />} />
+              
             </div>
           </div>
         </div>

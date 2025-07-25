@@ -1,7 +1,38 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { FaArrowUp } from "react-icons/fa";
+
+// === BackToTopButton Component ===
+const BackToTopButton = () => {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      setVisible(window.scrollY > 300);
+    };
+
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  if (!visible) return null;
+
+  return (
+    <button
+      onClick={scrollToTop}
+      className="fixed bottom-6 left-6 z-50 bg-white text-black p-3 rounded-full shadow-lg hover:bg-blue-500 hover:text-white transition duration-300"
+      aria-label="Back to Top"
+    >
+      <FaArrowUp />
+    </button>
+  );
+};
 
 // === TEAM DATA ===
 const team = [
@@ -106,75 +137,50 @@ export const JourneySection = () => {
   ];
 
   return (
-    <div
-      className="relative max-w-full mx-auto px-4 sm:px-6 md:px-16 lg:px-32 py-16 md:py-24 z-20 overflow-x-hidden"
-      style={{ fontFamily: "'Inter', sans-serif" }}
-    >
-      <div
-        className="relative pl-6 md:pl-20 bg-black bg-opacity-60 backdrop-blur-lg rounded-2xl p-6 md:p-12 shadow-2xl"
-        style={{ zIndex: 25 }}
-      >
-        {/* Heading */}
+    <div className="relative max-w-full mx-auto px-4 sm:px-6 md:px-16 lg:px-32 py-16 md:py-24 z-20 overflow-x-hidden" style={{ fontFamily: "'Inter', sans-serif" }}>
+      <div className="relative pl-6 md:pl-20 bg-black bg-opacity-60 backdrop-blur-lg rounded-2xl p-6 md:p-12 shadow-2xl" style={{ zIndex: 25 }}>
         <h2 className="text-3xl md:text-5xl font-extrabold mb-16 md:mb-20 bg-gradient-to-r from-pink-500 via-blue-500 to-cyan-500 text-transparent bg-clip-text text-center tracking-wide">
           Our Journey
         </h2>
 
-        {/* Vertical line */}
-        <div
-          className="absolute left-9 md:left-22 top-28 bottom-4 w-0.5 rounded-full"
-          style={{
-            background: "linear-gradient(to bottom, #ec4899, #3b82f6, #06b6d4)",
-            boxShadow: "0 0 12px rgba(99, 102, 241, 0.7)",
-          }}
-        />
+        <div className="absolute left-9 md:left-22 top-28 bottom-4 w-0.5 rounded-full" style={{
+          background: "linear-gradient(to bottom, #ec4899, #3b82f6, #06b6d4)",
+          boxShadow: "0 0 12px rgba(99, 102, 241, 0.7)"
+        }} />
 
-        {/* Timeline items */}
         {timeline.map((item, idx) => (
-          <div
-            key={idx}
-            className="relative mb-20 md:mb-24 last:mb-0 flex items-start"
-          >
-            {/* Connector line */}
-            <div
-              className="absolute left-3 md:left-2 top-5 w-14 md:w-19 h-[2px] rounded"
-              style={{
-                background:
-                  "linear-gradient(to right, #ec4899, #3b82f6, #06b6d4)",
-                boxShadow: "0 0 6px rgba(99, 102, 241, 0.6)",
-              }}
-            />
+          <div key={idx} className="relative mb-20 md:mb-24 last:mb-0 flex items-start">
+            <div className="absolute left-3 md:left-2 top-5 w-14 md:w-19 h-[2px] rounded" style={{
+              background: "linear-gradient(to right, #ec4899, #3b82f6, #06b6d4)",
+              boxShadow: "0 0 6px rgba(99, 102, 241, 0.6)"
+            }} />
 
-            {/* Year badge */}
             <span className="absolute left-10 md:left-18 top-0 font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 text-black px-4 md:px-5 py-2 md:py-3 rounded-full text-sm md:text-lg shadow-lg select-none">
               {item.year}
             </span>
 
-            {/* Description */}
             <p className="text-gray-300 ml-32 md:ml-52 text-base md:text-lg max-w-3xl leading-relaxed tracking-wide">
               {item.desc}
             </p>
           </div>
         ))}
       </div>
+
+      <BackToTopButton />
     </div>
   );
 };
 
-
 export const TeamSection = () => (
-  <section className="w-full px-6 py-16 md:py-24 lg:py-28 bg-black text-white">
+  <section className="w-full px-6 py-16 md:py-24 lg:py-28 text-white">
     <div className="max-w-screen-xl mx-auto">
-      <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-16 tracking-tight text-white">
+      <h3 className="text-4xl md:text-5xl text-center mb-16 tracking-tight text-white">
         The Minds Behind QR Pixel
-      </h2>
+      </h3>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
         {team.map((member, index) => (
-          <div
-            key={index}
-            className="flex flex-col justify-between p-8 bg-white/5 border border-white/10 rounded-3xl shadow-2xl hover:scale-[1.03] transition-transform duration-300"
-          >
-            {/* TOP */}
+          <div key={index} className="flex flex-col justify-between p-8 bg-white/5 border border-white/10 rounded-3xl shadow-2xl hover:scale-[1.03] transition-transform duration-300">
             <div className="flex flex-col items-center text-center">
               <div className="w-28 h-28 rounded-full overflow-hidden border border-white/20 mb-5 hover:scale-105 transition-transform duration-300">
                 <Image
@@ -187,20 +193,14 @@ export const TeamSection = () => (
               </div>
               <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
               <p className="text-sm text-gray-300 mb-2">{member.role}</p>
-
               <p className="text-sm text-gray-400 leading-relaxed min-h-[70px]">
                 {member.bio}
               </p>
             </div>
 
-            {/* CONNECT BUTTON */}
             <div className="mt-6 text-center">
-              <a
-                href={member.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block text-sm px-4 py-1.5 rounded-full border border-white/20 text-gray-300 hover:text-white hover:border-white transition-all duration-200"
-              >
+              <a href={member.linkedin} target="_blank" rel="noopener noreferrer"
+                className="inline-block text-sm px-4 py-1.5 rounded-full border border-white/20 text-gray-300 hover:text-white hover:border-white transition-all duration-200">
                 <span className="font-semibold">Connect</span>
               </a>
             </div>
@@ -208,44 +208,63 @@ export const TeamSection = () => (
         ))}
       </div>
     </div>
+
+    <BackToTopButton />
   </section>
 );
 
-
-
-
-
 export const ServicesSection = () => {
   const services = [
-    { icon: '💡', title: 'Smart Lighting', desc: 'Energy-efficient lighting control systems for ambiance and sustainability.', image: '/smart-lighting.png' },
-    { icon: '🤖', title: 'Automation', desc: 'Control lighting, HVAC, and more for comfort and control.', image: '/automation.jpg' },
-    { icon: '🎨', title: 'Lighting Design', desc: 'Elegant lighting schemes that blend function and beauty.', image: '/design.png' },
-    { icon: '✨', title: 'Decorative Lighting', desc: 'Custom installations that make your spaces shine.', image: '/decorative.png' },
-    { icon: '🏠', title: 'Affordable Plans', desc: 'Solutions for every budget without compromising style.', image: '/personalized.png' },
-    { icon: '🌱', title: 'Energy Efficiency', desc: 'Modern tech to reduce power usage across systems.', image: '/efficiency.png' },
+    {
+     // icon: '💡',
+      title: 'Lighting Design',
+      desc: 'Create energy-efficient lighting experiences that enhance mood, ambiance, and sustainability.',
+      image: '/smart-lighting.png',
+    },
+    {
+      //icon: '🤖',
+      title: 'Intelligent Automation',
+      desc: 'Seamlessly control lighting, HVAC, and more—bringing comfort, convenience, and smart living to your space.',
+      image: '/automation.jpg',
+    },
+    {
+      //icon: '🎨',
+      title: 'Digital Signage',
+      desc: 'Visually striking lighting and display solutions that blend technology with aesthetic appeal.',
+      image: '/design.png',
+    },
+    {
+      //icon: '✨',
+      title: 'Customize Decorative',
+      desc: 'Tailored lighting installations that highlight architectural features and add signature style.',
+      image: '/decorative.png',
+    },
   ];
 
   return (
-    <div>
-      <h2 className="text-3xl font-bold mb-8 text-blue-400 text-center">Our Services</h2>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="px-6 py-16 text-white">
+      <h2 className="text-3xl font-bold mb-8 text-center text-white">How we can help you?</h2>
+      
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
         {services.map((service, index) => (
-          <div key={index} className="relative rounded-xl overflow-hidden border border-white/10 shadow-md group">
+          <div
+            key={index}
+            className="relative rounded-xl overflow-hidden border border-white/10 shadow-md group"
+          >
             <Image
               src={service.image}
               alt={service.title}
               width={400}
               height={240}
-              className="w-full h-56 object-cover opacity-80 group-hover:opacity-60"
+              className="w-full h-56 object-cover opacity-200 group-hover:opacity-60"
             />
-            <div className="absolute inset-0 bg-black/60 group-hover:bg-black/80 transition duration-300 p-4 flex flex-col justify-end">
-              <span className="text-2xl">{service.icon}</span>
-              <h3 className="text-white text-xl font-semibold">{service.title}</h3>
-              <p className="text-gray-300 text-sm">{service.desc}</p>
-            </div>
+           
           </div>
         ))}
       </div>
+
+      <BackToTopButton />
     </div>
   );
 };
+

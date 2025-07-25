@@ -37,7 +37,7 @@ export default function BlogPage() {
     <section className="min-h-screen py-20 bg-gradient-to-b from-gray-950 to-black relative overflow-hidden">
       <AnimatedBackground />
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <h1 className="text-3xl md:text-4xl font-extrabold text-center mb-10 bg-gradient-to-r from-purple-600 via-pink-500 to-yellow-400 text-transparent bg-clip-text tracking-tight drop-shadow-sm">
+        <h1 className="text-3xl md:text-4xl font-extrabold text-center mb-10 bg-white text-transparent bg-clip-text tracking-tight drop-shadow-sm">
           Explore Insights & Ideas
         </h1>
 
@@ -83,7 +83,7 @@ export default function BlogPage() {
         </div>
 
         {/* Submit Blog Idea CTA */}
-        <div className="relative z-20 mb-16 text-center bg-white py-10 px-6 rounded-xl shadow-xl max-w-3xl mx-auto top-7">
+        <div className="relative z-20 mb-16 text-center bg-[#edd8d8] py-10 px-6 rounded-xl shadow-xl max-w-3xl mx-auto top-7">
           <h2 className="text-2xl sm:text-3xl font-semibold text-black mb-4">
             Have a blog idea you&apos;d like to share?
           </h2>

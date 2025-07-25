@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { ScrollButton } from "@/components/ui/scroll-button";
-import Slider from "@/components/Slider";
 export default function ProjectsPage() {
   const yamunaRef = useRef<HTMLVideoElement>(null);
 
@@ -138,15 +137,15 @@ export default function ProjectsPage() {
 
   return (
    <main className="min-h-screen text-white">
-  {/* FULLSCREEN SLIDER */}
+  {/* FULLSCREEN SLIDER 
   <div className="w-full h-screen">
     <Slider />
   </div>
-
+*/}
   {/* PROJECT LISTINGS SECTION */}
   <section
     id="projects"
-    className="pb-10 relative overflow-hidden bg-[#faf7f5]"
+    className="pb-10 relative overflow-hidden bg-[#1a0d0d] text-white"
   >
     <div className="container mx-auto px-9 py-10">
       <div className="columns-1 md:columns-2 gap-6">
@@ -181,7 +180,7 @@ export default function ProjectsPage() {
 
               <div className="absolute bottom-0 left-0 w-full px-6 py-5 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex items-end pointer-events-none transition-opacity duration-500 group-hover:opacity-0">
                 <h3
-                  className="text-white text-2xl font-extrabold select-none text-left"
+                  className="text-white text-xl  select-none text-left"
                   style={{
                     textShadow: "0 2px 12px rgba(0,0,0,0.85), 0 0px 1px #fff",
                     letterSpacing: "0.03em",
