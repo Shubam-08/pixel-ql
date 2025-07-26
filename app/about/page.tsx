@@ -2,7 +2,7 @@
 
 import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import AnimatedBackground from "@/components/AnimatedBackground";
+//import AnimatedBackground from "@/components/Animatedcolour";
 
 
 
@@ -37,7 +37,7 @@ export default function AboutPage() {
 
   return (
     <main className="relative min-h-screen bg-black text-white overflow-hidden font-sans">
-      <AnimatedBackground />
+       {/*<AnimatedBackground />*/}
       
       {/* HERO TOP SECTION */}
       <div className="relative z-10 w-full min-h-screen flex flex-col justify-center items-center px-6 pt-30 pb-10">

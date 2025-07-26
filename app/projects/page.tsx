@@ -14,12 +14,13 @@ export default function ProjectsPage() {
   }, []);
 
   const projects = [
+    
     {
       id: 1,
-      title: "Luqta(private place)",
-      image: "/luqta2.jpg",
-      description: "Energy-efficient lighting and automation solutions for large retail spaces",
-      link: "/projects/luqta",
+      title: "Gujrat Architectural Jewels",
+      image: "/project6.png",
+      description: "Advanced lighting control and automation system implemented in a luxury hotel setting",
+      link: "/projects/gujratjewels",
     },
     {
       id: 2,
@@ -42,13 +43,15 @@ export default function ProjectsPage() {
       description: "Energy-efficient lighting and automation solutions for large retail spaces",
       link: "/projects/spatikahotel",
     },
+    
     {
       id: 5,
-      title: "Gujrat Architectural Jewels",
-      image: "/project6.png",
-      description: "Advanced lighting control and automation system implemented in a luxury hotel setting",
-      link: "/projects/gujratjewels",
+      title: "Luqta(private place)",
+      image: "/luqta2.jpg",
+      description: "Energy-efficient lighting and automation solutions for large retail spaces",
+      link: "/projects/luqta",
     },
+
     {
       id: 6,
       title: "Sobha Towers",
@@ -145,7 +148,7 @@ export default function ProjectsPage() {
   {/* PROJECT LISTINGS SECTION */}
   <section
     id="projects"
-    className="pb-10 relative overflow-hidden bg-[#1a0d0d] text-white"
+    className="pb-10 relative overflow-hidden bg-[#140904] text-white"
   >
     <div className="container mx-auto px-9 py-10">
       <div className="columns-1 md:columns-2 gap-6">

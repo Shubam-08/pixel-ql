@@ -7,7 +7,7 @@ import HeaderLogo from "@/components/HeaderLogo";
 
 export default function Home() {
   return (
-    <main className="w-full max-w-full overflow-x-hidden bg-[#111111] text-white">
+    <main className="w-full max-w-full overflow-x-hidden bg-[#e2f0e8] text-white">
       <HeaderLogo />
       <FloatingMenu />
       <HeroLamp />
@@ -15,7 +15,7 @@ export default function Home() {
       {/* Featured Projects Section */}
       <section
         id="featured-projects"
-        className="relative py-14 bg-[#111111] w-full max-w-full px-2 sm:px-4 md:px-8 border-y border-white/10"
+        className="relative py-14 bg-[#1e1003] w-full max-w-full px-2 sm:px-4 md:px-8 border-y border-white/10"
       >
         {/* Divider */}
         
@@ -54,18 +54,19 @@ export default function Home() {
 
           {/* Right: Two Stacked Cards */}
           <div className="flex flex-col gap-10 justify-center h-auto">
-            <Link href="/projects/luqta" className="block flex-1">
+            <Link href="/projects/residentialcomplex" className="block flex-1">
               <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-xl border border-transparent hover:shadow-cyan-400/40 hover:border-cyan-400 hover:brightness-110 hover:-translate-y-2 transition-all duration-300 h-[340px] md:h-[420px] flex flex-col">
                 <div className="relative w-full h-full aspect-[16/9]">
                   <Image
-                    src="/luqta2.jpg"
-                    alt="Luqta, Private palace"
+                    src="/fourth.jpg"
+            
+                    alt="Residential Complex"
                     fill
                     className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105 group-hover:brightness-110"
                   />
                   <div className="absolute bottom-0 left-0 w-full px-6 py-3 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex items-end">
                     <h3 className="text-lg md:text-xl  text-white/90">
-                      Luqta, Private Palace
+                      Residential Complex
                     </h3>
                   </div>
                 </div>

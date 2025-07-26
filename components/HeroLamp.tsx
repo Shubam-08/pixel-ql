@@ -3,31 +3,33 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { sora } from "@/app/fonts";
+import { useEffect, useRef } from "react";
 
 export function HeroLamp() {
+
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.9; // Adjust as needed
+    }
+  }, []);
+
   return (
     <section className="relative w-full max-w-full h-screen overflow-hidden px-2">
       {/* Video Background */}
-      <video
-        className="absolute inset-0 w-full h-full object-cover"
-        src="/herovideo1new.mp4"
-        autoPlay
-        muted
-        loop
-        playsInline
-      />
+    <video
+      ref={videoRef}
+      className="absolute inset-0 w-full h-full object-cover contrast-125 brightness-80"
+      src="/herobgvideo.mp4"
+      autoPlay
+      muted
+      loop
+      playsInline
+    />
 
-      {/* Brighter overlay */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          background: "rgba(0,0,0,0.10)",
-          backdropFilter: "brightness(1.45) contrast(1.2)",
-        }}
-      />
+      
 
-      {/* Dark gradient overlay for readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/40 to-black/80 z-10" />
 
       {/* Hero Content */}
       <div className="relative z-20 flex flex-col justify-center items-center text-center h-full px-2 sm:px-4 w-full max-w-full mx-auto">

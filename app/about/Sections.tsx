@@ -35,85 +35,76 @@ const BackToTopButton = () => {
 };
 
 // === TEAM DATA ===
+// === TEAM DATA ===
 const team = [
   {
     name: "Revant Sharma",
     role: "Founder & CEO",
     linkedin: "https://www.linkedin.com/in/revant-sharma-931a22111",
     image: "/revant-modified.jpg",
-    bio: "Revant leads innovation at QR Pixel, blending technology with impactful lighting design.",
   },
   {
     name: "Philipose Philip.",
     role: "Director",
     linkedin: "https://www.linkedin.com/in/philipose-p-9443595",
     image: "/philipose img-modified.jpg",
-    bio: "Philip brings strategic vision and 25+ years of industry experience to QR Pixel.",
   },
   {
     name: "Yash Raj Kaushik",
     role: "Marketing & Procurement Manager",
     linkedin: "https://www.linkedin.com/in/yashrajk15",
     image: "/yash-modified.jpg",
-    bio: "Yash crafts compelling campaigns and builds lasting client relationships.",
   },
   {
     name: "Jnanasagar Kamath",
     role: "Lighting Design Head",
     linkedin: "https://www.linkedin.com/in/jskamath",
     image: "/jnanasagar-modified.jpg",
-    bio: "Jnanasagar creates award-winning lighting designs with immersive aesthetics.",
   },
   {
     name: "Illayaraja P",
     role: "Senior R&D - India",
     linkedin: "https://www.linkedin.com/in/illayaraja-p-95b087187",
     image: "/illayaraja-img -modified.jpg",
-    bio: "Illayaraja drives innovation through research in smart lighting and automation.",
   },
   {
     name: "Shubam Gupta",
     role: "Jr. R&D - India",
     linkedin: "https://www.linkedin.com/in/shubamgupta02",
     image: "/shubamqr.jpg",
-    bio: "Shubam ensures seamless digital integration of lighting control systems.",
   },
   {
     name: "Atharv Sudan",
     role: "Regional Sales UAE",
     linkedin: "https://www.linkedin.com/in",
     image: "/atharv.png",
-    bio: "Atharv spearheads sales initiatives, fostering growth and client relationships in the UAE region.",
   },
   {
     name: "Vikas Singh",
     role: "Sr Lighting and Controls Designer UAE",
     linkedin: "https://www.linkedin.com/in",
     image: "/vikas.png",
-    bio: "Vikas designs sophisticated lighting and control systems for UAE projects.",
   },
   {
     name: "Prabhu .N",
     role: "Technical Head",
     linkedin: "https://www.linkedin.com/in/prabhu-n-33945622",
     image: "/prabhu.png",
-    bio: "Prabhu oversees technical operations, ensuring precision and reliability.",
   },
   {
     name: "Chandrashekhar Narsaiah",
     role: "Accounts",
     linkedin: "https://www.linkedin.com/in",
     image: "/chandrashekhar.png",
-    bio: "Chandrashekhar manages financial aspects, ensuring fiscal health.",
   },
   {
     name: "Gopal Manjunatha",
     role: "Commissioning Engineer",
     linkedin: "https://www.linkedin.com/in",
     image: "/gopal.png",
-    bio: "Gopal ensures flawless installation and calibration of lighting systems.",
   },
 ];
+
 
 // === COMPONENTS ===
 export const JourneySection = () => {
@@ -172,7 +163,7 @@ export const JourneySection = () => {
 };
 
 export const TeamSection = () => (
-  <section className="w-full px-6 py-16 md:py-24 lg:py-28 text-white">
+  <section className="w-full px-6 py-16 md:py-24 lg:py-0 -mt-21 text-white">
     <div className="max-w-screen-xl mx-auto">
       <h3 className="text-4xl md:text-5xl text-center mb-16 tracking-tight text-white">
         The Minds Behind QR Pixel
@@ -191,11 +182,9 @@ export const TeamSection = () => (
                   className="object-cover w-full h-full"
                 />
               </div>
-              <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
-              <p className="text-sm text-gray-300 mb-2">{member.role}</p>
-              <p className="text-sm text-gray-400 leading-relaxed min-h-[70px]">
-                {member.bio}
-              </p>
+              <h3 className="text-xl font-semibold mb-0">{member.name}</h3>
+              <p className="text-sm text-gray-300 mb-0">{member.role}</p>
+             
             </div>
 
             <div className="mt-6 text-center">
@@ -213,38 +202,42 @@ export const TeamSection = () => (
   </section>
 );
 
-export const ServicesSection = () => {
+
+ export const ServicesSection = () => {
   const services = [
     {
-     // icon: '💡',
-      title: 'Lighting Design',
-      desc: 'Create energy-efficient lighting experiences that enhance mood, ambiance, and sustainability.',
-      image: '/smart-lighting.png',
-    },
-    {
-      //icon: '🤖',
-      title: 'Intelligent Automation',
-      desc: 'Seamlessly control lighting, HVAC, and more—bringing comfort, convenience, and smart living to your space.',
-      image: '/automation.jpg',
-    },
-    {
-      //icon: '🎨',
-      title: 'Digital Signage',
-      desc: 'Visually striking lighting and display solutions that blend technology with aesthetic appeal.',
-      image: '/design.png',
-    },
-    {
-      //icon: '✨',
-      title: 'Customize Decorative',
-      desc: 'Tailored lighting installations that highlight architectural features and add signature style.',
-      image: '/decorative.png',
-    },
+  icon: '💡',
+  title: 'Lighting Design',
+  desc: 'We craft lighting solutions that enhance spatial experience, optimize energy use, and elevate ambiance — blending form with function for every environment.',
+  image: '/smart-lighting.png',
+},
+{
+  icon: '🤖',
+  title: 'Intelligent Automation',
+  desc: 'From lighting to climate control, we integrate intelligent systems that adapt to your lifestyle — offering comfort, efficiency, and complete control at your fingertips.',
+  image: '/automation.jpg',
+},
+{
+  icon: '🎨',
+  title: 'Digital Signage',
+  desc: 'Create immersive brand moments with high-impact digital signage, designed for clarity, aesthetics, and seamless integration into any architectural space.',
+  image: '/design.png',
+},
+{
+  icon: '✨',
+  title: 'Customize Decorative Lighting',
+  desc: 'We design and install bespoke decorative lighting that transforms ordinary spaces into extraordinary experiences — tailored to match your unique style and story.',
+  image: '/decorative.png',
+},
+
   ];
 
   return (
     <div className="px-6 py-16 text-white">
-      <h2 className="text-3xl font-bold mb-8 text-center text-white">How we can help you?</h2>
-      
+      <h2 className="text-3xl font-bold mb-8 text-center text-white">
+        How we can help you?
+      </h2>
+
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
         {services.map((service, index) => (
           <div
@@ -256,9 +249,14 @@ export const ServicesSection = () => {
               alt={service.title}
               width={400}
               height={240}
-              className="w-full h-56 object-cover opacity-200 group-hover:opacity-60"
+              className="w-full h-56 object-cover transition-opacity duration-300 group-hover:opacity-60"
             />
-           
+
+            {/* Overlay text */}
+            <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 transition-opacity duration-300 opacity-0 group-hover:opacity-100 bg-black/50">
+              <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
+              <p className="text-sm text-gray-200">{service.desc}</p>
+            </div>
           </div>
         ))}
       </div>
@@ -267,4 +265,5 @@ export const ServicesSection = () => {
     </div>
   );
 };
+
 
