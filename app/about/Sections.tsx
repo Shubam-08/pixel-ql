@@ -109,54 +109,81 @@ const team = [
 // === COMPONENTS ===
 export const JourneySection = () => {
   const timeline = [
-    {
-      year: "2018",
-      desc: "QR Pixel was founded with a passion for design and lighting.",
-    },
-    {
-      year: "2020",
-      desc: "Expanded to commercial and hospitality design across India.",
-    },
-    {
-      year: "2022",
-      desc: "Entered the Middle East market and launched LED integration solutions.",
-    },
-    {
-      year: "2024",
-      desc: "Recognized as a leader in GRMS & façade design innovation.",
-    },
-  ];
+  {
+    year: "2018",
+    title: "Foundation",
+    desc: "QR Pixel began its journey with a bold vision — to transform the future of architectural lighting and smart automation. Built on creativity, precision, and a passion for design, the company set out to reimagine how spaces are illuminated and experienced.",
+    icon: "✨",
+  },
+  {
+    year: "2020",
+    title: "Expansion",
+    desc: "Within just two years, QR Pixel expanded its presence across India. By delivering high-impact lighting solutions to commercial, hospitality, and residential projects, the brand became known for merging aesthetics with intelligence and efficiency.",
+    icon: "🚀",
+  },
+  {
+    year: "2022",
+    title: "Global Reach",
+    desc: "QR Pixel entered the international stage by launching operations in the UAE and the Middle East. With a focus on advanced LED integration and customized automation, our solutions began enhancing world-class developments across Dubai and beyond.",
+    icon: "🌍",
+  },
+  {
+    year: "2024",
+    title: "Innovation Leader",
+    desc: "QR Pixel earned its place as a pioneer in GRMS (Guest Room Management Systems), façade control, and smart automation. By combining design innovation with cutting-edge technology, we continue to set new benchmarks in the world of architectural lighting.",
+    icon: "🏆",
+  },
+];
+
 
   return (
-    <div className="relative max-w-full mx-auto px-4 sm:px-6 md:px-16 lg:px-32 py-16 md:py-24 z-20 overflow-x-hidden" style={{ fontFamily: "'Inter', sans-serif" }}>
-      <div className="relative pl-6 md:pl-20 bg-black bg-opacity-60 backdrop-blur-lg rounded-2xl p-6 md:p-12 shadow-2xl" style={{ zIndex: 25 }}>
-        <h2 className="text-3xl md:text-5xl font-extrabold mb-16 md:mb-20 bg-gradient-to-r from-pink-500 via-blue-500 to-cyan-500 text-transparent bg-clip-text text-center tracking-wide">
-          Our Journey
-        </h2>
+    <div className="relative w-full py-20 md:py-28 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16">
+          <span className="inline-block text-sm font-semibold text-white-400 mb-4 tracking-wider uppercase">
+            Our Story
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            The Journey of <span className="bg-gradient-to-r from-cyan-700 to-yellow-500 text-transparent bg-clip-text">QR Pixel</span>
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-yellow-500 mx-auto rounded-full"></div>
+        </div>
 
-        <div className="absolute left-9 md:left-22 top-28 bottom-4 w-0.5 rounded-full" style={{
-          background: "linear-gradient(to bottom, #ec4899, #3b82f6, #06b6d4)",
-          boxShadow: "0 0 12px rgba(99, 102, 241, 0.7)"
-        }} />
+        <div className="relative">
+       
+          
+          {/* Timeline items */}
+          <div className="space-y-16 md:space-y-24">
+            {timeline.map((item, idx) => (
+              <div 
+                key={idx}
+                className={`relative flex flex-col md:flex-row items-center ${idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+              >
+                {/* Year Badge - Visible on all screens */}
+                <div className="relative z-10 w-full md:w-1/2 px-4 md:px-8 mb-6 md:mb-0">
+                  <div className={`inline-flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-cyan-900 to-navy-700 shadow-lg shadow-cyan-500/20`}>
+                    <span className="text-3xl">{item.icon}</span>
+                  </div>
+                  <h3 className="mt-4 text-2xl font-bold text-shadow-gray-600">{item.title}</h3>
+                  <p className="mt-2 text-gray-400">{item.year}</p>
+                </div>
 
-        {timeline.map((item, idx) => (
-          <div key={idx} className="relative mb-20 md:mb-24 last:mb-0 flex items-start">
-            <div className="absolute left-3 md:left-2 top-5 w-14 md:w-19 h-[2px] rounded" style={{
-              background: "linear-gradient(to right, #ec4899, #3b82f6, #06b6d4)",
-              boxShadow: "0 0 6px rgba(99, 102, 241, 0.6)"
-            }} />
-
-            <span className="absolute left-10 md:left-18 top-0 font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 text-black px-4 md:px-5 py-2 md:py-3 rounded-full text-sm md:text-lg shadow-lg select-none">
-              {item.year}
-            </span>
-
-            <p className="text-gray-300 ml-32 md:ml-52 text-base md:text-lg max-w-3xl leading-relaxed tracking-wide">
-              {item.desc}
-            </p>
+                {/* Content */}
+                <div className="w-full md:w-1/2 px-4 md:px-8">
+                  <div className="relative bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10 shadow-xl hover:bg-white/10 transition-all duration-300">
+                    <div className="absolute -top-3 left-6 w-6 h-6 transform rotate-45 bg-white/5 border-l border-t border-white/10"></div>
+                    <p className="text-gray-300 leading-relaxed">{item.desc}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
 
+          {/* Animated elements */}
+          <div className="absolute -top-20 -right-20 w-120 h-120 bg-cyan-500/10 rounded-full mix-blend-screen filter blur-3xl animate-blob"></div>
+          <div className="absolute -bottom-20 -left-20 w-222 h-222 bg-blue-500/10 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-2000"></div>
+        </div>
+      </div>
       <BackToTopButton />
     </div>
   );
