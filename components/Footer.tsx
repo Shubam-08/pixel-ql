@@ -6,14 +6,17 @@ export default function Footer() {
   return (
     <footer className="relative text-white py-0 sm:py-4 lg:py-4 z-10 overflow-hidden">
       {/* Background Image with Gradient Overlay */}
-      <div className="absolute inset-0 -z-10">
-        <Image
-          src="/footerbgcrop.jpg"
-          alt="Footer background"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/20" />
-      </div>
+     <div className="absolute inset-0 -z-10">
+  <Image
+    src="/footerbgcrop.jpg"
+    alt="Footer background"
+    fill
+    className="object-cover"
+    priority // optional: ensures faster loading
+  />
+  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/20" />
+</div>
+
 
       {/* Footer Content */}
       <div className="relative z-10 w-full px-2 sm:px-4 md:px-8 text-shadow-md">
