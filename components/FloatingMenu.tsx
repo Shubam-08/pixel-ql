@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -11,6 +11,9 @@ export default function FloatingMenu() {
   const [open, setOpen] = useState(false);
   const [logoVisible, setLogoVisible] = useState(true);
 
+  const menuRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const handleScroll = () => {
       setLogoVisible(window.scrollY <= 10);
@@ -18,6 +21,25 @@ export default function FloatingMenu() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        open &&
+        menuRef.current &&
+        buttonRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        !buttonRef.current.contains(event.target as Node)
+      ) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [open]);
 
   const navLinks = [
     { label: "Home", href: "/", icon: Home },
@@ -29,8 +51,9 @@ export default function FloatingMenu() {
 
   return (
     <>
-      {/* Floating toggle button (now visible on all screen sizes) */}
+      {/* Floating toggle button */}
       <motion.div
+        ref={buttonRef}
         initial={{ opacity: 1 }}
         animate={{ opacity: logoVisible ? 1 : 0 }}
         transition={{ duration: 0.5 }}
@@ -62,10 +85,11 @@ export default function FloatingMenu() {
         </button>
       </motion.div>
 
-      {/* Dropdown nav menu (now visible on all screen sizes) */}
+      {/* Dropdown nav menu */}
       <AnimatePresence>
         {open && (
           <motion.nav
+            ref={menuRef}
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 20 }}
@@ -77,7 +101,8 @@ export default function FloatingMenu() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
               transition={{ type: "spring", stiffness: 220, damping: 20 }}
-              className="flex flex-col gap-2 bg-gray-900 rounded-lg p-3 shadow-xl border border-gray-700 backdrop-blur-md w-[180px] text-sm font-medium"
+              className="flex flex-col gap-2 bg-black rounded-lg p-1 shadow-xl border border-gray-700 w-[180px] text-sm font-medium"
+
             >
               {navLinks.map(({ label, href, icon: Icon }) => (
                 <motion.li
@@ -97,7 +122,6 @@ export default function FloatingMenu() {
                   >
                     <Icon className="w-5 h-5" />
                     {label}
-                    {/* Tooltip on hover */}
                     <span className="absolute left-full ml-2 top-1/2 -translate-y-1/2 bg-gray-100 text-gray-900 text-xs px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
                       {label}
                     </span>

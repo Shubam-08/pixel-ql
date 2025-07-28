@@ -203,38 +203,37 @@ export const TeamSection = () => (
 );
 
 
- export const ServicesSection = () => {
+export const ServicesSection = () => {
   const services = [
     {
-  icon: '💡',
-  title: 'Lighting Design',
-  desc: 'We craft lighting solutions that enhance spatial experience, optimize energy use, and elevate ambiance — blending form with function for every environment.',
-  image: '/smart-lighting.png',
-},
-{
-  icon: '🤖',
-  title: 'Intelligent Automation',
-  desc: 'From lighting to climate control, we integrate intelligent systems that adapt to your lifestyle — offering comfort, efficiency, and complete control at your fingertips.',
-  image: '/automation.jpg',
-},
-{
-  icon: '🎨',
-  title: 'Digital Signage',
-  desc: 'Create immersive brand moments with high-impact digital signage, designed for clarity, aesthetics, and seamless integration into any architectural space.',
-  image: '/design.png',
-},
-{
-  icon: '✨',
-  title: 'Customize Decorative Lighting',
-  desc: 'We design and install bespoke decorative lighting that transforms ordinary spaces into extraordinary experiences — tailored to match your unique style and story.',
-  image: '/decorative.png',
-},
-
+      icon: '💡',
+      title: 'Lighting Design',
+      desc: 'We craft lighting solutions that enhance spatial experience, optimize energy use, and elevate ambiance — blending form with function for every environment.',
+      image: '/smart-lighting.png',
+    },
+    {
+      icon: '🤖',
+      title: 'Intelligent Automation',
+      desc: 'From lighting to climate control, we integrate intelligent systems that adapt to your lifestyle — offering comfort, efficiency, and complete control at your fingertips.',
+      image: '/automation.jpg',
+    },
+    {
+      icon: '🎨',
+      title: 'Digital Signage',
+      desc: 'Create immersive brand moments with high-impact digital signage, designed for clarity, aesthetics, and seamless integration into any architectural space.',
+      image: '/design.png',
+    },
+    {
+      icon: '✨',
+      title: 'Customize Decorative Lighting',
+      desc: 'We design and install bespoke decorative lighting that transforms ordinary spaces into extraordinary experiences — tailored to match your unique style and story.',
+      image: '/decorative.png',
+    },
   ];
 
   return (
-    <div className="px-6 py-16 text-white">
-      <h2 className="text-3xl font-bold mb-8 text-center text-white">
+    <div className="px-4 sm:px-6 py-16 text-white bg-black rounded-3xl">
+      <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-white">
         How we can help you?
       </h2>
 
@@ -244,16 +243,21 @@ export const TeamSection = () => (
             key={index}
             className="relative rounded-xl overflow-hidden border border-white/10 shadow-md group"
           >
+            {/* Service Image */}
             <Image
               src={service.image}
               alt={service.title}
               width={400}
               height={240}
-              className="w-full h-56 object-cover transition-opacity duration-300 group-hover:opacity-60"
+              className="w-full h-56 object-cover transition-opacity duration-300 opacity-60 group-hover:opacity-40"
             />
 
-            {/* Overlay text */}
-            <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 transition-opacity duration-300 opacity-0 group-hover:opacity-100 bg-black/50">
+            {/* Always Visible on Mobile, Hover on Desktop */}
+            <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4
+              bg-black/60 sm:bg-black/50
+              opacity-100 sm:opacity-0 sm:group-hover:opacity-100
+              transition-opacity duration-300"
+            >
               <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
               <p className="text-sm text-gray-200">{service.desc}</p>
             </div>

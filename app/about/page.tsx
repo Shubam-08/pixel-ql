@@ -38,7 +38,14 @@ export default function AboutPage() {
   return (
     <main className="relative min-h-screen bg-black text-white overflow-hidden font-sans">
        {/*<AnimatedBackground />*/}
-      
+          <video
+    className="absolute inset-0 w-full h-full object-cover z-0"
+    src="/about1.mp4"
+    autoPlay
+    muted
+    loop
+    playsInline
+  />
       {/* HERO TOP SECTION */}
       <div className="relative z-10 w-full min-h-screen flex flex-col justify-center items-center px-6 pt-30 pb-10">
         <div className="flex flex-col md:flex-row items-start justify-between max-w-6xl w-full gap-12">
