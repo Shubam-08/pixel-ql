@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 //import AnimatedBackground from "@/components/Animatedcolour";
 
@@ -26,7 +26,37 @@ const tabs = [
 
 export default function AboutPage() {
   const [active, setActive] = useState("journey");
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [showReadMore, setShowReadMore] = useState(false);
+
+  useEffect(() => {
+    // Check if mobile on component mount and window resize
+    const checkIfMobile = () => {
+      const mobile = window.innerWidth < 768; // Tailwind's md breakpoint
+      setIsMobile(mobile);
+      if (!mobile) {
+        setIsExpanded(true);
+      }
+    };
+
+    // Initial check
+    checkIfMobile();
+    window.addEventListener('resize', checkIfMobile);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
+
+  useEffect(() => {
+    // Check if content overflows its container
+    if (contentRef.current) {
+      const isOverflowing = contentRef.current.scrollHeight > contentRef.current.clientHeight;
+      setShowReadMore(isMobile && isOverflowing);
+    }
+  }, [isMobile]);
 
   const handleClick = (id: string) => {
     setActive(id);
@@ -53,21 +83,33 @@ export default function AboutPage() {
        {/* Wrapper */}
 <div className="flex flex-col items-start gap-10 max-w-screen-xl mx-auto px-4 py-16 text-neutral-300">
 
-  {/* Text Content - Balanced Modern Layout (Moved Upwards) */}
+  {/* Text Content - Balanced Modern Layout */}
 <div className="w-full flex justify-center px-4 md:px-8 lg:px-16 py-10 -mt-32">
-  <div className=" rounded-2xl p-6 md:p-10 shadow-xl 
-                  max-w-5xl text-white space-y-6">
+  <div className="rounded-2xl p-6 md:p-10 shadow-xl max-w-5xl text-white space-y-6">
 
     {/* Heading */}
     <div className="flex items-center gap-3">
       <h1 className="text-2xl md:text-3xl font-semibold tracking-tight">
-        Connect with Light
+        Connect with Light – At QR-Pixel
       </h1>
       <FaConnectdevelop className="text-neutral-300 text-3xl shrink-0" />
     </div>
 
-    {/* Paragraphs */}
-    <div className="space-y-4 text-base md:text-lg leading-relaxed text-neutral-200">
+    {/* Paragraphs with collapsible content */}
+    <div 
+      ref={contentRef}
+      className={`space-y-4 text-base md:text-lg leading-relaxed text-neutral-200 ${
+        isMobile && !isExpanded ? 'max-h-96 overflow-hidden relative' : ''
+      }`}
+      style={{
+        maskImage: isMobile && !isExpanded 
+          ? 'linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%)' 
+          : 'none',
+        WebkitMaskImage: isMobile && !isExpanded 
+          ? 'linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%)' 
+          : 'none'
+      }}
+    >
       <p>
         <strong>At QR-Pixel</strong>, every project is a story brought to life through thoughtful design.  
         We approach each space with care and precision, crafting environments that reflect our clients’ unique vision and narrative.  
@@ -105,9 +147,19 @@ export default function AboutPage() {
         We don’t just light spaces — we <strong>craft atmospheres</strong>, shape moods, and tell stories through light.
       </p>
     </div>
+
+    {showReadMore && (
+      <div className="flex justify-center mt-4 md:hidden">
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="px-6 py-2 bg-white/10 hover:bg-white/20 text-white rounded-full transition-all duration-300 text-sm font-medium"
+        >
+          {isExpanded ? 'Show Less' : 'Read More'}
+        </button>
+      </div>
+    )}
   </div>
 </div>
-
 
 
 

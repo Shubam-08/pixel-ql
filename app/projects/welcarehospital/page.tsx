@@ -118,7 +118,7 @@ export default function WelcareHospitalPage() {
 
             <div className="text-center pt-8">
               <Link
-                href="/projects"
+                href="/projects/welcarehospital"
                 className="inline-flex items-center border border-neutral-700 bg-transparent text-neutral-200 px-4 py-2 rounded-lg hover:bg-neutral-800 hover:border-neutral-600 transition-colors text-base font-medium shadow-sm group"
               >
                 <svg
@@ -129,7 +129,7 @@ export default function WelcareHospitalPage() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                 </svg>
-                Back to Projects
+                Back to Top
               </Link>
             </div>
           </div>
