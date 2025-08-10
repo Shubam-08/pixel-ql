@@ -1,4 +1,4 @@
-import { FaWhatsapp, FaYoutube, FaFacebook } from "react-icons/fa";
+import { FaWhatsapp, FaYoutube, FaFacebook, FaLinkedin } from "react-icons/fa";
 import { Instagram } from "lucide-react";
 import Image from "next/image";
 
@@ -36,6 +36,8 @@ export default function Footer() {
           </div>
 
           {/* CENTER: (Empty to preserve layout) */}
+
+
           <div className="flex flex-col items-center text-center" />
 
           {/* RIGHT: Social Links */}
@@ -44,11 +46,21 @@ export default function Footer() {
               Follow and Contact with us
             </h3>
             <div className="flex gap-1.5 sm:gap-2 justify-end">
+              
+               <SocialIcon
+               href="https://www.linkedin.com/company/qr-pixel/"
+               label="LinkedIn"
+               icon={<FaLinkedin size={22} />}
+               />
+              
               <SocialIcon
                 href="https://wa.me/916005749782"
                 label="WhatsApp"
                 icon={<FaWhatsapp size={22} />}
               />
+
+             
+
               <SocialIcon
                 href="https://www.instagram.com/qr_pixel?igsh=MW1oY3hkMTRmZXZjcA=="
                 label="Instagram"
@@ -59,6 +71,9 @@ export default function Footer() {
                 label="YouTube"
                 icon={<FaYoutube size={22} />}
               />
+               
+
+              
               <SocialIcon
                 href="https://www.facebook.com/share/1AdHt798nj/"
                 label="Facebook"

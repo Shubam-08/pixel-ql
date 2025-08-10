@@ -53,28 +53,63 @@ export default function AboutPage() {
        {/* Wrapper */}
 <div className="flex flex-col items-start gap-10 max-w-screen-xl mx-auto px-4 py-16 text-neutral-300">
 
-  {/* Text Content - Full Width */}
-  <div className="w-full">
-    <div className="flex items-center gap-3 mb-4">
-      <h1 className="text-3xl md:text-4xl font-semibold text-white">
+  {/* Text Content - Balanced Modern Layout (Moved Upwards) */}
+<div className="w-full flex justify-center px-4 md:px-8 lg:px-16 py-10 -mt-32">
+  <div className=" rounded-2xl p-6 md:p-10 shadow-xl 
+                  max-w-5xl text-white space-y-6">
+
+    {/* Heading */}
+    <div className="flex items-center gap-3">
+      <h1 className="text-2xl md:text-3xl font-semibold tracking-tight">
         Connect with Light
       </h1>
-      <FaConnectdevelop className="text-neutral-400 text-4xl shrink-0" />
+      <FaConnectdevelop className="text-neutral-300 text-3xl shrink-0" />
     </div>
 
-    <p className="text-base md:text-lg leading-relaxed md:leading-loose mb-6">
-      Lighting is not just an essential design element — it is the soul of a space, shaping its mood, character, and identity. At{" "}
-      <span className="font-semibold text-white">QR-Pixel</span>, we explore light as an experience — of style, emotion, and atmosphere — crafting environments that captivate and inspire.
-    </p>
+    {/* Paragraphs */}
+    <div className="space-y-4 text-base md:text-lg leading-relaxed text-neutral-200">
+      <p>
+        <strong>At QR-Pixel</strong>, every project is a story brought to life through thoughtful design.  
+        We approach each space with care and precision, crafting environments that reflect our clients’ unique vision and narrative.  
+        Our design philosophy blends technical expertise with creative sensitivity — resulting in immersive, emotionally resonant spaces where form, function, and feeling exist in harmony.
+      </p>
 
-    <p className="text-base md:text-lg leading-relaxed md:leading-loose mb-6">
-      We explore light as a dynamic and immersive experience — a blend of style, emotion, and atmosphere — meticulously crafting environments that not only illuminate but also resonate deeply with the people within them.
-    </p>
+      <p>
+        At QR-Pixel, we believe that <strong>light is more than illumination</strong> — it’s an emotional material.  
+        It can make a space feel safe, energizing, intimate, or inspiring.  
+        It shapes the way we see the world and how we experience every moment within it.
+      </p>
 
-    <p className="text-base md:text-lg leading-relaxed md:leading-loose">
-      By harnessing the transformative power of light, we breathe life into spaces — whether residential, commercial, or hospitality — in ways that spark curiosity, ignite imagination, and leave a lasting impression.
-    </p>
+      <p>
+        Born from the idea that everyone deserves good lighting, our studio has redefined what lighting design means for homes, hospitality, and architectural spaces.  
+        We’ve seen firsthand how thoughtful, intentional lighting transforms not just rooms, but lives.
+      </p>
+
+      <p>
+        Every project begins with <strong>listening</strong> — to you, your lifestyle, your vision, and your needs.  
+        We dive deep into understanding the architecture, materials, and mood you want to create.  
+        From there, we design layered lighting solutions that are tailored, human-centric, and aesthetically seamless.
+      </p>
+
+      <p>
+        Our expertise spans over <strong>500 projects worldwide</strong>, blending artistry with technical precision.  
+        Whether it’s the soft glow that welcomes you home, the dramatic accent that highlights a treasured artwork, or the subtle wash of light that brings texture to life — each decision is purposeful.
+      </p>
+
+      <p>
+        At QR-Pixel, we work at the intersection of <strong>design, technology, and emotion</strong>.  
+        Our goal is simple: to create lighting experiences that evoke warmth, beauty, and a sense of belonging — lighting that feels as natural and personal as sunlight itself.
+      </p>
+
+      <p>
+        We don’t just light spaces — we <strong>craft atmospheres</strong>, shape moods, and tell stories through light.
+      </p>
+    </div>
   </div>
+</div>
+
+
+
 
   {/* Image Below Content */}
  
