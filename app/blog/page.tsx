@@ -83,11 +83,11 @@ export default function BlogPage() {
         </div>
 
         {/* Submit Blog Idea CTA */}
-        <div className="relative z-20 mb-16 text-center bg-[#edd8d8] py-10 px-6 rounded-xl shadow-xl max-w-3xl mx-auto top-7">
-          <h2 className="text-2xl sm:text-3xl font-semibold text-black mb-4">
+        <div className="relative z-20 mb-16 text-center bg-black py-10 px-6 rounded-xl shadow-xl max-w-3xl mx-auto top-7">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-4">
             Have a blog idea you&apos;d like to share?
           </h2>
-          <p className="text-gray-700 mb-6">
+          <p className="text-white mb-6">
             We&apos;re always looking for fresh perspectives and topics. Drop us a line — and if we love it, we’ll feature your blog on our website and social media! 🚀
           </p>
 

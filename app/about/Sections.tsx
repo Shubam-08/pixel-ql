@@ -34,7 +34,7 @@ const BackToTopButton = () => {
   );
 };
 
-// === TEAM DATA ===
+
 // === TEAM DATA ===
 const team = [
   {
@@ -61,6 +61,19 @@ const team = [
     linkedin: "https://www.linkedin.com/in/jskamath",
     image: "/jnanasagar-modified.jpg",
   },
+   {
+    name: "Prabhu .N",
+    role: "Technical Head",
+    linkedin: "https://www.linkedin.com/in/prabhu-n-33945622",
+    image: "/prabhu.png",
+  },
+  {
+    name: "Vikas Singh",
+    role: "Sr Lighting and Controls Designer UAE",
+    linkedin: "https://www.linkedin.com/in",
+    image: "/vikas.png",
+  },
+ 
   {
     name: "Illayaraja P",
     role: "Senior R&D - India",
@@ -76,32 +89,21 @@ const team = [
   {
     name: "Atharv Sudan",
     role: "Regional Sales UAE",
-    linkedin: "https://www.linkedin.com/in",
-    image: "/atharv.png",
+    linkedin: "https://www.linkedin.com/in/atharv-sudan-b97a27132?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    image: "/atharv.jpg",
   },
-  {
-    name: "Vikas Singh",
-    role: "Sr Lighting and Controls Designer UAE",
-    linkedin: "https://www.linkedin.com/in",
-    image: "/vikas.png",
-  },
-  {
-    name: "Prabhu .N",
-    role: "Technical Head",
-    linkedin: "https://www.linkedin.com/in/prabhu-n-33945622",
-    image: "/prabhu.png",
-  },
+  
   {
     name: "Chandrashekhar Narsaiah",
     role: "Accounts",
     linkedin: "https://www.linkedin.com/in",
-    image: "/chandrashekhar.png",
+    image: "/chandrashekar Burragadda.jpg",
   },
   {
     name: "Gopal Manjunatha",
     role: "Commissioning Engineer",
     linkedin: "https://www.linkedin.com/in",
-    image: "/gopal.png",
+    image: "/gopal.jpg",
   },
 ];
 
@@ -110,27 +112,27 @@ const team = [
 export const JourneySection = () => {
   const timeline = [
   {
-    year: "2018",
+    year: "2015",
     title: "Foundation",
-    desc: "QR Pixel began its journey with a bold vision — to transform the future of architectural lighting and smart automation. Built on creativity, precision, and a passion for design, the company set out to reimagine how spaces are illuminated and experienced.",
+    desc: "QR Pixel began its journey with a bold vision to transform the future of architectural lighting and smart automation. Built on creativity, precision, and a passion for design, the company set out to reimagine how spaces are illuminated and experienced.",
     icon: "✨",
   },
   {
-    year: "2020",
+    year: "2018",
     title: "Expansion",
     desc: "Within just two years, QR Pixel expanded its presence across India. By delivering high-impact lighting solutions to commercial, hospitality, and residential projects, the brand became known for merging aesthetics with intelligence and efficiency.",
     icon: "🚀",
   },
   {
-    year: "2022",
+    year: "2021",
     title: "Global Reach",
     desc: "QR Pixel entered the international stage by launching operations in the UAE and the Middle East. With a focus on advanced LED integration and customized automation, our solutions began enhancing world-class developments across Dubai and beyond.",
     icon: "🌍",
   },
   {
-    year: "2024",
+    year: "2023",
     title: "Innovation Leader",
-    desc: "QR Pixel earned its place as a pioneer in GRMS (Guest Room Management Systems), façade control, and smart automation. By combining design innovation with cutting-edge technology, we continue to set new benchmarks in the world of architectural lighting.",
+    desc: "QR Pixel earned its place as a pioneer in GRMS (Guest Room Management Systems), facade control, customize lighting, customize chandelier and smart automation. By combining design innovation with cutting-edge technology, we continue to set new benchmarks in the world of architectural lighting.",
     icon: "🏆",
   },
 ];

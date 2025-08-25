@@ -8,7 +8,7 @@ export default function SpatikaHotelPage() {
 
   const handleLoadedMetadata = () => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 2.7;
+      videoRef.current.playbackRate = 1.2;
     }
   };
 

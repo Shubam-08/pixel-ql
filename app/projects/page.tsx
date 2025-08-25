@@ -147,7 +147,7 @@ export default function ProjectsPage() {
     {
       id: 16,
       title: "Alian Office",
-      image: "/meetingroom.jpg",
+      image: "/meetinghome.jpg",
       description:
         "Energy-efficient lighting and automation solutions for large retail spaces",
       link: "/projects/meetingroom",
@@ -171,47 +171,47 @@ export default function ProjectsPage() {
   initial={{ opacity: 0, y: 60 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 1 }}
-  className="w-full relative overflow-hidden py-14 px-6 bg-gradient-to-b from-[#f4e6d1] via-[#f4e6d1] to-[#f4e6d1] text-black text-center"
+  className="w-full relative overflow-hidden py-14 px-6 bg-black text-white text-center"
 >
-  {/* Animated soft blobs */}
+  {/* Black blobs */}
   <motion.div
     animate={{ x: [0, 20, 0], y: [0, -20, 0] }}
     transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
-    className="absolute top-[-120px] left-[25%] w-96 h-96 bg-[#f5d7c3] rounded-full blur-3xl opacity-30 pointer-events-none z-0"
+    className="absolute top-[-120px] left-[25%] w-96 h-96 bg-black rounded-full blur-3xl opacity-40 pointer-events-none z-0"
   />
   <motion.div
     animate={{ x: [0, -20, 0], y: [0, 20, 0] }}
     transition={{ repeat: Infinity, duration: 14, ease: "easeInOut" }}
-    className="absolute bottom-[-100px] right-[20%] w-96 h-96 bg-[#cbe7ff] rounded-full blur-3xl opacity-30 pointer-events-none z-0"
+    className="absolute bottom-[-100px] right-[20%] w-96 h-96 bg-black rounded-full blur-3xl opacity-40 pointer-events-none z-0"
   />
 
   {/* Heading with staggered character animation */}
   <motion.h2
-    initial="hidden"
-    animate="visible"
-    variants={{
-      hidden: { opacity: 0 },
-      visible: {
-        opacity: 1,
-        transition: { staggerChildren: 0.045 },
-      },
-    }}
-    className="text-4xl md:text-5xl font-extrabold relative z-10"
-  >
-    {"Explore Our Signature Projects".split("").map((char, index) => (
-  <motion.span
-    key={index}
-    variants={{
-      hidden: { opacity: 0, y: 20 },
-      visible: { opacity: 1, y: 0 },
-    }}
-    className={`inline-block ${char === " " ? "w-2" : ""}`}
-  >
-    {char}
-  </motion.span>
-))}
+  initial="hidden"
+  animate="visible"
+  variants={{
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 },
+    },
+  }}
+  className="text-4xl md:text-4xl font-extrabold relative z-10 text-white"
+>
+  {"Explore Our Signature Projects".split(" ").map((word, index) => (
+    <motion.span
+      key={index}
+      variants={{
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      className="inline-block mr-2"
+    >
+      {word}
+    </motion.span>
+  ))}
+</motion.h2>
 
-  </motion.h2>
 
   {/* Description fade-in */}
   <motion.p
@@ -219,7 +219,7 @@ export default function ProjectsPage() {
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 1, delay: 0.3 }}
     viewport={{ once: true }}
-    className="mt-6 text-lg md:text-xl text-gray-700 max-w-3xl mx-auto relative z-10"
+    className="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto relative z-10"
   >
     Discover how we combine lighting, design, and automation to transform
     spaces into modern masterpieces.
@@ -230,17 +230,18 @@ export default function ProjectsPage() {
     initial={{ y: 0 }}
     animate={{ y: [0, 8, 0] }}
     transition={{ repeat: Infinity, duration: 1.8 }}
-    className="mt-14 text-sm text-black relative z-10"
+    className="mt-14 text-sm text-gray-400 relative z-10"
   >
     ↓ Scroll to Explore
   </motion.div>
 </motion.section>
 
 
+
       {/* Project Listing */}
       <section
         id="projects"
-        className="pb-10 relative overflow-hidden bg-[#140904] text-white"
+        className="pb-10 relative overflow-hidden bg-[rgb(11,4,0)] text-white"
       >
         <div className="container mx-auto px-9 py-10">
           <div className="columns-1 md:columns-2 gap-6">

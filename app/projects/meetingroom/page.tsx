@@ -13,6 +13,7 @@ export default function MeetingRoomProjectPage() {
           <div className="w-full flex justify-center items-start py-24 md:px-8">
             <ImageCarousel
               images={[
+                 { src: "/meetinghome.jpg", alt: "Meeting Room 3" },
                 { src: "/meetingroom3.jpg", alt: "Meeting Room 3" },
                 { src: "/meetingroom4.jpg", alt: "Meeting Room 3" },
                 { src: "/meetingroom5.jpg", alt: "Meeting Room 3" },

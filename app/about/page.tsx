@@ -90,7 +90,7 @@ export default function AboutPage() {
     {/* Heading */}
     <div className="flex items-center gap-3">
       <h1 className="text-2xl md:text-3xl font-semibold tracking-tight">
-        Connect with Light – At QR-Pixel
+        Connect with Design - At QR Pixel
       </h1>
       <FaConnectdevelop className="text-neutral-300 text-3xl shrink-0" />
     </div>
@@ -111,13 +111,13 @@ export default function AboutPage() {
       }}
     >
       <p>
-        <strong>At QR-Pixel</strong>, every project is a story brought to life through thoughtful design.  
+        <strong>At QR Pixel</strong>, every project is a story brought to life through thoughtful design.  
         We approach each space with care and precision, crafting environments that reflect our clients’ unique vision and narrative.  
-        Our design philosophy blends technical expertise with creative sensitivity — resulting in immersive, emotionally resonant spaces where form, function, and feeling exist in harmony.
+        Our design philosophy blends technical expertise with creative sensitivity, resulting in immersive, emotionally resonant spaces where form, function, and feeling exist in harmony.
       </p>
 
       <p>
-        At QR-Pixel, we believe that <strong>light is more than illumination</strong> — it’s an emotional material.  
+        At QR-Pixel, we believe that <strong>light is more than illumination</strong>it’s an emotional material.  
         It can make a space feel safe, energizing, intimate, or inspiring.  
         It shapes the way we see the world and how we experience every moment within it.
       </p>
@@ -128,23 +128,23 @@ export default function AboutPage() {
       </p>
 
       <p>
-        Every project begins with <strong>listening</strong> — to you, your lifestyle, your vision, and your needs.  
+        Every project begins with <strong>listening</strong> to you, your lifestyle, your vision, and your needs.  
         We dive deep into understanding the architecture, materials, and mood you want to create.  
         From there, we design layered lighting solutions that are tailored, human-centric, and aesthetically seamless.
       </p>
 
       <p>
-        Our expertise spans over <strong>500 projects worldwide</strong>, blending artistry with technical precision.  
-        Whether it’s the soft glow that welcomes you home, the dramatic accent that highlights a treasured artwork, or the subtle wash of light that brings texture to life — each decision is purposeful.
+        Our expertise spans over <strong>398 projects worldwide</strong>, blending artistry with technical precision.  
+        Whether it’s the soft glow that welcomes you home, the dramatic accent that highlights a treasured artwork, or the subtle wash of light that brings texture to life, each decision is purposeful.
       </p>
 
       <p>
         At QR-Pixel, we work at the intersection of <strong>design, technology, and emotion</strong>.  
-        Our goal is simple: to create lighting experiences that evoke warmth, beauty, and a sense of belonging — lighting that feels as natural and personal as sunlight itself.
+        Our goal is simple: to create lighting experiences that evoke warmth, beauty, and a sense of belonging, lighting that feels as natural and personal as sunlight itself.
       </p>
 
       <p>
-        We don’t just light spaces — we <strong>craft atmospheres</strong>, shape moods, and tell stories through light.
+        We don’t just light spaces we <strong>craft atmospheres</strong>, shape moods, and tell stories through light.
       </p>
     </div>
 
