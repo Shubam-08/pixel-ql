@@ -71,7 +71,7 @@ const team = [
     name: "Vikas Singh",
     role: "Sr Lighting and Controls Designer UAE",
     linkedin: "https://www.linkedin.com/in",
-    image: "/vikas.png",
+    image: "/vikas qlite.jpg",
   },
  
   {
@@ -238,25 +238,25 @@ export const ServicesSection = () => {
       icon: '💡',
       title: 'Lighting Design',
       desc: 'We craft lighting solutions that enhance spatial experience, optimize energy use, and elevate ambiance — blending form with function for every environment.',
-      image: '/smart-lighting.png',
+      image: '/lighting design.jpg',
     },
     {
       icon: '🤖',
       title: 'Intelligent Automation',
       desc: 'From lighting to climate control, we integrate intelligent systems that adapt to your lifestyle — offering comfort, efficiency, and complete control at your fingertips.',
-      image: '/automation.jpg',
+      image: '/intelligent automation.jpeg',
     },
     {
       icon: '🎨',
       title: 'Digital Signage',
       desc: 'Create immersive brand moments with high-impact digital signage, designed for clarity, aesthetics, and seamless integration into any architectural space.',
-      image: '/design.png',
+      image: '/digital signage.jpg',
     },
     {
       icon: '✨',
       title: 'Customize Decorative Lighting',
       desc: 'We design and install bespoke decorative lighting that transforms ordinary spaces into extraordinary experiences — tailored to match your unique style and story.',
-      image: '/decorative.png',
+      image: '/mushroom.jpg',
     },
   ];
 

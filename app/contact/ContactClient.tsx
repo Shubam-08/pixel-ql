@@ -196,7 +196,7 @@ export default function ContactClient() {
                 "Al Qusais Industrial Area 2, Bagadad Street",
                 "Dubai, UAE",
               ]}
-              mapLink="https://www.google.com/maps?q=QR+Pixel,+Dubai"
+              mapLink="https://maps.app.goo.gl/4sdUhdtPsUeGsMgX8"
             />
             <ImageCard
               src="/vidhan sabha.jpg"

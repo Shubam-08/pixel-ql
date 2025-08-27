@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-import { ScrollButton } from "@/components/ui/scroll-button";
 import { motion } from "framer-motion";
 
 export default function ProjectsPage() {
@@ -48,13 +47,12 @@ export default function ProjectsPage() {
         "Energy-efficient lighting and automation solutions for large retail spaces",
       link: "/projects/luqta",
     },
-    
     {
       id: 6,
       title: "Sobha Towers",
       image: "/Sobha Towers.jpg",
       description:
-      "Intelligent energy management system with smart lighting and HVAC controls",
+        "Intelligent energy management system with smart lighting and HVAC controls",
       link: "/projects/sobhatowers",
     },
     {
@@ -62,7 +60,7 @@ export default function ProjectsPage() {
       title: "Residential Building, Chennai",
       image: "/building.jpg",
       description:
-      "Energy-efficient lighting and automation solutions for large retail spaces",
+        "Energy-efficient lighting and automation solutions for large retail spaces",
       link: "/projects/residentialbuilding",
     },
     {
@@ -73,8 +71,6 @@ export default function ProjectsPage() {
         "Energy-efficient lighting and automation solutions for large retail spaces",
       link: "/projects/yamunaskycity",
     },
-    
-
     {
       id: 8,
       title: "Commercial Showroom, Bangalore",
@@ -83,17 +79,15 @@ export default function ProjectsPage() {
         "Smart home automation with integrated lighting and security systems",
       link: "/projects/comercialshowroom",
     },
-
     {
-     id: 10,
-     title: "Spatika Hotel, Manipal",
-     image: "/spatikahotel.png",
-     description:
-       "Energy-efficient lighting and automation solutions for large retail spaces",
-     link: "/projects/spatikahotel",
-   },
-   
-     {
+      id: 10,
+      title: "Spatika Hotel, Manipal",
+      image: "/spatikahotel.png",
+      description:
+        "Energy-efficient lighting and automation solutions for large retail spaces",
+      link: "/projects/spatikahotel",
+    },
+    {
       id: 9,
       title: "Fashion Showroom, Bangalore",
       image: "/fashion3.png",
@@ -101,8 +95,6 @@ export default function ProjectsPage() {
         "Intelligent energy management system with smart lighting and HVAC controls",
       link: "/projects/fashionshowroom",
     },
-    
-   
     {
       id: 11,
       title: "Expo City Masjid",
@@ -143,7 +135,6 @@ export default function ProjectsPage() {
         "Energy-efficient lighting and automation solutions for large retail spaces",
       link: "/projects/privatevilla",
     },
-      
     {
       id: 16,
       title: "Alian Office",
@@ -152,7 +143,6 @@ export default function ProjectsPage() {
         "Energy-efficient lighting and automation solutions for large retail spaces",
       link: "/projects/meetingroom",
     },
-
     {
       id: 17,
       title: "Aliha University, Campus",
@@ -165,83 +155,67 @@ export default function ProjectsPage() {
 
   return (
     <main className="min-h-screen text-white">
+      {/* Intro Section with Shader Animation */}
+      <section className="relative w-full h-[50vh] flex items-center justify-center overflow-hidden bg-black">
      
-      {/* Animated Intro Section */}
-<motion.section
-  initial={{ opacity: 0, y: 60 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1 }}
-  className="w-full relative overflow-hidden py-14 px-6 bg-black text-white text-center"
->
-  {/* Black blobs */}
-  <motion.div
-    animate={{ x: [0, 20, 0], y: [0, -20, 0] }}
-    transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
-    className="absolute top-[-120px] left-[25%] w-96 h-96 bg-black rounded-full blur-3xl opacity-40 pointer-events-none z-0"
-  />
-  <motion.div
-    animate={{ x: [0, -20, 0], y: [0, 20, 0] }}
-    transition={{ repeat: Infinity, duration: 14, ease: "easeInOut" }}
-    className="absolute bottom-[-100px] right-[20%] w-96 h-96 bg-black rounded-full blur-3xl opacity-40 pointer-events-none z-0"
-  />
+        
+        {/* Overlay to darken background */}
+  <div className="absolute inset-0 bg-black/60 z-5" />
 
-  {/* Heading with staggered character animation */}
-  <motion.h2
-  initial="hidden"
-  animate="visible"
-  variants={{
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2 },
-    },
-  }}
-  className="text-4xl md:text-4xl font-extrabold relative z-10 text-white"
->
-  {"Explore Our Signature Projects".split(" ").map((word, index) => (
-    <motion.span
-      key={index}
-      variants={{
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0 },
-      }}
-      className="inline-block mr-2"
-    >
-      {word}
-    </motion.span>
-  ))}
-</motion.h2>
+        <div className="absolute z-10 text-center px-6 top-15 md:top-21">
 
+          <motion.h2
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: { staggerChildren: 0.2 },
+              },
+            }}
+            className="text-3xl md:text-4xl font-extrabold text-white"
+          >
+            {"Explore Our Signature Projects".split(" ").map((word, index) => (
+              <motion.span
+                key={index}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                className="inline-block mr-2"
+              >
+                {word}
+              </motion.span>
+            ))}
+          </motion.h2>
 
-  {/* Description fade-in */}
-  <motion.p
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1, delay: 0.3 }}
-    viewport={{ once: true }}
-    className="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto relative z-10"
-  >
-    Discover how we combine lighting, design, and automation to transform
-    spaces into modern masterpieces.
-  </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="mt-5 text-sm md:text-xl text-gray-200 max-w-3xl mx-auto"
+          >
+            Discover how we combine lighting, design, and automation <br /> to
+            transform spaces into modern masterpieces.
+          </motion.p>
 
-  {/* Scroll cue animation */}
-  <motion.div
-    initial={{ y: 0 }}
-    animate={{ y: [0, 8, 0] }}
-    transition={{ repeat: Infinity, duration: 1.8 }}
-    className="mt-14 text-sm text-gray-400 relative z-10"
-  >
-    ↓ Scroll to Explore
-  </motion.div>
-</motion.section>
-
-
+          <motion.div
+            initial={{ y: 0 }}
+            animate={{ y: [0, 8, 0] }}
+            transition={{ repeat: Infinity, duration: 1.8 }}
+            className="mt-5 text-sm text-gray-300"
+          >
+            ↓ Scroll to Explore
+          </motion.div>
+        </div>
+      </section>
 
       {/* Project Listing */}
       <section
         id="projects"
-        className="pb-10 relative overflow-hidden bg-[rgb(11,4,0)] text-white"
+        className="pb-10 relative overflow-hidden bg-grey text-white"
       >
         <div className="container mx-auto px-9 py-10">
           <div className="columns-1 md:columns-2 gap-6">
@@ -255,9 +229,7 @@ export default function ProjectsPage() {
                   {project.video ? (
                     <video
                       ref={
-                        project.title === "Yamuna Sky City"
-                          ? yamunaRef
-                          : null
+                        project.title === "Yamuna Sky City" ? yamunaRef : null
                       }
                       src={project.video}
                       autoPlay
@@ -280,7 +252,7 @@ export default function ProjectsPage() {
 
                   <div className="absolute bottom-0 left-0 w-full px-6 py-5 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex items-end pointer-events-none transition-opacity duration-500 group-hover:opacity-0">
                     <h3
-                      className="text-white text-xl  select-none text-left"
+                      className="text-white text-xl select-none text-left"
                       style={{
                         textShadow:
                           "0 2px 12px rgba(0,0,0,0.85), 0 0px 1px #fff",
@@ -296,8 +268,13 @@ export default function ProjectsPage() {
             ))}
           </div>
 
-          <div className="text-center mt-16">
-            <ScrollButton />
+         <div className="text-center mt-28 px-2">
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-3 px-8 py-4 text-base font-medium text-white border border-gray-500 rounded-full hover:bg-gray-800 transition-all"
+            >
+              ← Back to top
+            </Link>
           </div>
         </div>
       </section>

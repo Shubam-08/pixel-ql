@@ -11,7 +11,7 @@ const blogPosts = [
     title: "How Smart Lighting Transforms Modern Spaces",
     date: "2025-07-01",
     excerpt:
-      "Smart lighting blends technology, comfort, and design into one seamless system. It adapts to your lifestyle—automatically adjusting brightness, color temperature, and scheduling.",
+      "Smart lighting blends technology, comfort, and design into one seamless system. It adapts to your lifestyle automatically adjusting brightness, color temperature, and scheduling.",
     image: "/smart-lighting1.png",
   },
   {
@@ -27,7 +27,7 @@ const blogPosts = [
     title: "Personalized Automation for Residential Projects",
     date: "2025-06-10",
     excerpt:
-      "Smart homes use tailored automation to simplify daily routines—from lighting and climate to security and entertainment. These systems adapt to your lifestyle.",
+      "Smart homes use tailored automation to simplify daily routines from lighting and climate to security and entertainment. These systems adapt to your lifestyle.",
     image: "/automation.png",
   },
 ];
